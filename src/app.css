@@ -1,0 +1,6 @@
+@import "tailwindcss";
+@plugin "daisyui" { themes: pastel --default, synthwave --prefersdark; }
+
+* {
+  font-family: "Noto Sans", sans-serif;
+}
