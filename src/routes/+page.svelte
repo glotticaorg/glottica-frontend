@@ -4,11 +4,6 @@
 	import HeroLander from './HeroLander.svelte';
 </script>
 
-<svelte:head>
-	<title>Glottica.org</title>
-	<meta name="description" content="Learning platform and tools for Indo-Europeanists." />
-</svelte:head>
-
 <section>
 	<HeroLander />
 	<span class="welcome">
