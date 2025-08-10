@@ -2,7 +2,7 @@
   import Logo from './Logo.svelte'
 </script>
 
-<div class="navbar bg-base-100">
+<div class="navbar bg-base-100 flex-none">
   <div class="navbar-start">
     <a class="btn btn-ghost btn-circle" aria-label="Home" href="/">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">

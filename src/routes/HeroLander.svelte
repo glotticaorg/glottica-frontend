@@ -1,8 +1,8 @@
-<div class="hero min-h-[80dvh]">
+<div class="hero flex-1">
   <div class="hero-content flex-col lg:flex-row-reverse">
     <div class="text-center lg:text-left lg:ml-8">
       <h1 class="text-5xl font-bold">Login now!</h1>
-      <p class="py-6">Create an account to manage your progress.</p>
+      <p class="py-6">Create an account to start learning.</p>
     </div>
     <div class="card bg-base-100 w-full max-w-sm shrink-0">
       <div class="card-body">

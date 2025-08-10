@@ -1,11 +1,12 @@
 <script lang="ts">
   import Logo from './Logo.svelte'
+  const currentYear = new Date().getFullYear();
 </script>
 
-<footer class="footer sm:footer-horizontal bg-base-100 text-base-content p-10">
+<footer class="footer sm:footer-horizontal bg-base-100 text-base-content p-10 flex-none">
   <aside>
     <Logo /> <!-- TODO ADD FAVICON -->
-    <p>&copy; 2025</p>
+    <p>&copy; 2025&ndash;{currentYear}</p>
   </aside>
   <nav>
     <h6 class="footer-title">Learn</h6>
