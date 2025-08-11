@@ -4,12 +4,10 @@
 	import HeroLander from './HeroLander.svelte';
 </script>
 
-<section>
+<section class="flex-1 flex flex-column">
 	<HeroLander />
-	<span class="welcome">
-		<picture>
-			<source srcset={welcome} type="image/webp" />
-			<img src={welcomeFallback} alt="Welcome" />
-		</picture>
-	</span>
+	<!-- <picture>
+		<source srcset={welcome} type="image/webp" />
+		<img src={welcomeFallback} alt="Welcome" />
+	</picture> -->
 </section>

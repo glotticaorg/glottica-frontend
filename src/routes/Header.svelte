@@ -21,7 +21,7 @@
 		</a>
 	</div>
 	<div class="navbar-center">
-		<a href="/" aria-label="Logo">
+		<a href="/" aria-label="Home logo">
 			<Logo />
 		</a>
 	</div>

@@ -5,8 +5,9 @@
 
 <footer class="footer sm:footer-horizontal bg-base-100 text-base-content p-10 flex-none">
 	<aside>
-		<Logo />
-		<!-- TODO ADD FAVICON -->
+		<a href="/about/" aria-label="About us">
+			<Logo />
+		</a>
 		<p>&copy; 2025&ndash;{currentYear}</p>
 	</aside>
 	<nav>
