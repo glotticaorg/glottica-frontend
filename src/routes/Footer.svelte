@@ -24,8 +24,8 @@
 	</nav>
 	<nav>
 		<h2 class="footer-title">Legal</h2>
-		<a class="link link-hover" href="/legal/tos/">Terms of use</a>
-		<a class="link link-hover" href="/legal/privacy/">Privacy policy</a>
+		<a class="link link-hover" href="/legal/tos/">Terms of service</a>
+		<a class="link link-hover" href="/legal/privacy/">Privacy statement</a>
 		<a class="link link-hover" href="/legal/cookies/">Cookie policy</a>
 	</nav>
 </footer>
