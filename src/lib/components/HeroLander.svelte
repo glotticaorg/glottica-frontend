@@ -4,7 +4,7 @@
 			<div class="text-center lg:text-left lg:ml-8 shrink-0">
 				<h1 class="text-5xl font-bold">Login now!</h1>
 				<p class="my-6">
-					<a href="/profile/register" class="link">Create an account to start learning</a>
+					Or <a href="/profile/register" class="link">create an account</a> to start learning
 				</p>
 			</div>
 			<div class="card bg-base-100 w-full max-w-sm shrink-0">
@@ -57,15 +57,15 @@
 		</div>
 		<div class="stat place-items-center">
 			<div class="stat-title">Keybinds</div>
-			<div class="stat-value">1,000+</div>
-			<div class="stat-desc">Windows and Mac support</div>
+			<div class="stat-value">1000+</div>
+			<div class="stat-desc">For both Windows and Mac</div>
 		</div>
 	</div>
 	<div class="bg-base-200 py-8 px-10 lg:px-50">
 		<h2 class="text-2xl font-bold mb-6">Discover the benefits!</h2>
 		<div class="flex w-full flex-col lg:flex-row">
-			<div class="card bg-base-300 rounded-box grid min-h-32 flex-1 p-10">
-				<h2 class="text-xl mb-2">For professors</h2>
+			<div class="card bg-base-300 rounded-box grid min-h-32 flex-1 px-8 py-6">
+				<h2 class="text-xl mb-2">For teachers and staff</h2>
 				<ul class="steps steps-vertical">
 					<li class="step step-primary">Useful writing tools and keybinds</li>
 					<li class="step step-primary">Easily publish course materials</li>
@@ -74,7 +74,7 @@
 				</ul>
 			</div>
 			<div class="divider lg:divider-horizontal lg:m-8">AND</div>
-			<div class="card bg-base-300 rounded-box grid min-h-32 flex-1 grow p-10">
+			<div class="card bg-base-300 rounded-box grid min-h-32 flex-1 grow px-8 py-6">
 				<h2 class="text-xl mb-2">For students</h2>
 				<ul class="steps steps-vertical">
 					<li class="step step-primary">Create your own word lists</li>

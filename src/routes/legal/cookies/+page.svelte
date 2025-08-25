@@ -1,5 +1,5 @@
 <script>
-	import CookiesIcon from './CookiesIcon.svelte';
+import CookiesIcon from './CookiesIcon.svelte';
 </script>
 
 <div class="hero flex-1">

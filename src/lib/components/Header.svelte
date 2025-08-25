@@ -1,5 +1,6 @@
 <script lang="ts">
-	import Logo from './Logo.svelte';
+import Logo from './Logo.svelte';
+import ThemeToggle from './ThemeToggle.svelte';
 </script>
 
 <div class="navbar bg-base-100 flex-none">
@@ -8,8 +9,7 @@
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				viewBox="0 0 24 24"
-				fill="currentColor"
-				class="size-6"
+				class="size-6 fill-current"
 			>
 				<path
 					d="M11.47 3.841a.75.75 0 0 1 1.06 0l8.69 8.69a.75.75 0 1 0 1.06-1.061l-8.689-8.69a2.25 2.25 0 0 0-3.182 0l-8.69 8.69a.75.75 0 1 0 1.061 1.06l8.69-8.689Z"
@@ -26,12 +26,12 @@
 		</a>
 	</div>
 	<div class="navbar-end">
+		<ThemeToggle />
 		<a class="btn btn-ghost btn-circle" aria-label="Profile" href="/profile/">
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				viewBox="0 0 24 24"
-				fill="currentColor"
-				class="size-6"
+				class="size-6 fill-current"
 			>
 				<path
 					fill-rule="evenodd"

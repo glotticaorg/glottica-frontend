@@ -1,5 +1,5 @@
 <script>
-	import TosIcon from './TosIcon.svelte';
+import TosIcon from './TosIcon.svelte';
 </script>
 
 <section class="hero flex-1">
