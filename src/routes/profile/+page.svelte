@@ -1,1 +1,1 @@
-<h1>Profile</h1>
+<h1 class="text-5xl font-bold">Profile</h1>

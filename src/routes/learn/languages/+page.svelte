@@ -1,1 +1,1 @@
-<h1>Languages</h1>
+<h1 class="text-5xl font-bold">Languages</h1>

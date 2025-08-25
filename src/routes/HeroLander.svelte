@@ -1,6 +1,6 @@
 <div class="flex-1 flex flex-col">
 	<div class="hero flex-1">
-		<div class="hero-content flex-col lg:flex-row-reverse my-4">
+		<div class="hero-content flex-col lg:flex-row-reverse my-24">
 			<div class="text-center lg:text-left lg:ml-8 shrink-0">
 				<h1 class="text-5xl font-bold">Login now!</h1>
 				<p class="my-6">
@@ -11,7 +11,7 @@
 				<div class="card-body">
 					<fieldset class="fieldset">
 						<label class="floating-label">
-							<input type="email" placeholder="Email" class="input validator" name="email" required />
+							<input type="email" placeholder="Email" class="input validator" name="email" autocomplete="email" required />
 							<span>Email</span>
 							<div class="validator-hint hidden">Enter valid email address</div>
 						</label>
@@ -57,16 +57,32 @@
 		</div>
 		<div class="stat place-items-center">
 			<div class="stat-title">Keybinds</div>
-			<div class="stat-value">1,200</div>
+			<div class="stat-value">1,000+</div>
 			<div class="stat-desc">Windows and Mac support</div>
 		</div>
 	</div>
 	<div class="bg-base-200 py-8 px-10 lg:px-50">
-		<h2 class="text-2xl font-bold mb-4">Discover the benefits!</h2>
+		<h2 class="text-2xl font-bold mb-6">Discover the benefits!</h2>
 		<div class="flex w-full flex-col lg:flex-row">
-			<div class="card bg-base-300 rounded-box grid h-32 grow place-items-center">For professors</div>
-			<div class="divider lg:divider-horizontal">OR</div>
-			<div class="card bg-base-300 rounded-box grid h-32 grow place-items-center">For students</div>
+			<div class="card bg-base-300 rounded-box grid min-h-32 flex-1 p-10">
+				<h2 class="text-xl mb-2">For professors</h2>
+				<ul class="steps steps-vertical">
+					<li class="step step-primary">Useful writing tools and keybinds</li>
+					<li class="step step-primary">Easily publish course materials</li>
+					<li class="step step-primary">Support students in learning</li>
+					<li class="step step-primary">Set up templates for students</li>
+				</ul>
+			</div>
+			<div class="divider lg:divider-horizontal lg:m-8">AND</div>
+			<div class="card bg-base-300 rounded-box grid min-h-32 flex-1 grow p-10">
+				<h2 class="text-xl mb-2">For students</h2>
+				<ul class="steps steps-vertical">
+					<li class="step step-primary">Create your own word lists</li>
+					<li class="step step-primary">Learn new scripts effortlessly</li>
+					<li class="step step-primary">Import from and export to Anki</li>
+					<li class="step step-primary">Rehearse words at the optimal time</li>
+				</ul>
+			</div>
 		</div>
 	</div>
 </div>

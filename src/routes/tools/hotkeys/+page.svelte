@@ -1,4 +1,4 @@
-<h1>Hotkeys for Indo-Europeanists</h1>
+<h1 class="text-5xl font-bold">Hotkeys for Indo-Europeanists</h1>
 
 <ul>
 	<li>Lithuanian</li>

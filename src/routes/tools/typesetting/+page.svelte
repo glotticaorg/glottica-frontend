@@ -1,4 +1,4 @@
-<h2>Generate typesetting templates</h2>
+<h1 class="text-5xl font-bold">Generate typesetting templates</h1>
 
 <ul>
 	<li>Slideshows</li>

@@ -1,1 +1,1 @@
-<h1>Feedback</h1>
+<h1 class="text-5xl font-bold">Feedback</h1>
