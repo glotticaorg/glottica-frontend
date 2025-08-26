@@ -1,9 +1,9 @@
 <script lang="ts">
-import Logo from './Logo.svelte';
-import ThemeToggle from './ThemeToggle.svelte';
+import Logo from './Logo.svelte'
+import ThemeToggle from './ThemeToggle.svelte'
 </script>
 
-<div class="navbar bg-base-100 flex-none">
+<div class="navbar shadow bg-base-100 flex-none">
 	<div class="navbar-start">
 		<a class="btn btn-ghost btn-circle" aria-label="Home" href="/">
 			<svg

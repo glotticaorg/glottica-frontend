@@ -6,6 +6,7 @@ and uses the Google Noto font for maximal glyph coverage.
 </p>
 
 <p>
-For our templates we rely on open-source implementation of the
-Unified stylesheet for linguistics and contributions from publishers.
+For our templates we rely on an open-source implementation of
+the Unified stylesheet for linguistics by XYZ and
+contributions from our institutional partners.
 </p>

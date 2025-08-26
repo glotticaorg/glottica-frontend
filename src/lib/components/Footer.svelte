@@ -3,7 +3,7 @@ import Logo from './Logo.svelte';
 const currentYear = new Date().getFullYear();
 </script>
 
-<footer class="footer sm:footer-horizontal bg-base-100 text-base-content p-10 flex-none">
+<footer class="footer shadow sm:footer-horizontal bg-base-100 text-base-content p-10 flex-none">
 	<aside>
 		<a href="/about/" aria-label="About us">
 			<Logo />
