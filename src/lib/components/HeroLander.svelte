@@ -1,5 +1,5 @@
 <script>
-	import LanguageIcon from "./icons/LanguageIcon.svelte";
+	import LanguageIcon from './icons/LanguageIcon.svelte';
 </script>
 
 <div class="flex-1 flex flex-col">
