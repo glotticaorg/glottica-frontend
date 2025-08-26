@@ -7,7 +7,10 @@
 		<DisclosuresIcon />
 		<div class="text-center lg:text-left">
 			<h1 class="text-5xl font-bold">Disclosures</h1>
-			<p class="py-6">TODO</p>
+			<p class="py-6 max-w-96">
+				As a non-profit we must disclose certain documents on the financials and
+				management of the foundation, these can all be found here.
+			</p>
 		</div>
 	</div>
 </section>

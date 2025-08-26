@@ -4,7 +4,7 @@
 
 <p>
 	This website is maintained by Glottica.org, a non-profit foundation registered
-	in the Netherlands.
+	and located in the Netherlands.
 </p>
 
 <h2 class="text-2xl">I want to help!</h2>
