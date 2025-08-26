@@ -32,7 +32,7 @@
 	<a href="https://daisyui.com/" class="link">DaisyUI</a>
 	for styling the webpages. We use the
 	<a href="https://fonts.google.com/noto" class="link">Google Noto font</a> to ensure
-	maximum glyph coverage.
+	maximum glyph coverage. The icons are provided by HeroIcons.
 </p>
 
 <p>
@@ -43,4 +43,10 @@
 		class="link">AutoHotKey software</a
 	>
 	for Windows and XYZ for Mac.
+</p>
+
+<p>
+	Disclaimer: we do not have any endorsements, sponsorships, or other relations
+	with the technologies on top of which we built this platform or their respective
+	owners.
 </p>
