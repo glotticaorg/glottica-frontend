@@ -1,5 +1,5 @@
 <script>
-import PrivacyIcon from './PrivacyIcon.svelte';
+import PrivacyIcon from "$lib/components/icons/PrivacyIcon.svelte"
 </script>
 
 <div class="hero flex-1">

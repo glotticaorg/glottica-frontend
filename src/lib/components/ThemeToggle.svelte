@@ -1,12 +1,15 @@
 <script lang="ts">
-let darkMode = $state(window?.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches)
+let darkMode = $state(false)
 $effect(() => {
-	document.documentElement.dataset.theme = darkMode ? "synthwave" : "caramellatte"
+	darkMode = document.documentElement.dataset.theme == "dark"
+})
+$effect(() => {
+	document.documentElement.dataset.theme = darkMode ? "dark" : "light"
 })
 </script>
 
-<label class="swap swap-rotate btn btn-ghost btn-circle" aria-label="Visual theme toggle">
-	<input type="checkbox" bind:checked={darkMode} />
+<label class="swap swap-rotate btn btn-ghost btn-circle theme-toggle" aria-label="Visual theme toggle">
+	<input type="checkbox" name="theme-toggle" bind:checked={darkMode} />
 	<svg
 		xmlns="http://www.w3.org/2000/svg"
 		viewBox="0 0 24 24"
