@@ -20,7 +20,7 @@
 								<input
 									type="email"
 									placeholder="Email"
-									class="input validator"
+									class="input validator w-full"
 									name="email"
 									autocomplete="email"
 									required
@@ -32,7 +32,7 @@
 								<input
 									type="password"
 									placeholder="Password"
-									class="input validator"
+									class="input validator w-full"
 									name="password"
 									minlength="8"
 									maxlength="64"
