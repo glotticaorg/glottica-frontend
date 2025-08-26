@@ -3,7 +3,9 @@
 	const currentYear = new Date().getFullYear();
 </script>
 
-<footer class="footer shadow md:footer-horizontal bg-base-100 text-base-content p-10 flex-none">
+<footer
+	class="footer shadow md:footer-horizontal bg-base-100 text-base-content p-10 flex-none"
+>
 	<aside>
 		<a href="/" aria-label="Home">
 			<Logo />

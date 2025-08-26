@@ -34,7 +34,13 @@
 					data-tip="Please specify what typesetting application you want to use."
 					>Application</legend
 				>
-				<input type="radio" name="application" class="btn join-item" aria-label="TeX" value="tex" />
+				<input
+					type="radio"
+					name="application"
+					class="btn join-item"
+					aria-label="TeX"
+					value="tex"
+				/>
 				<input
 					type="radio"
 					name="application"
@@ -64,7 +70,8 @@
 			<fieldset class="fieldset">
 				<legend
 					class="fieldset-legend tooltip"
-					data-tip="Please provide a .woff, .woff2, .ttf, or .otf font file.">Font</legend
+					data-tip="Please provide a .woff, .woff2, .ttf, or .otf font file."
+					>Font</legend
 				>
 				<input
 					type="file"
@@ -101,8 +108,20 @@
 					aria-label="Unified"
 					value="unified"
 				/>
-				<input type="radio" name="citations" class="btn join-item" aria-label="APA" value="apa" />
-				<input type="radio" name="citations" class="btn join-item" aria-label="MLA" value="mla" />
+				<input
+					type="radio"
+					name="citations"
+					class="btn join-item"
+					aria-label="APA"
+					value="apa"
+				/>
+				<input
+					type="radio"
+					name="citations"
+					class="btn join-item"
+					aria-label="MLA"
+					value="mla"
+				/>
 			</div>
 		</li>
 		<li class="step">

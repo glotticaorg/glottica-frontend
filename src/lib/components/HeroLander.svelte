@@ -10,7 +10,8 @@
 				<div class="text-center lg:text-left lg:ml-8 shrink-0">
 					<h1 class="text-5xl font-bold">Login now!</h1>
 					<p class="my-6">
-						Or <a href="/profile/register" class="link">create an account</a> for free to start learning
+						Or <a href="/profile/register" class="link">create an account</a> for
+						free to start learning
 					</p>
 				</div>
 				<div class="card shadow bg-base-100/90 w-full max-w-sm shrink-0">
@@ -26,7 +27,9 @@
 									required
 								/>
 								<span>Email</span>
-								<div class="validator-hint hidden">Enter valid email address</div>
+								<div class="validator-hint hidden">
+									Enter valid email address
+								</div>
 							</label>
 							<label class="floating-label my-2">
 								<input
@@ -39,10 +42,14 @@
 									required
 								/>
 								<span>Password</span>
-								<div class="validator-hint hidden">Passwords must contain 8 to 64 characters</div>
+								<div class="validator-hint hidden">
+									Passwords must contain 8 to 64 characters
+								</div>
 							</label>
 							<div>
-								<a class="link link-hover" href="/profile/password/">Forgot password?</a>
+								<a class="link link-hover" href="/profile/password/"
+									>Forgot password?</a
+								>
 							</div>
 							<button class="btn btn-neutral mt-4">Login</button>
 						</fieldset>
@@ -76,9 +83,13 @@
 		</div>
 	</div>
 	<div class="bg-base-200 py-8 px-10 lg:px-50">
-		<h2 class="text-2xl font-bold mb-6">Discover the benefits for free &mdash; forever!</h2>
+		<h2 class="text-2xl font-bold mb-6">
+			Discover the benefits for free &mdash; forever!
+		</h2>
 		<div class="flex w-full flex-col lg:flex-row">
-			<div class="card shadow bg-base-300 rounded-box grid min-h-32 flex-1 px-8 py-6">
+			<div
+				class="card shadow bg-base-300 rounded-box grid min-h-32 flex-1 px-8 py-6"
+			>
 				<h2 class="text-xl mb-2">For teachers and staff</h2>
 				<ul class="steps steps-vertical">
 					<li class="step step-primary">Useful writing tools and keybinds</li>
@@ -88,7 +99,9 @@
 				</ul>
 			</div>
 			<div class="divider lg:divider-horizontal lg:m-8">AND</div>
-			<div class="card shadow bg-base-300 rounded-box grid min-h-32 flex-1 grow px-8 py-6">
+			<div
+				class="card shadow bg-base-300 rounded-box grid min-h-32 flex-1 grow px-8 py-6"
+			>
 				<h2 class="text-xl mb-2">For students</h2>
 				<ul class="steps steps-vertical">
 					<li class="step step-primary">Create your own word lists</li>
