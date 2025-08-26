@@ -47,6 +47,6 @@
 
 <p>
 	Disclaimer: we do not have any endorsements, sponsorships, or other relations
-	with the technologies on top of which we built this platform or their respective
-	owners.
+	with the technologies on top of which we built this platform or their
+	respective owners.
 </p>

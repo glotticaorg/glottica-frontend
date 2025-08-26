@@ -1,5 +1,5 @@
 <script>
-	import HintButton from "$lib/components/HintButton.svelte";
+	import HintButton from '$lib/components/HintButton.svelte';
 </script>
 
 <div class="hero flex-1">
