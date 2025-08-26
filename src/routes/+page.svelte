@@ -1,7 +1,7 @@
 <script lang="ts">
-// import welcome from '$lib/images/svelte-welcome.webp';
-// import welcomeFallback from '$lib/images/svelte-welcome.png';
-import HeroLander from "$lib/components/HeroLander.svelte";
+	// import welcome from '$lib/images/svelte-welcome.webp';
+	// import welcomeFallback from '$lib/images/svelte-welcome.png';
+	import HeroLander from '$lib/components/HeroLander.svelte';
 </script>
 
 <section class="flex-1 flex flex-column">

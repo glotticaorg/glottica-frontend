@@ -26,7 +26,14 @@
 					<div class="card-body">
 						<fieldset class="fieldset">
 							<label class="floating-label">
-								<input type="email" placeholder="Email" class="input validator" name="email" autocomplete="email" required />
+								<input
+									type="email"
+									placeholder="Email"
+									class="input validator"
+									name="email"
+									autocomplete="email"
+									required
+								/>
 								<span>Email</span>
 								<div class="validator-hint hidden">Enter valid email address</div>
 							</label>
@@ -41,9 +48,7 @@
 									required
 								/>
 								<span>Password</span>
-								<div class="validator-hint hidden">
-									Passwords must contain 8 to 64 characters
-								</div>
+								<div class="validator-hint hidden">Passwords must contain 8 to 64 characters</div>
 							</label>
 							<div>
 								<a class="link link-hover" href="/profile/password/">Forgot password?</a>
@@ -55,7 +60,9 @@
 			</div>
 		</div>
 	</div>
-	<div class="bg-base-100 shadow py-4 lg:py-8 stats stats-vertical lg:stats-horizontal rounded-none">
+	<div
+		class="bg-base-100 shadow py-4 lg:py-8 stats stats-vertical lg:stats-horizontal rounded-none"
+	>
 		<div class="stat place-items-center">
 			<div class="stat-title">Languages</div>
 			<div class="stat-value">7</div>
@@ -104,9 +111,10 @@
 </div>
 
 <style>
-.stat-desc, .stat-title {
-  @supports (color: color-mix(in lab, red, red)) {
-    color: color-mix(in oklab, var(--color-base-content) 80%, transparent);
-  }
-}
+	.stat-desc,
+	.stat-title {
+		@supports (color: color-mix(in lab, red, red)) {
+			color: color-mix(in oklab, var(--color-base-content) 80%, transparent);
+		}
+	}
 </style>

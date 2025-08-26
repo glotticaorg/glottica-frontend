@@ -1,6 +1,6 @@
 <script lang="ts">
-import Logo from './Logo.svelte';
-const currentYear = new Date().getFullYear();
+	import Logo from './Logo.svelte';
+	const currentYear = new Date().getFullYear();
 </script>
 
 <footer class="footer shadow sm:footer-horizontal bg-base-100 text-base-content p-10 flex-none">
