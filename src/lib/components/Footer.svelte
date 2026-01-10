@@ -1,4 +1,6 @@
 <script lang="ts">
+	import FooterTitle from './FooterTitle.svelte';
+	import HoverLink from './HoverLink.svelte';
 	import Logo from './Logo.svelte';
 	const currentYear = new Date().getFullYear();
 </script>
@@ -13,24 +15,29 @@
 		<p>&copy; 2025&ndash;{currentYear}</p>
 	</aside>
 	<nav>
-		<h2 class="footer-title opacity-80">About us</h2>
-		<a class="link link-hover" href="/about/">About us</a>
-		<a class="link link-hover" href="/about/contact/">Contact</a>
-		<a class="link link-hover" href="/donate/">Donate</a>
-		<a class="link link-hover" href="/feedback/">Feedback</a>
+		<FooterTitle>About us</FooterTitle>
+		<HoverLink href="/about/">About us</HoverLink>
+		<HoverLink href="/about/contact/">Contact</HoverLink>
+		<HoverLink href="/donate/">Donate</HoverLink>
+		<HoverLink href="/feedback/">Feedback</HoverLink>
+		<HoverLink href="/about/partnerships/">Partnerships</HoverLink>
 	</nav>
 	<nav>
-		<h2 class="footer-title opacity-80">Resources</h2>
-		<a class="link link-hover" href="/learn/languages/">Languages</a>
-		<a class="link link-hover" href="/learn/scripts/">Scripts</a>
-		<a class="link link-hover" href="/tools/hotkeys/">Keyboard layouts</a>
-		<a class="link link-hover" href="/tools/typesetting/">Typesetting</a>
+		<FooterTitle>Resources</FooterTitle>
+		<HoverLink href="/learn/languages/">Languages</HoverLink>
+		<HoverLink href="/learn/scripts/">Scripts</HoverLink>
+		<HoverLink href="/texts/">Texts</HoverLink>
+		<HoverLink href="/tools/hotkeys/">Keyboard layouts</HoverLink>
+		<HoverLink href="/tools/typesetting/">Typesetting</HoverLink>
+		<HoverLink href="/calendar/">Calendar</HoverLink>
 	</nav>
 	<nav>
-		<h2 class="footer-title opacity-80">Legal</h2>
-		<a class="link link-hover" href="/legal/tos/">Terms of service</a>
-		<a class="link link-hover" href="/legal/privacy/">Privacy statement</a>
-		<a class="link link-hover" href="/legal/cookies/">Cookie policy</a>
-		<a class="link link-hover" href="/legal/disclosures/">Disclosures</a>
+		<FooterTitle>Legal</FooterTitle>
+		<HoverLink href="/legal/cookies/">Cookie policy</HoverLink>
+		<HoverLink href="/legal/disclosures/">Disclosures</HoverLink>
+		<HoverLink href="/legal/privacy/">Privacy statement</HoverLink>
+		<HoverLink href="/legal/tos/">Terms of service</HoverLink>
+		<HoverLink href="/legal/accessibility/">Accessibility</HoverLink>
+		<HoverLink href="/legal/responsible-disclosure/">Responsible disclosure</HoverLink>
 	</nav>
 </footer>

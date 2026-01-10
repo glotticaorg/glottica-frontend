@@ -1,1 +1,5 @@
-<h1 class="text-5xl font-bold">Register account</h1>
+<script>
+	import PageHeader from "$lib/components/PageHeader.svelte";
+
+</script>
+<PageHeader>Register account</PageHeader>

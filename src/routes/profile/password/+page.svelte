@@ -1,1 +1,5 @@
-<h1 class="text-5xl font-bold">Reset password</h1>
+<script>
+	import PageHeader from "$lib/components/PageHeader.svelte";
+
+</script>
+<PageHeader>Reset password</PageHeader>
