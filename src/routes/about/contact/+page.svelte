@@ -1,4 +1,8 @@
-<h1 class="text-3xl">Contact</h1>
+<script>
+	import PageHeader from "$lib/components/PageHeader.svelte";
+</script>
+
+<PageHeader>Contact</PageHeader>
 
 <p>
 	You can reach us for any inquiries at <a

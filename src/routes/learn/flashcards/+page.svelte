@@ -1,24 +1,38 @@
 <script>
+	import AccentJoinButton from '$lib/components/AccentJoinButton.svelte';
+	import AccentJoinSearch from '$lib/components/AccentJoinSearch.svelte';
+	import CenteredCardBody from '$lib/components/CenteredCardBody.svelte';
+	import CardActions from '$lib/components/CardActions.svelte';
+	import CardTitle from '$lib/components/CardTitle.svelte';
+	import CardWide from '$lib/components/CardWide.svelte';
 	import HintButton from '$lib/components/HintButton.svelte';
+	import SendIcon from '$lib/components/icons/SendIcon.svelte';
+	import ResponsiveJoin from '$lib/components/ResponsiveJoin.svelte';
+	import WideJoin from '$lib/components/WideJoin.svelte';
+	import CenteredHero from '$lib/components/CenteredHero.svelte';
 </script>
 
-<div class="hero flex-1">
-	<div class="hero-content text-center">
-		<div class="card bg-base-300 min-w-64 md:min-w-128">
-			<div class="card-body items-center text-center">
-				<h2 class="card-title text-3xl">Horatio</h2>
-				<div class="card-actions my-3">
-					<div class="join join-vertical md:join-horizontal px-4">
-						<button class="btn btn-accent join-item">Horatius</button>
-						<button class="btn btn-accent join-item">garden</button>
-						<button class="btn btn-accent join-item">flowers</button>
-						<button class="btn btn-accent join-item">Henrietta</button>
-					</div>
-				</div>
-				<div class="card-actions">
-					<HintButton />
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
+<CenteredHero>
+	<CardWide>
+		<CenteredCardBody>
+			<CardTitle>Horatio</CardTitle>
+			<CardActions>
+				<ResponsiveJoin>
+					<AccentJoinButton>Horatius</AccentJoinButton>
+					<AccentJoinButton>garden</AccentJoinButton>
+					<AccentJoinButton>flowers</AccentJoinButton>
+					<AccentJoinButton>Henrietta</AccentJoinButton>
+				</ResponsiveJoin>
+				<WideJoin>
+					<AccentJoinSearch placeholder="Answer" />
+					<AccentJoinButton ariaLabel="Send answer">
+						<SendIcon />
+					</AccentJoinButton>
+				</WideJoin>
+			</CardActions>
+			<CardActions>
+				<HintButton />
+			</CardActions>
+		</CenteredCardBody>
+	</CardWide>
+</CenteredHero>

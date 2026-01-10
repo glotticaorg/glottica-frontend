@@ -1,124 +1,63 @@
 <script>
+	import FlexHero from './FlexHero.svelte';
 	import LanguageIcon from './icons/LanguageIcon.svelte';
+	import Link from './Link.svelte';
+	import PageHeader from './PageHeader.svelte';
+	import ResponsiveAlignment from './ResponsiveAlignment.svelte';
 </script>
 
-<div class="flex-1 flex flex-col">
-	<div class="hero flex-1">
-		<div class="relative overflow-hidden w-full">
-			<LanguageIcon />
-			<div class="hero-content flex-col lg:flex-row-reverse my-24">
-				<div class="text-center lg:text-left lg:ml-8 shrink-0">
-					<h1 class="text-5xl font-bold">Login now!</h1>
+<FlexHero>
+	<div class="relative overflow-hidden w-full">
+		<LanguageIcon />
+		<div class="hero-content flex-col lg:flex-row-reverse my-24">
+			<div class="shrink-0 lg:ml-8">
+				<ResponsiveAlignment>
+					<PageHeader>Login now!</PageHeader>
 					<p class="my-6">
 						Or <a href="/profile/register" class="link">create an account</a> for
 						free to start learning
 					</p>
-				</div>
-				<div class="card shadow bg-base-100/90 w-full max-w-sm shrink-0">
-					<div class="card-body">
-						<fieldset class="fieldset">
-							<label class="floating-label">
-								<input
-									type="email"
-									placeholder="Email"
-									class="input validator w-full"
-									name="email"
-									autocomplete="email"
-									required
-								/>
-								<span>Email</span>
-								<div class="validator-hint hidden">
-									Enter valid email address
-								</div>
-							</label>
-							<label class="floating-label my-2">
-								<input
-									type="password"
-									placeholder="Password"
-									class="input validator w-full"
-									name="password"
-									minlength="8"
-									maxlength="64"
-									required
-								/>
-								<span>Password</span>
-								<div class="validator-hint hidden">
-									Passwords must contain 8 to 64 characters
-								</div>
-							</label>
-							<div>
-								<a class="link link-hover" href="/profile/password/"
-									>Forgot password?</a
-								>
+				</ResponsiveAlignment>
+			</div>
+			<div class="card shadow bg-base-100/90 w-full max-w-sm shrink-0">
+				<div class="card-body">
+					<fieldset class="fieldset">
+						<label class="floating-label">
+							<input
+								type="email"
+								placeholder="Email"
+								class="input validator w-full"
+								name="email"
+								autocomplete="email"
+								required
+							/>
+							<span>Email</span>
+							<div class="validator-hint hidden">
+								Enter valid email address
 							</div>
-							<button class="btn btn-neutral mt-4">Login</button>
-						</fieldset>
-					</div>
+						</label>
+						<label class="floating-label my-2">
+							<input
+								type="password"
+								placeholder="Password"
+								class="input validator w-full"
+								name="password"
+								minlength="8"
+								maxlength="64"
+								required
+							/>
+							<span>Password</span>
+							<div class="validator-hint hidden">
+								Passwords must contain 8 to 64 characters
+							</div>
+						</label>
+						<div>
+							<Link href="/profile/password/">Forgot password?</Link>
+						</div>
+						<button class="btn btn-neutral mt-4">Login</button>
+					</fieldset>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div
-		class="bg-base-100 shadow py-4 lg:py-8 stats stats-vertical lg:stats-horizontal rounded-none"
-	>
-		<div class="stat place-items-center">
-			<div class="stat-title">Languages</div>
-			<div class="stat-value">7</div>
-			<div class="stat-desc">Explore all learning materials</div>
-		</div>
-		<div class="stat place-items-center">
-			<div class="stat-title">Universities</div>
-			<div class="stat-value">3</div>
-			<div class="stat-desc">Leading institutional partners</div>
-		</div>
-		<div class="stat place-items-center">
-			<div class="stat-title">Templates</div>
-			<div class="stat-value">35</div>
-			<div class="stat-desc">Office, TeX, and Typst support</div>
-		</div>
-		<div class="stat place-items-center">
-			<div class="stat-title">Keybinds</div>
-			<div class="stat-value">1000+</div>
-			<div class="stat-desc">For both Windows and Mac</div>
-		</div>
-	</div>
-	<div class="bg-base-200 py-8 px-10 lg:px-50">
-		<h2 class="text-2xl font-bold mb-6">
-			Discover the benefits for free &mdash; forever!
-		</h2>
-		<div class="flex w-full flex-col lg:flex-row">
-			<div
-				class="card shadow bg-base-300 rounded-box grid min-h-32 flex-1 px-8 py-6"
-			>
-				<h2 class="text-xl mb-2">For teachers and staff</h2>
-				<ul class="steps steps-vertical">
-					<li class="step step-primary">Useful writing tools and keybinds</li>
-					<li class="step step-primary">Easily publish course materials</li>
-					<li class="step step-primary">Support students in learning</li>
-					<li class="step step-primary">Set up templates for students</li>
-				</ul>
-			</div>
-			<div class="divider lg:divider-horizontal lg:m-8">AND</div>
-			<div
-				class="card shadow bg-base-300 rounded-box grid min-h-32 flex-1 grow px-8 py-6"
-			>
-				<h2 class="text-xl mb-2">For students</h2>
-				<ul class="steps steps-vertical">
-					<li class="step step-primary">Create your own word lists</li>
-					<li class="step step-primary">Learn new scripts effortlessly</li>
-					<li class="step step-primary">Import from and export to Anki</li>
-					<li class="step step-primary">Rehearse at the optimal time</li>
-				</ul>
-			</div>
-		</div>
-	</div>
-</div>
-
-<style>
-	.stat-desc,
-	.stat-title {
-		@supports (color: color-mix(in lab, red, red)) {
-			color: color-mix(in oklab, var(--color-base-content) 80%, transparent);
-		}
-	}
-</style>
+</FlexHero>
