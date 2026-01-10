@@ -1,4 +1,15 @@
-<h1 class="text-5xl font-bold">Hotkeys for Indo-Europeanists</h1>
+<script>
+	import PageHeader from "$lib/components/PageHeader.svelte";
+</script>
+
+<PageHeader>Hotkeys for Indo-Europeanists</PageHeader>
+
+<p>
+	We distribute configurations supporting the following languages and orthographies.
+	Additionally, a bundle containing all hotkeys is provided. This is set up using
+	so-called language "modes", which allow writing many different charactersets
+	without any hassle.
+</p>
 
 <ul>
 	<li>Lithuanian</li>

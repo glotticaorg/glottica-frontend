@@ -1,15 +1,22 @@
 <script>
+	import DocumentHeader from '$lib/components/DocumentHeader.svelte';
 	import TosIcon from '$lib/components/icons/TosIcon.svelte';
+	import LegalText from '$lib/components/LegalText.svelte';
+	import Paragraph from '$lib/components/Paragraph.svelte';
+	import SectionHeader from '$lib/components/SectionHeader.svelte';
 </script>
 
-<section class="hero flex-1">
-	<div class="hero-content flex-col lg:flex-row">
-		<TosIcon />
-		<div class="text-center lg:text-left">
-			<h1 class="text-5xl font-bold">Terms of service</h1>
-			<p class="py-6">TODO</p>
-		</div>
-	</div>
-</section>
+<DocumentHeader
+	header="Terms of service"
+	description="What we expect from you"
+>
+	<TosIcon />
+</DocumentHeader>
 
-<section class="pb-5 px-50">The actual terms of service.</section>
+<LegalText>
+	<SectionHeader>Our terms of service</SectionHeader>
+	<Paragraph>
+		Please do not scrape our database or DDoS our service, that would be really uncool.
+		If we detect any such behavior, we reserve the right to inform your network administrator and block traffic to and from your IP address.
+	</Paragraph>
+</LegalText>
