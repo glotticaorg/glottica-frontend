@@ -1,7 +1,12 @@
 <script lang="ts">
-	import type { HTMLInputAttributes } from 'svelte/elements';
+import type { HTMLInputAttributes } from 'svelte/elements';
 
-	let { name, label, type = 'text', ...attrs }: { name: string; label: string } & HTMLInputAttributes = $props();
+const {
+	name,
+	label,
+	type = 'text',
+	...attrs
+}: { name: string; label: string } & HTMLInputAttributes = $props();
 </script>
 
 <label class="floating-label">

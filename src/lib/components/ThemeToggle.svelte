@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { theme } from '$lib/stores/theme.svelte';
+import { theme } from '$lib/stores/theme.svelte';
 </script>
 
 <label

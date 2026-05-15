@@ -1,9 +1,9 @@
 <script lang="ts">
-	import LegalText from '$lib/components/LegalText.svelte';
-	import PageMeta from '$lib/components/PageMeta.svelte';
-	import Paragraph from '$lib/components/Paragraph.svelte';
-	import PlainDocumentHeader from '$lib/components/PlainDocumentHeader.svelte';
-	import SectionHeader from '$lib/components/SectionHeader.svelte';
+import LegalText from '$lib/components/LegalText.svelte';
+import PageMeta from '$lib/components/PageMeta.svelte';
+import Paragraph from '$lib/components/Paragraph.svelte';
+import PlainDocumentHeader from '$lib/components/PlainDocumentHeader.svelte';
+import SectionHeader from '$lib/components/SectionHeader.svelte';
 </script>
 
 <PageMeta title="Typesetting Templates" description="Generate academic typesetting templates in TeX and Typst for linguistics." />

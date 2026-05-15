@@ -1,8 +1,8 @@
 <script lang="ts">
-	import HomeIcon from './icons/HomeIcon.svelte';
-	import ProfileIcon from './icons/ProfileIcon.svelte';
-	import Logo from './Logo.svelte';
-	import ThemeToggle from './ThemeToggle.svelte';
+import Logo from './Logo.svelte';
+import ThemeToggle from './ThemeToggle.svelte';
+import HomeIcon from './icons/HomeIcon.svelte';
+import ProfileIcon from './icons/ProfileIcon.svelte';
 </script>
 
 <div class="navbar shadow bg-base-100 flex-none">

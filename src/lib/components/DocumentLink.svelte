@@ -1,8 +1,8 @@
 <script>
-	import InlineDocumentIcon from "./icons/InlineDocumentIcon.svelte";
-	import Link from "./Link.svelte";
+import Link from './Link.svelte';
+import InlineDocumentIcon from './icons/InlineDocumentIcon.svelte';
 
-  let { children, href } = $props()
+const { children, href } = $props();
 </script>
 
 <Link href={href} newPage>

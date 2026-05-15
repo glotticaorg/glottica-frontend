@@ -1,11 +1,11 @@
 <script>
-	import LegalText from '$lib/components/LegalText.svelte';
-	import DocumentHeader from '$lib/components/DocumentHeader.svelte';
-	import Link from '$lib/components/Link.svelte';
-	import PageMeta from '$lib/components/PageMeta.svelte';
-	import SecurityIcon from '$lib/components/icons/SecurityIcon.svelte';
-	import Paragraph from '$lib/components/Paragraph.svelte';
-	import SectionHeader from '$lib/components/SectionHeader.svelte';
+import DocumentHeader from '$lib/components/DocumentHeader.svelte';
+import LegalText from '$lib/components/LegalText.svelte';
+import Link from '$lib/components/Link.svelte';
+import PageMeta from '$lib/components/PageMeta.svelte';
+import Paragraph from '$lib/components/Paragraph.svelte';
+import SectionHeader from '$lib/components/SectionHeader.svelte';
+import SecurityIcon from '$lib/components/icons/SecurityIcon.svelte';
 </script>
 
 <PageMeta title="Responsible Disclosure" description="Glottica's procedure for reporting cybersecurity concerns." />

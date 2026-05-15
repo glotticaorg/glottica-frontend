@@ -1,10 +1,10 @@
 <script lang="ts">
-	import { enhance } from '$app/forms';
-	import FlexHero from './FlexHero.svelte';
-	import LanguageIcon from './icons/LanguageIcon.svelte';
-	import Link from './Link.svelte';
-	import PageHeader from './PageHeader.svelte';
-	import ResponsiveAlignment from './ResponsiveAlignment.svelte';
+import { enhance } from '$app/forms';
+import FlexHero from './FlexHero.svelte';
+import Link from './Link.svelte';
+import PageHeader from './PageHeader.svelte';
+import ResponsiveAlignment from './ResponsiveAlignment.svelte';
+import LanguageIcon from './icons/LanguageIcon.svelte';
 </script>
 
 <FlexHero>

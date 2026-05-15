@@ -1,6 +1,6 @@
 <script>
-	import PrivacyIcon from "./icons/PrivacyIcon.svelte";
-	import PrivacyIconSlash from "./icons/PrivacyIconSlash.svelte";
+import PrivacyIcon from './icons/PrivacyIcon.svelte';
+import PrivacyIconSlash from './icons/PrivacyIconSlash.svelte';
 </script>
 
 <label class="swap swap-flip">

@@ -1,6 +1,7 @@
 <script lang="ts">
-  type AndSplitListProps = { title: string, list: string[] }
-  let { left, right }: { left: AndSplitListProps, right: AndSplitListProps } = $props()
+type AndSplitListProps = { title: string; list: string[] };
+const { left, right }: { left: AndSplitListProps; right: AndSplitListProps } =
+	$props();
 </script>
 
 <div class="flex w-full flex-col lg:flex-row">

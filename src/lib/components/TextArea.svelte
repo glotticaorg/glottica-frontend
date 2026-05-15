@@ -1,7 +1,11 @@
 <script lang="ts">
-	import type { HTMLTextareaAttributes } from 'svelte/elements';
+import type { HTMLTextareaAttributes } from 'svelte/elements';
 
-	let { label, name, ...attrs }: { label: string; name: string } & HTMLTextareaAttributes = $props();
+const {
+	label,
+	name,
+	...attrs
+}: { label: string; name: string } & HTMLTextareaAttributes = $props();
 </script>
 
 <label class="floating-label w-full">

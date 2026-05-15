@@ -1,8 +1,14 @@
 <script lang="ts">
-	import type { Snippet } from 'svelte';
-	import type { HTMLSelectAttributes } from 'svelte/elements';
+import type { Snippet } from 'svelte';
+import type { HTMLSelectAttributes } from 'svelte/elements';
 
-	let { children, name, label, ...attrs }: { children: Snippet; name: string; label: string } & HTMLSelectAttributes = $props();
+const {
+	children,
+	name,
+	label,
+	...attrs
+}: { children: Snippet; name: string; label: string } & HTMLSelectAttributes =
+	$props();
 </script>
 
 <label class="select">

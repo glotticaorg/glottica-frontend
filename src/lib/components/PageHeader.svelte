@@ -1,6 +1,6 @@
 <script lang="ts">
-	import type { Snippet } from 'svelte';
-	let { children }: { children: Snippet } = $props();
+import type { Snippet } from 'svelte';
+const { children }: { children: Snippet } = $props();
 </script>
 
 <h1 class="text-5xl font-bold">

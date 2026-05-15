@@ -1,9 +1,9 @@
 <script>
-	import LegalText from "$lib/components/LegalText.svelte";
-	import Link from "$lib/components/Link.svelte";
-	import PageMeta from "$lib/components/PageMeta.svelte";
-	import Paragraph from "$lib/components/Paragraph.svelte";
-	import PlainDocumentHeader from "$lib/components/PlainDocumentHeader.svelte";
+import LegalText from '$lib/components/LegalText.svelte';
+import Link from '$lib/components/Link.svelte';
+import PageMeta from '$lib/components/PageMeta.svelte';
+import Paragraph from '$lib/components/Paragraph.svelte';
+import PlainDocumentHeader from '$lib/components/PlainDocumentHeader.svelte';
 </script>
 
 <PageMeta title="Contact" description="Get in touch with the Glottica team." />

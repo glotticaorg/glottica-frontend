@@ -1,13 +1,13 @@
 <script lang="ts">
-	import { enhance } from '$app/forms';
-	import InfoAlert from '$lib/components/InfoAlert.svelte';
-	import Input from '$lib/components/Input.svelte';
-	import LegalText from '$lib/components/LegalText.svelte';
-	import PageHeader from '$lib/components/PageHeader.svelte';
-	import PageMeta from '$lib/components/PageMeta.svelte';
-	import type { ActionData } from './$types';
+import { enhance } from '$app/forms';
+import InfoAlert from '$lib/components/InfoAlert.svelte';
+import Input from '$lib/components/Input.svelte';
+import LegalText from '$lib/components/LegalText.svelte';
+import PageHeader from '$lib/components/PageHeader.svelte';
+import PageMeta from '$lib/components/PageMeta.svelte';
+import type { ActionData } from './$types';
 
-	let { form }: { form: ActionData } = $props();
+const { form }: { form: ActionData } = $props();
 </script>
 
 <PageMeta title="Register" description="Create a free Glottica account to start learning." />

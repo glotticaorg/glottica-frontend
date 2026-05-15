@@ -7,8 +7,8 @@ const config = {
 	// for more information about preprocessors
 	preprocess: vitePreprocess(),
 	kit: {
-		adapter: adapter({ compress: true }),
-	},
+		adapter: adapter({ compress: true })
+	}
 };
 
 export default config;
