@@ -1,5 +1,5 @@
 <script>
-  let { children } = $props()
+const { children } = $props();
 </script>
 
 <h2 class="footer-title opacity-80">

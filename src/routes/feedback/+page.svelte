@@ -1,16 +1,16 @@
 <script lang="ts">
-	import { enhance } from '$app/forms';
-	import InfoAlert from '$lib/components/InfoAlert.svelte';
-	import Input from '$lib/components/Input.svelte';
-	import LegalText from '$lib/components/LegalText.svelte';
-	import Paragraph from '$lib/components/Paragraph.svelte';
-	import PlainDocumentHeader from '$lib/components/PlainDocumentHeader.svelte';
-	import Select from '$lib/components/Select.svelte';
-	import TextArea from '$lib/components/TextArea.svelte';
-	import PageMeta from '$lib/components/PageMeta.svelte';
-	import type { ActionData } from './$types';
+import { enhance } from '$app/forms';
+import InfoAlert from '$lib/components/InfoAlert.svelte';
+import Input from '$lib/components/Input.svelte';
+import LegalText from '$lib/components/LegalText.svelte';
+import PageMeta from '$lib/components/PageMeta.svelte';
+import Paragraph from '$lib/components/Paragraph.svelte';
+import PlainDocumentHeader from '$lib/components/PlainDocumentHeader.svelte';
+import Select from '$lib/components/Select.svelte';
+import TextArea from '$lib/components/TextArea.svelte';
+import type { ActionData } from './$types';
 
-	let { form }: { form: ActionData } = $props();
+const { form }: { form: ActionData } = $props();
 </script>
 
 <PageMeta title="Feedback" description="Share your feedback and ideas to help improve the Glottica platform." />

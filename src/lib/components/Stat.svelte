@@ -1,6 +1,10 @@
 <script lang="ts">
-	import type { Snippet } from "svelte";
-  let { title, children, description }: { title: string, children: Snippet, description: string } = $props()
+import type { Snippet } from 'svelte';
+const {
+	title,
+	children,
+	description
+}: { title: string; children: Snippet; description: string } = $props();
 </script>
 
 <div class="stat place-items-center">

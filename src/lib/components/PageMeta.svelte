@@ -1,6 +1,9 @@
 <script lang="ts">
-	let { title = '', description = '' }: { title?: string; description?: string } = $props();
-	const fullTitle = title ? `Glottica — ${title}` : 'Glottica';
+const {
+	title = '',
+	description = ''
+}: { title?: string; description?: string } = $props();
+const fullTitle = title ? `Glottica — ${title}` : 'Glottica';
 </script>
 
 <svelte:head>

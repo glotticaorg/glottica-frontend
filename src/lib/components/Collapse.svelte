@@ -1,7 +1,11 @@
 <script lang="ts">
-	import type { Snippet } from "svelte";
+import type { Snippet } from 'svelte';
 
-  let { children, title, open = false }: { children: Snippet, title: string, open?: boolean } = $props()
+const {
+	children,
+	title,
+	open = false
+}: { children: Snippet; title: string; open?: boolean } = $props();
 </script>
 
 <div class="collapse collapse-arrow bg-base-300 shadow mt-4">

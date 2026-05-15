@@ -1,23 +1,23 @@
 <script lang="ts">
-	import LegalText from '$lib/components/LegalText.svelte';
-	import PageMeta from '$lib/components/PageMeta.svelte';
-	import Paragraph from '$lib/components/Paragraph.svelte';
-	import PlainDocumentHeader from '$lib/components/PlainDocumentHeader.svelte';
-	import SectionHeader from '$lib/components/SectionHeader.svelte';
+import LegalText from '$lib/components/LegalText.svelte';
+import PageMeta from '$lib/components/PageMeta.svelte';
+import Paragraph from '$lib/components/Paragraph.svelte';
+import PlainDocumentHeader from '$lib/components/PlainDocumentHeader.svelte';
+import SectionHeader from '$lib/components/SectionHeader.svelte';
 
-	const languages = [
-		'Lithuanian',
-		'Proto-Indo-European',
-		'Old Church Slavic',
-		'Polish',
-		'Serbo-Croatian',
-		'Avestan',
-		'Sanskrit',
-		'Greek',
-		'Gothic',
-		'Hittite',
-		'Latin'
-	];
+const languages = [
+	'Lithuanian',
+	'Proto-Indo-European',
+	'Old Church Slavic',
+	'Polish',
+	'Serbo-Croatian',
+	'Avestan',
+	'Sanskrit',
+	'Greek',
+	'Gothic',
+	'Hittite',
+	'Latin'
+];
 </script>
 
 <PageMeta title="Hotkeys" description="Download keyboard hotkey configurations for Indo-European languages and scripts." />

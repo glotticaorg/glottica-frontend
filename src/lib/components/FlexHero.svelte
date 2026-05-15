@@ -1,5 +1,5 @@
 <script>
-  let { children } = $props()
+const { children } = $props();
 </script>
 
 <div class="hero flex-1">

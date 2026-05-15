@@ -1,13 +1,13 @@
 <script>
-	import DisclosuresIcon from '$lib/components/icons/DisclosuresIcon.svelte';
-	import LegalText from '$lib/components/LegalText.svelte';
-	import DocumentHeader from '$lib/components/DocumentHeader.svelte';
-	import CollapseList from '$lib/components/CollapseList.svelte';
-	import ListDocument from '$lib/components/ListDocument.svelte';
-	import Link from '$lib/components/Link.svelte';
-	import PageMeta from '$lib/components/PageMeta.svelte';
-	import SectionHeader from '$lib/components/SectionHeader.svelte';
-	import Paragraph from '$lib/components/Paragraph.svelte';
+import CollapseList from '$lib/components/CollapseList.svelte';
+import DocumentHeader from '$lib/components/DocumentHeader.svelte';
+import LegalText from '$lib/components/LegalText.svelte';
+import Link from '$lib/components/Link.svelte';
+import ListDocument from '$lib/components/ListDocument.svelte';
+import PageMeta from '$lib/components/PageMeta.svelte';
+import Paragraph from '$lib/components/Paragraph.svelte';
+import SectionHeader from '$lib/components/SectionHeader.svelte';
+import DisclosuresIcon from '$lib/components/icons/DisclosuresIcon.svelte';
 </script>
 
 <PageMeta title="Disclosures" description="Financial and governance disclosure documents for Glottica Foundation." />

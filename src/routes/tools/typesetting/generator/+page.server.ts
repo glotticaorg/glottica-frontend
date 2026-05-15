@@ -9,7 +9,9 @@ export const actions: Actions = {
 		const citations = data.get('citations');
 
 		if (!template || !application || !citations) {
-			return fail(400, { error: 'Please select a content type, application, and citation style.' });
+			return fail(400, {
+				error: 'Please select a content type, application, and citation style.'
+			});
 		}
 
 		// TODO: generate and return the template file

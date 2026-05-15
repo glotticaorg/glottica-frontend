@@ -1,7 +1,7 @@
 <script lang="ts">
-	import LegalText from '$lib/components/LegalText.svelte';
-	import PageMeta from '$lib/components/PageMeta.svelte';
-	import PlainDocumentHeader from '$lib/components/PlainDocumentHeader.svelte';
+import LegalText from '$lib/components/LegalText.svelte';
+import PageMeta from '$lib/components/PageMeta.svelte';
+import PlainDocumentHeader from '$lib/components/PlainDocumentHeader.svelte';
 </script>
 
 <PageMeta title="Template Generator" description="Customise and generate your TeX or Typst template with your institution's branding." />

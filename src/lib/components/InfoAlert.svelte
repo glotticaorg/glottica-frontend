@@ -1,9 +1,9 @@
 <script lang="ts">
-	import type { Snippet } from "svelte";
-	import InfoIcon from "./icons/InfoIcon.svelte";
-	import Bold from "./Bold.svelte";
+import type { Snippet } from 'svelte';
+import Bold from './Bold.svelte';
+import InfoIcon from './icons/InfoIcon.svelte';
 
-  let { children, title }: { children: Snippet, title: string } = $props()
+const { children, title }: { children: Snippet; title: string } = $props();
 </script>
 
 <div role="alert" class="alert alert-info mb-4 shadow">
