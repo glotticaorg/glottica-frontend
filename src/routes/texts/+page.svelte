@@ -179,7 +179,7 @@ const texts = [
 
 const languages = [...new Set(texts.map((t) => t.language))].sort();
 
-const selectedLanguage = $state('All');
+let selectedLanguage = $state('All');
 
 const filtered = $derived(
 	selectedLanguage === 'All'

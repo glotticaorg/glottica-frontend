@@ -5,12 +5,8 @@ const {
 	children,
 	ariaLabel = undefined
 }: { children: Snippet; ariaLabel?: string } = $props();
-const buttonAttrs: { 'aria-label'?: string } = {};
-if (ariaLabel) {
-	buttonAttrs['aria-label'] = ariaLabel;
-}
 </script>
 
-<button class="btn btn-accent join-item" {...buttonAttrs}>
+<button class="btn btn-accent join-item" aria-label={ariaLabel}>
   {@render children?.()}
 </button>
