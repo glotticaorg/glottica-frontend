@@ -2,10 +2,12 @@
 	import DocumentHeader from '$lib/components/DocumentHeader.svelte';
 	import TosIcon from '$lib/components/icons/TosIcon.svelte';
 	import LegalText from '$lib/components/LegalText.svelte';
+	import PageMeta from '$lib/components/PageMeta.svelte';
 	import Paragraph from '$lib/components/Paragraph.svelte';
 	import SectionHeader from '$lib/components/SectionHeader.svelte';
 </script>
 
+<PageMeta title="Terms of Service" description="Glottica's terms of service." />
 <DocumentHeader
 	header="Terms of service"
 	description="What we expect from you"

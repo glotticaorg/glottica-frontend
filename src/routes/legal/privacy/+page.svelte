@@ -3,10 +3,12 @@
 	import InteractivePrivacyIcon from '$lib/components/InteractivePrivacyIcon.svelte';
 	import LegalText from '$lib/components/LegalText.svelte';
 	import Link from '$lib/components/Link.svelte';
+	import PageMeta from '$lib/components/PageMeta.svelte';
 	import Paragraph from '$lib/components/Paragraph.svelte';
 	import SectionHeader from '$lib/components/SectionHeader.svelte';
 </script>
 
+<PageMeta title="Privacy Statement" description="How Glottica collects, uses, and protects your personal data in compliance with the GDPR." />
 <DocumentHeader
 	header="Privacy statement"
 	description="We are committed to protecting your privacy"

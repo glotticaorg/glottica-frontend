@@ -1,10 +1,12 @@
 <script lang="ts">
 	import AndSplit from '$lib/components/AndSplit.svelte';
 	import HeroLander from '$lib/components/HeroLander.svelte';
+	import PageMeta from '$lib/components/PageMeta.svelte';
 	import Stat from '$lib/components/Stat.svelte';
 	import StatsList from '$lib/components/StatsList.svelte';
 </script>
 
+<PageMeta description="A free learning platform and tools for Indo-Europeanists." />
 <HeroLander />
 <StatsList>
   <Stat title="Languages" description="Explore all learning materials">7</Stat>

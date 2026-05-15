@@ -1,10 +1,12 @@
 <script>
 	import LegalText from "$lib/components/LegalText.svelte";
 	import List from "$lib/components/List.svelte";
+	import PageMeta from "$lib/components/PageMeta.svelte";
 	import PlainDocumentHeader from "$lib/components/PlainDocumentHeader.svelte";
 	import SectionHeader from "$lib/components/SectionHeader.svelte";
 </script>
 
+<PageMeta title="Calendar" description="Upcoming seminars and events for Indo-Europeanists." />
 <PlainDocumentHeader>Calendar</PlainDocumentHeader>
 
 <LegalText>

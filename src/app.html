@@ -59,7 +59,10 @@
 			</style>
 		</noscript>
 		<script>
-			if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+			const saved = localStorage.getItem('glottica-theme');
+			if (saved) {
+				document.documentElement.dataset.theme = saved;
+			} else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
 				document.documentElement.dataset.theme = 'dark';
 			} else {
 				document.documentElement.dataset.theme = 'light';

@@ -1,10 +1,10 @@
 <script lang="ts">
-	import type { HTMLInputTypeAttribute } from "svelte/elements";
+	import type { HTMLInputAttributes } from 'svelte/elements';
 
-  let { name, label, type }: { name: string, label: string, type: HTMLInputTypeAttribute } = $props()
+	let { name, label, type = 'text', ...attrs }: { name: string; label: string } & HTMLInputAttributes = $props();
 </script>
 
 <label class="floating-label">
 	<span>{label}</span>
-	<input type={type} placeholder={label} name={name} class="input" />
+	<input {type} {name} placeholder={label} class="input" {...attrs} />
 </label>

@@ -1,12 +1,14 @@
 <script>
 	import Bold from '$lib/components/Bold.svelte';
-import DocumentHeader from '$lib/components/DocumentHeader.svelte';
+	import DocumentHeader from '$lib/components/DocumentHeader.svelte';
 	import CookiesIcon from '$lib/components/icons/CookiesIcon.svelte';
 	import LegalText from '$lib/components/LegalText.svelte';
+	import PageMeta from '$lib/components/PageMeta.svelte';
 	import Paragraph from '$lib/components/Paragraph.svelte';
 	import SectionHeader from '$lib/components/SectionHeader.svelte';
 </script>
 
+<PageMeta title="Cookie Policy" description="Glottica does not use tracking cookies — only secure session cookies while you are logged in." />
 <DocumentHeader
 	header="Cookie policy"
 	description="No cookies were harmed in creating this website, we do not use cookies to track you"

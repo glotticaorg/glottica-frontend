@@ -1,8 +1,10 @@
 <script lang="ts">
-  let { label, name }: { label: string, name: string } = $props()
+	import type { HTMLTextareaAttributes } from 'svelte/elements';
+
+	let { label, name, ...attrs }: { label: string; name: string } & HTMLTextareaAttributes = $props();
 </script>
 
 <label class="floating-label w-full">
 	<span>{label}</span>
-	<textarea rows="10" class="textarea w-full" placeholder={label} name={name}></textarea>
+	<textarea rows="10" class="textarea w-full" placeholder={label} {name} {...attrs}></textarea>
 </label>

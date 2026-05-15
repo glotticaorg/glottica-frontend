@@ -1,4 +1,5 @@
-<script>
+<script lang="ts">
+	import { enhance } from '$app/forms';
 	import FlexHero from './FlexHero.svelte';
 	import LanguageIcon from './icons/LanguageIcon.svelte';
 	import Link from './Link.svelte';
@@ -21,41 +22,43 @@
 			</div>
 			<div class="card shadow bg-base-100/90 w-full max-w-sm shrink-0">
 				<div class="card-body">
-					<fieldset class="fieldset">
-						<label class="floating-label">
-							<input
-								type="email"
-								placeholder="Email"
-								class="input validator w-full"
-								name="email"
-								autocomplete="email"
-								required
-							/>
-							<span>Email</span>
-							<div class="validator-hint hidden">
-								Enter valid email address
+					<form method="POST" use:enhance>
+						<fieldset class="fieldset">
+							<label class="floating-label">
+								<input
+									type="email"
+									placeholder="Email"
+									class="input validator w-full"
+									name="email"
+									autocomplete="email"
+									required
+								/>
+								<span>Email</span>
+								<div class="validator-hint hidden">
+									Enter valid email address
+								</div>
+							</label>
+							<label class="floating-label my-2">
+								<input
+									type="password"
+									placeholder="Password"
+									class="input validator w-full"
+									name="password"
+									minlength="8"
+									maxlength="64"
+									required
+								/>
+								<span>Password</span>
+								<div class="validator-hint hidden">
+									Passwords must contain 8 to 64 characters
+								</div>
+							</label>
+							<div>
+								<Link href="/profile/password/">Forgot password?</Link>
 							</div>
-						</label>
-						<label class="floating-label my-2">
-							<input
-								type="password"
-								placeholder="Password"
-								class="input validator w-full"
-								name="password"
-								minlength="8"
-								maxlength="64"
-								required
-							/>
-							<span>Password</span>
-							<div class="validator-hint hidden">
-								Passwords must contain 8 to 64 characters
-							</div>
-						</label>
-						<div>
-							<Link href="/profile/password/">Forgot password?</Link>
-						</div>
-						<button class="btn btn-neutral mt-4">Login</button>
-					</fieldset>
+							<button type="submit" class="btn btn-neutral mt-4">Login</button>
+						</fieldset>
+					</form>
 				</div>
 			</div>
 		</div>
