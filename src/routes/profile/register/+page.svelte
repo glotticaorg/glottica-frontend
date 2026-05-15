@@ -23,8 +23,8 @@ const { form }: { form: ActionData } = $props();
 			{/if}
 			<Input name="email" type="email" label="Email" required autocomplete="email" />
 			<Input name="username" type="text" label="Username" required autocomplete="username" />
-			<Input name="password" type="password" label="Password" required minlength="8" maxlength="64" autocomplete="new-password" />
-			<Input name="confirm" type="password" label="Confirm password" required minlength="8" maxlength="64" autocomplete="new-password" />
+			<Input name="password" type="password" label="Password" required minlength={8} maxlength={64} autocomplete="new-password" />
+			<Input name="confirm" type="password" label="Confirm password" required minlength={8} maxlength={64} autocomplete="new-password" />
 			<button type="submit" class="btn btn-primary">Create account</button>
 			<p class="text-sm">Already have an account? <a href="/" class="link">Log in</a></p>
 		</form>

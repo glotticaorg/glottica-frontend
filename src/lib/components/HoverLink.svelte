@@ -6,12 +6,9 @@ const {
 	href,
 	newPage = false
 }: { children: Snippet; href: string; newPage?: boolean } = $props();
-const linkAttrs: { target?: '_blank' } = {};
-if (newPage) {
-	linkAttrs.target = '_blank';
-}
+const target = $derived(newPage ? '_blank' : undefined);
 </script>
 
-<a class="link link-hover" href={href} {...linkAttrs}>
+<a class="link link-hover" {href} {target}>
   {@render children?.()}
 </a>

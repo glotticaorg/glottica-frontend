@@ -6,6 +6,7 @@ const {
 	children,
 	name,
 	label,
+	value = $bindable(undefined),
 	...attrs
 }: { children: Snippet; name: string; label: string } & HTMLSelectAttributes =
 	$props();
@@ -13,7 +14,7 @@ const {
 
 <label class="select">
 	<span class="label">{label}</span>
-	<select {name} {...attrs}>
+	<select {name} {value} {...attrs}>
 		{@render children?.()}
 	</select>
 </label>
