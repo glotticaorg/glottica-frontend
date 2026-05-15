@@ -1,5 +1,6 @@
 <script>
 	import AccentJoinButton from '$lib/components/AccentJoinButton.svelte';
+	import PageMeta from '$lib/components/PageMeta.svelte';
 	import AccentJoinSearch from '$lib/components/AccentJoinSearch.svelte';
 	import CenteredCardBody from '$lib/components/CenteredCardBody.svelte';
 	import CardActions from '$lib/components/CardActions.svelte';
@@ -12,6 +13,7 @@
 	import CenteredHero from '$lib/components/CenteredHero.svelte';
 </script>
 
+<PageMeta title="Flashcards" description="Practice Indo-European vocabulary with interactive flashcard exercises." />
 <CenteredHero>
 	<CardWide>
 		<CenteredCardBody>

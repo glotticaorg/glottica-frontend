@@ -2,11 +2,13 @@
 	import Alert from "$lib/components/Alert.svelte";
 	import LegalText from "$lib/components/LegalText.svelte";
 	import Link from "$lib/components/Link.svelte";
+	import PageMeta from "$lib/components/PageMeta.svelte";
 	import Paragraph from "$lib/components/Paragraph.svelte";
 	import PlainDocumentHeader from "$lib/components/PlainDocumentHeader.svelte";
 	import SectionHeader from "$lib/components/SectionHeader.svelte";
 </script>
 
+<PageMeta title="About" description="Learn about Glottica, a non-profit foundation dedicated to Indo-European language learning." />
 <PlainDocumentHeader>About us</PlainDocumentHeader>
 
 <LegalText>

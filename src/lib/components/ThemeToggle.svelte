@@ -1,18 +1,12 @@
 <script lang="ts">
-	let darkMode = $state(false);
-	$effect(() => {
-		darkMode = document.documentElement.dataset.theme == 'dark';
-	});
-	$effect(() => {
-		document.documentElement.dataset.theme = darkMode ? 'dark' : 'light';
-	});
+	import { theme } from '$lib/stores/theme.svelte';
 </script>
 
 <label
 	class="swap swap-rotate btn btn-ghost btn-circle theme-toggle"
 	aria-label="Visual theme toggle"
 >
-	<input type="checkbox" name="theme-toggle" bind:checked={darkMode} />
+	<input type="checkbox" name="theme-toggle" checked={theme.darkMode} onchange={theme.toggle} />
 	<svg
 		xmlns="http://www.w3.org/2000/svg"
 		viewBox="0 0 24 24"

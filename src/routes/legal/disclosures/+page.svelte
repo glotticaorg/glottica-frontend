@@ -5,10 +5,12 @@
 	import CollapseList from '$lib/components/CollapseList.svelte';
 	import ListDocument from '$lib/components/ListDocument.svelte';
 	import Link from '$lib/components/Link.svelte';
+	import PageMeta from '$lib/components/PageMeta.svelte';
 	import SectionHeader from '$lib/components/SectionHeader.svelte';
 	import Paragraph from '$lib/components/Paragraph.svelte';
 </script>
 
+<PageMeta title="Disclosures" description="Financial and governance disclosure documents for Glottica Foundation." />
 <DocumentHeader
 	header="Disclosures"
 	description="As a non-profit foundation we must disclose certain documents on the financials and management of our organisation, these can all be found here."
