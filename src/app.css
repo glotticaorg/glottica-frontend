@@ -1,5 +1,12 @@
 @import "tailwindcss";
-@plugin "daisyui";
+@plugin "daisyui" {
+	exclude: avatar, breadcrumbs, calendar, carousel, chat, checkbox, countdown,
+	         diff, dock, drawer, dropdown, fab, fileinput, filter, hover3d,
+	         hovergallery, indicator, kbd, label, list, loading, mask, menu,
+	         mockup, modal, progress, radialprogress, radio, range, rating,
+	         skeleton, stack, status, tab, table, textrotate, timeline, toast,
+	         toggle, validator;
+}
 
 @plugin "daisyui/theme" {
 	name: "dark";
