@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@import "../node_modules/shadcn-svelte/dist/tailwind.css";
 
 @custom-variant dark (&:where(.dark, .dark *));
 

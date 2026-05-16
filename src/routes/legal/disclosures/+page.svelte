@@ -28,7 +28,7 @@ import SectionHeader from '$lib/components/SectionHeader.svelte';
 		If you notice any such disagreement between the Dutch and English documents or if you see
 		anything that is unclear, please <Link href="/about/contact">reach out to us</Link>.
 	</Paragraph>
-	<CollapseList title="2025 (NL)" open>
+	<CollapseList title="2025 (NL)">
 		<ListDocument href="#">Contactgegevens 2025</ListDocument>
 		<ListDocument href="#">Bestuurders en functies 2025</ListDocument>
 		<ListDocument href="#">Statuten 2025</ListDocument>

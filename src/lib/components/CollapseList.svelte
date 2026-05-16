@@ -1,17 +1,16 @@
 <script lang="ts">
 import type { Snippet } from 'svelte';
-import Collapse from './Collapse.svelte';
 import List from './List.svelte';
 
 const {
 	children,
-	title,
-	open = false
-}: { children: Snippet; title: string; open?: boolean } = $props();
+	title
+}: { children: Snippet; title: string } = $props();
 </script>
 
-<Collapse open={open} title={title}>
+<div class="mt-4 bg-card rounded-xl shadow-xs ring-1 ring-foreground/10 px-6 py-4">
+  <p class="font-semibold text-sm mb-3">{title}</p>
   <List noMargin>
     {@render children?.()}
   </List>
-</Collapse>
+</div>
