@@ -5,7 +5,7 @@ import { defineConfig } from 'vite';
 export default defineConfig({
 	plugins: [tailwindcss(), sveltekit()],
 	build: {
-		target: 'es2022',
+		target: 'es2020',
 		cssMinify: 'lightningcss'
 	}
 });
