@@ -1,12 +1,12 @@
 <script lang="ts">
-import type { HTMLTextareaAttributes } from 'svelte/elements';
-import { Textarea } from '$lib/components/ui/textarea';
 import { Label } from '$lib/components/ui/label';
+import { Textarea } from '$lib/components/ui/textarea';
+import type { HTMLTextareaAttributes } from 'svelte/elements';
 
 const {
-  label,
-  name,
-  ...attrs
+	label,
+	name,
+	...attrs
 }: { label: string; name: string } & HTMLTextareaAttributes = $props();
 </script>
 

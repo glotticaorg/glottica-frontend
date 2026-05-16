@@ -1,11 +1,11 @@
 <script lang="ts">
 import { enhance } from '$app/forms';
-import { Button } from '$lib/components/ui/button';
 import InfoAlert from '$lib/components/InfoAlert.svelte';
 import Input from '$lib/components/Input.svelte';
 import LegalText from '$lib/components/LegalText.svelte';
 import PageHeader from '$lib/components/PageHeader.svelte';
 import PageMeta from '$lib/components/PageMeta.svelte';
+import { Button } from '$lib/components/ui/button';
 import type { ActionData } from './$types';
 
 const { form }: { form: ActionData } = $props();

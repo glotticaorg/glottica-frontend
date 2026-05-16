@@ -1,11 +1,9 @@
 <script lang="ts">
-import type { Snippet } from 'svelte';
 import { Button } from '$lib/components/ui/button';
+import type { Snippet } from 'svelte';
 
-const {
-  children,
-  ...props
-}: { children?: Snippet } & Record<string, unknown> = $props();
+const { children, ...props }: { children?: Snippet } & Record<string, unknown> =
+	$props();
 </script>
 
 <Button variant="ghost" {...props}>

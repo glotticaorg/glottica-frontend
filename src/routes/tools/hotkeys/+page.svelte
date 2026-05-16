@@ -1,11 +1,11 @@
 <script lang="ts">
-import { Badge } from '$lib/components/ui/badge';
-import { Button } from '$lib/components/ui/button';
 import LegalText from '$lib/components/LegalText.svelte';
 import PageMeta from '$lib/components/PageMeta.svelte';
 import Paragraph from '$lib/components/Paragraph.svelte';
 import PlainDocumentHeader from '$lib/components/PlainDocumentHeader.svelte';
 import SectionHeader from '$lib/components/SectionHeader.svelte';
+import { Badge } from '$lib/components/ui/badge';
+import { Button } from '$lib/components/ui/button';
 
 const languages = [
 	'Lithuanian',

@@ -1,13 +1,13 @@
 <script lang="ts">
-import type { HTMLInputAttributes } from 'svelte/elements';
 import { Label } from '$lib/components/ui/label';
 import { cn } from '$lib/utils';
+import type { HTMLInputAttributes } from 'svelte/elements';
 
 const {
-  name,
-  label,
-  class: className,
-  ...attrs
+	name,
+	label,
+	class: className,
+	...attrs
 }: { name: string; label: string } & HTMLInputAttributes = $props();
 </script>
 

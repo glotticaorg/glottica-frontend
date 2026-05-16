@@ -1,15 +1,19 @@
 <script lang="ts">
+import { Label } from '$lib/components/ui/label';
 import type { Snippet } from 'svelte';
 import type { HTMLSelectAttributes } from 'svelte/elements';
-import { Label } from '$lib/components/ui/label';
 
 let {
-  children,
-  name,
-  label,
-  value = $bindable(undefined),
-  ...attrs
-}: { children: Snippet; name: string; label: string } & HTMLSelectAttributes = $props();
+	children,
+	name,
+	label,
+	value = $bindable(undefined),
+	...attrs
+}: {
+	children: Snippet;
+	name: string;
+	label: string;
+} & HTMLSelectAttributes = $props();
 </script>
 
 <div class="flex flex-col gap-1.5">

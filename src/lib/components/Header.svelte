@@ -1,9 +1,9 @@
 <script lang="ts">
+import { Button } from '$lib/components/ui/button';
 import Logo from './Logo.svelte';
 import ThemeToggle from './ThemeToggle.svelte';
 import HomeIcon from './icons/HomeIcon.svelte';
 import ProfileIcon from './icons/ProfileIcon.svelte';
-import { Button } from '$lib/components/ui/button';
 </script>
 
 <header class="flex items-center h-16 px-4 shadow bg-card flex-none">

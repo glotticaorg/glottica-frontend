@@ -2,8 +2,8 @@
 import LegalText from '$lib/components/LegalText.svelte';
 import PageMeta from '$lib/components/PageMeta.svelte';
 import PlainDocumentHeader from '$lib/components/PlainDocumentHeader.svelte';
-import { Input } from '$lib/components/ui/input';
 import { Button } from '$lib/components/ui/button';
+import { Input } from '$lib/components/ui/input';
 </script>
 
 <PageMeta title="Template Generator" description="Customise and generate your TeX or Typst template with your institution's branding." />

@@ -1,6 +1,5 @@
 <script lang="ts">
 import { enhance } from '$app/forms';
-import { Button } from '$lib/components/ui/button';
 import InfoAlert from '$lib/components/InfoAlert.svelte';
 import Input from '$lib/components/Input.svelte';
 import LegalText from '$lib/components/LegalText.svelte';
@@ -9,6 +8,7 @@ import Paragraph from '$lib/components/Paragraph.svelte';
 import PlainDocumentHeader from '$lib/components/PlainDocumentHeader.svelte';
 import Select from '$lib/components/Select.svelte';
 import TextArea from '$lib/components/TextArea.svelte';
+import { Button } from '$lib/components/ui/button';
 import type { ActionData } from './$types';
 
 const { form }: { form: ActionData } = $props();
