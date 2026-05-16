@@ -93,6 +93,10 @@
 
 }
 
+html {
+	background-color: var(--card);
+}
+
 * {
 	font-family: "Noto Sans", sans-serif;
 }

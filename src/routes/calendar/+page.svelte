@@ -13,23 +13,23 @@ import SectionHeader from '$lib/components/SectionHeader.svelte';
 	<SectionHeader>2025</SectionHeader>
 
 	<List>
-		<li class="list-row">
-			<div class="text-4xl font-thin opacity-60 tabular-nums my-auto">06 JUN</div>
-			<div class="my-auto">
+		<li class="flex items-center gap-6 py-4">
+			<div class="text-4xl font-thin opacity-60 tabular-nums shrink-0 w-28 whitespace-nowrap">06 JUN</div>
+			<div class="flex-1 min-w-0">
 				<div>Waves Across the Atlantic: Reevaluating the Genetic Position of Faroese</div>
 				<div class="text-xs uppercase font-semibold opacity-60">Simon den Hertog</div>
 			</div>
-			<div class="my-auto">Seminar</div>
-			<div class="my-auto">Leiden University</div>
+			<div class="shrink-0 text-sm text-muted-foreground w-24">Seminar</div>
+			<div class="shrink-0 text-sm text-muted-foreground w-36">Leiden University</div>
 		</li>
-		<li class="list-row">
-			<div class="text-4xl font-thin opacity-60 tabular-nums my-auto">25 APR</div>
-			<div class="my-auto">
+		<li class="flex items-center gap-6 py-4">
+			<div class="text-4xl font-thin opacity-60 tabular-nums shrink-0 w-28 whitespace-nowrap">25 APR</div>
+			<div class="flex-1 min-w-0">
 				<div>Tussen Taal en Dialect</div>
 				<div class="text-xs uppercase font-semibold opacity-60">Yoïn van Spijk</div>
 			</div>
-			<div class="my-auto">Seminar</div>
-			<div class="my-auto">Leiden University</div>
+			<div class="shrink-0 text-sm text-muted-foreground w-24">Seminar</div>
+			<div class="shrink-0 text-sm text-muted-foreground w-36">Leiden University</div>
 		</li>
 	</List>
 </LegalText>
