@@ -1,24 +1,25 @@
 <script lang="ts">
 import LegalText from '$lib/components/LegalText.svelte';
 import PageMeta from '$lib/components/PageMeta.svelte';
-import Paragraph from '$lib/components/Paragraph.svelte';
 import PlainDocumentHeader from '$lib/components/PlainDocumentHeader.svelte';
-import SectionHeader from '$lib/components/SectionHeader.svelte';
 import { Badge } from '$lib/components/ui/badge';
 import { Button } from '$lib/components/ui/button';
+import { Download, Package } from '@lucide/svelte';
+
+let expanded = $state(false);
 
 const languages = [
-	'Lithuanian',
-	'Proto-Indo-European',
-	'Old Church Slavic',
-	'Polish',
-	'Serbo-Croatian',
-	'Avestan',
-	'Sanskrit',
-	'Greek',
-	'Gothic',
-	'Hittite',
-	'Latin'
+	{ name: 'Lithuanian', branch: 'Baltic' },
+	{ name: 'Proto-Indo-European', branch: 'Reconstructed' },
+	{ name: 'Old Church Slavic', branch: 'Slavic' },
+	{ name: 'Polish', branch: 'Slavic' },
+	{ name: 'Serbo-Croatian', branch: 'Slavic' },
+	{ name: 'Avestan', branch: 'Iranian' },
+	{ name: 'Sanskrit', branch: 'Indo-Aryan' },
+	{ name: 'Greek', branch: 'Hellenic' },
+	{ name: 'Gothic', branch: 'Germanic' },
+	{ name: 'Hittite', branch: 'Anatolian' },
+	{ name: 'Latin', branch: 'Italic' }
 ];
 </script>
 
@@ -26,26 +27,56 @@ const languages = [
 <PlainDocumentHeader>Hotkeys for Indo-Europeanists</PlainDocumentHeader>
 
 <LegalText>
-	<Paragraph>
-		We distribute configurations supporting the following languages and orthographies.
-		Additionally, a bundle containing all hotkeys is provided. This is set up using
-		so-called language "modes", which allow writing many different charactersets
-		without any hassle.
-	</Paragraph>
+	<p class="mb-6 text-muted-foreground">
+		Keyboard configurations supporting Indo-European languages and orthographies, using language
+		"modes" so you can switch between character sets without any hassle.
+	</p>
 
-	<SectionHeader>Supported languages</SectionHeader>
-	<div class="flex flex-wrap gap-2 mb-6">
-		{#each languages as lang}
-			<Badge variant="outline" class="text-sm bg-card">{lang}</Badge>
-		{/each}
+	<div class="flex items-start gap-4 rounded-xl border border-border bg-card p-5 mb-8">
+		<Package class="size-5 text-muted-foreground shrink-0 mt-0.5" />
+		<div class="flex flex-col gap-1">
+			<div class="flex items-center gap-2">
+				<h3 class="text-base font-semibold">Full bundle</h3>
+				<button
+					onclick={() => expanded = !expanded}
+					class="text-xs font-medium px-2 py-0.5 rounded-full border border-border bg-secondary text-secondary-foreground hover:bg-muted transition-colors cursor-pointer"
+				>
+					All {languages.length} languages {expanded ? '▴' : '▾'}
+				</button>
+			</div>
+			{#if expanded}
+				<div class="flex flex-wrap gap-1 mt-1">
+					{#each languages as lang}
+						<Badge variant="outline" class="text-xs">{lang.name}</Badge>
+					{/each}
+				</div>
+			{/if}
+			<p class="text-sm text-muted-foreground">
+				Download a single bundle containing configurations for all supported languages and modes.
+			</p>
+			<div class="mt-3">
+				<Button href="/tools/hotkeys">
+					<Download class="size-4" />
+					Download full bundle
+				</Button>
+			</div>
+		</div>
 	</div>
 
-	<SectionHeader>Downloads</SectionHeader>
-	<Paragraph>
-		Download a configuration for a single language or the full bundle for all supported modes.
-	</Paragraph>
-	<div class="flex flex-col sm:flex-row gap-3 mt-2">
-		<Button variant="outline" href="/tools/hotkeys">Download by language</Button>
-		<Button href="/tools/hotkeys">Download full bundle</Button>
+	<p class="mb-4 text-sm text-muted-foreground">Alternatively, download a configuration for a single language:</p>
+
+	<div class="flex flex-col divide-y divide-border rounded-xl border border-border bg-card overflow-hidden">
+		{#each languages as lang}
+			<div class="flex items-center justify-between gap-4 px-5 py-3">
+				<div class="flex items-center gap-3">
+					<span class="font-medium">{lang.name}</span>
+					<Badge variant="outline" class="text-xs">{lang.branch}</Badge>
+				</div>
+				<Button variant="outline" size="sm" href="/tools/hotkeys" class="shrink-0">
+					<Download class="size-3.5" />
+					Download
+				</Button>
+			</div>
+		{/each}
 	</div>
 </LegalText>

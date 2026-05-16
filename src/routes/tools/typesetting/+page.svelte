@@ -1,55 +1,67 @@
 <script lang="ts">
+import CardGrid from '$lib/components/CardGrid.svelte';
+import GridCard from '$lib/components/GridCard.svelte';
 import LegalText from '$lib/components/LegalText.svelte';
 import PageMeta from '$lib/components/PageMeta.svelte';
-import Paragraph from '$lib/components/Paragraph.svelte';
 import PlainDocumentHeader from '$lib/components/PlainDocumentHeader.svelte';
-import SectionHeader from '$lib/components/SectionHeader.svelte';
+import { Badge } from '$lib/components/ui/badge';
 import { Button } from '$lib/components/ui/button';
+import { BookOpen, Code2, FileText, Palette } from '@lucide/svelte';
 </script>
 
 <PageMeta title="Typesetting Templates" description="Generate academic typesetting templates in TeX and Typst for linguistics." />
-<PlainDocumentHeader>Generate typesetting templates</PlainDocumentHeader>
+<PlainDocumentHeader>Typesetting templates</PlainDocumentHeader>
 
 <LegalText>
-	<Paragraph>
-		Generate ready-to-use document templates tailored to your institution. Choose a content type,
-		typesetting application, and citation style, then optionally upload your logo and brand color.
-	</Paragraph>
+	<p class="mb-6 text-muted-foreground">
+		Generate document templates for your institution in seconds. Choose a content type,
+		typesetting application, and citation style — then optionally add your logo and brand colour.
+	</p>
 
-	<div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-6">
-		<div class="bg-card rounded-xl shadow p-5 border border-border">
-			<h3 class="text-lg font-semibold mb-2">Document types</h3>
-			<ul class="list-disc list-inside text-sm space-y-1">
+	<CardGrid>
+		<GridCard>
+			<FileText class="size-5 text-muted-foreground mb-1" />
+			<h3 class="text-lg font-semibold">Document types</h3>
+			<ul class="text-sm text-muted-foreground space-y-1 mt-1">
 				<li>Papers</li>
 				<li>Syllabi</li>
 				<li>Slideshows</li>
 			</ul>
-		</div>
-		<div class="bg-card rounded-xl shadow p-5 border border-border">
-			<h3 class="text-lg font-semibold mb-2">Applications</h3>
-			<ul class="list-disc list-inside text-sm space-y-1">
+		</GridCard>
+		<GridCard>
+			<Code2 class="size-5 text-muted-foreground mb-1" />
+			<h3 class="text-lg font-semibold">Applications</h3>
+			<ul class="text-sm text-muted-foreground space-y-1 mt-1">
 				<li>TeX</li>
 				<li>Typst</li>
 			</ul>
-		</div>
-		<div class="bg-card rounded-xl shadow p-5 border border-border">
-			<h3 class="text-lg font-semibold mb-2">Citation styles</h3>
-			<ul class="list-disc list-inside text-sm space-y-1">
+		</GridCard>
+		<GridCard>
+			<BookOpen class="size-5 text-muted-foreground mb-1" />
+			<h3 class="text-lg font-semibold">Citation styles</h3>
+			<ul class="text-sm text-muted-foreground space-y-1 mt-1">
 				<li>Unified Stylesheet</li>
 				<li>APA</li>
 				<li>MLA</li>
 			</ul>
+		</GridCard>
+	</CardGrid>
+
+	<div class="mt-8 flex items-start gap-4 rounded-xl border border-border bg-card p-5">
+		<Palette class="size-5 text-muted-foreground shrink-0 mt-0.5" />
+		<div class="flex flex-col gap-1">
+			<div class="flex items-center gap-2">
+				<h3 class="text-base font-semibold">Branding</h3>
+				<Badge variant="secondary">Optional</Badge>
+			</div>
+			<p class="text-sm text-muted-foreground">
+				Upload your institution's logo and provide a brand colour to personalise cover pages and headings.
+				Supports <code class="font-mono">.svg</code> and <code class="font-mono">.png</code> logos.
+			</p>
 		</div>
 	</div>
 
-	<SectionHeader>Customisation</SectionHeader>
-	<Paragraph>
-		Optionally upload your institution's logo and provide a brand color to be used on cover pages
-		and headings. Both <code class="font-mono">.svg</code> and
-		<code class="font-mono">.png</code> logos are supported.
-	</Paragraph>
-
-	<div class="mt-6">
-		<Button href="/tools/typesetting/generator">Generate now</Button>
+	<div class="mt-8">
+		<Button href="/tools/typesetting/generator" size="lg">Generate your template</Button>
 	</div>
 </LegalText>
