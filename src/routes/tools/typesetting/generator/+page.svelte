@@ -1,9 +1,19 @@
 <script lang="ts">
+import Input from '$lib/components/Input.svelte';
 import LegalText from '$lib/components/LegalText.svelte';
 import PageMeta from '$lib/components/PageMeta.svelte';
 import PlainDocumentHeader from '$lib/components/PlainDocumentHeader.svelte';
+import SectionHeader from '$lib/components/SectionHeader.svelte';
+import { Badge } from '$lib/components/ui/badge';
 import { Button } from '$lib/components/ui/button';
-import { Input } from '$lib/components/ui/input';
+
+const radioClass =
+	'block border border-border rounded-md px-3 py-1.5 text-sm bg-card peer-checked:bg-primary peer-checked:text-primary-foreground peer-checked:border-primary transition-colors cursor-pointer';
+
+const ball =
+	'flex items-center justify-center size-7 rounded-full bg-primary text-primary-foreground text-xs font-bold shrink-0';
+
+let color = $state('#3b82f6');
 </script>
 
 <PageMeta title="Template Generator" description="Customise and generate your TeX or Typst template with your institution's branding." />
@@ -11,76 +21,108 @@ import { Input } from '$lib/components/ui/input';
 
 <LegalText>
 	<form method="POST" class="py-4">
-		<ol class="flex flex-col gap-8 w-full">
-			<li class="flex gap-4">
-				<span class="flex items-center justify-center size-7 rounded-full bg-primary text-primary-foreground text-xs font-bold shrink-0 mt-0.5">1</span>
-				<div class="flex-1">
-					<legend class="text-sm font-medium mb-2">Content type</legend>
-					<div class="flex flex-col lg:flex-row gap-1">
+		<div class="mb-6">
+			<SectionHeader>Template settings</SectionHeader>
+		</div>
+		<ol class="flex flex-col gap-8">
+
+			<li class="flex items-center gap-4">
+				<span class={ball}>1</span>
+				<fieldset class="flex-1 flex flex-col gap-2">
+					<legend class="text-sm font-medium">Content type</legend>
+					<div class="flex flex-wrap gap-1">
 						{#each [['paper', 'Paper'], ['syllabus', 'Syllabus'], ['slides', 'Slides']] as [value, label]}
-							<label class="cursor-pointer">
+							<label>
 								<input type="radio" name="template" {value} class="sr-only peer" />
-								<span class="block border border-border rounded-md px-3 py-1.5 text-sm bg-card peer-checked:bg-primary peer-checked:text-primary-foreground peer-checked:border-primary transition-colors">{label}</span>
+								<span class={radioClass}>{label}</span>
 							</label>
 						{/each}
 					</div>
-				</div>
+				</fieldset>
 			</li>
-			<li class="flex gap-4">
-				<span class="flex items-center justify-center size-7 rounded-full bg-primary text-primary-foreground text-xs font-bold shrink-0 mt-0.5">2</span>
-				<div class="flex-1">
-					<legend class="text-sm font-medium mb-2" title="Please specify what typesetting application you want to use.">Application</legend>
-					<div class="flex flex-col lg:flex-row gap-1">
+
+			<li class="flex items-center gap-4">
+				<span class={ball}>2</span>
+				<fieldset class="flex-1 flex flex-col gap-2">
+					<legend class="text-sm font-medium">Application</legend>
+					<div class="flex flex-wrap gap-1">
 						{#each [['tex', 'TeX'], ['typst', 'Typst']] as [value, label]}
-							<label class="cursor-pointer">
+							<label>
 								<input type="radio" name="application" {value} class="sr-only peer" />
-								<span class="block border border-border rounded-md px-3 py-1.5 text-sm bg-card peer-checked:bg-primary peer-checked:text-primary-foreground peer-checked:border-primary transition-colors">{label}</span>
+								<span class={radioClass}>{label}</span>
 							</label>
 						{/each}
 					</div>
-				</div>
+				</fieldset>
 			</li>
-			<li class="flex gap-4">
-				<span class="flex items-center justify-center size-7 rounded-full bg-primary text-primary-foreground text-xs font-bold shrink-0 mt-0.5">3</span>
-				<div class="flex-1">
-					<legend class="text-sm font-medium mb-2" title="You can provide your institution's logo as a .svg or .png file to be displayed on the cover page.">Affiliation logo</legend>
-					<Input type="file" name="logo" aria-label="affiliation logo" accept=".svg,.png" />
-				</div>
-			</li>
-			<li class="flex gap-4">
-				<span class="flex items-center justify-center size-7 rounded-full bg-primary text-primary-foreground text-xs font-bold shrink-0 mt-0.5">4</span>
-				<div class="flex-1">
-					<legend class="text-sm font-medium mb-2" title="Please provide a .woff, .woff2, .ttf, or .otf font file.">Font</legend>
-					<Input type="file" name="font" aria-label="font" accept=".woff,.woff2,.otf,.ttf" />
-				</div>
-			</li>
-			<li class="flex gap-4">
-				<span class="flex items-center justify-center size-7 rounded-full bg-primary text-primary-foreground text-xs font-bold shrink-0 mt-0.5">5</span>
-				<div class="flex-1">
-					<legend class="text-sm font-medium mb-2" title="Please consult your institution's style guide for the exact value.">Theme color</legend>
-					<Input type="text" name="color" placeholder="#000000" aria-label="theme color" pattern="^#[0-9a-fA-F]{6}$" />
-				</div>
-			</li>
-			<li class="flex gap-4">
-				<span class="flex items-center justify-center size-7 rounded-full bg-primary text-primary-foreground text-xs font-bold shrink-0 mt-0.5">6</span>
-				<div class="flex-1">
-					<legend class="text-sm font-medium mb-2">Citation style</legend>
-					<div class="flex flex-col lg:flex-row gap-1">
+
+			<li class="flex items-center gap-4">
+				<span class={ball}>3</span>
+				<fieldset class="flex-1 flex flex-col gap-2">
+					<legend class="text-sm font-medium">Citation style</legend>
+					<div class="flex flex-wrap gap-1">
 						{#each [['unified', 'Unified'], ['apa', 'APA'], ['mla', 'MLA']] as [value, label]}
-							<label class="cursor-pointer">
+							<label>
 								<input type="radio" name="citations" {value} class="sr-only peer" />
-								<span class="block border border-border rounded-md px-3 py-1.5 text-sm bg-card peer-checked:bg-primary peer-checked:text-primary-foreground peer-checked:border-primary transition-colors">{label}</span>
+								<span class={radioClass}>{label}</span>
 							</label>
 						{/each}
 					</div>
+				</fieldset>
+			</li>
+
+		</ol>
+
+		<div class="flex items-center gap-2 mt-10 mb-6">
+			<SectionHeader>Branding</SectionHeader>
+			<Badge variant="secondary" class="mb-0.5">Optional</Badge>
+		</div>
+
+		<ol class="flex flex-col gap-8" start={4}>
+
+			<li class="flex items-center gap-4">
+				<span class={ball}>4</span>
+				<div class="flex-1 flex flex-col gap-1">
+					<Input type="file" name="logo" label="Affiliation logo" accept=".svg,.png" />
+					<p class="text-xs text-muted-foreground">.svg or .png, shown on the cover page</p>
 				</div>
 			</li>
-			<li class="flex gap-4">
-				<span class="flex items-center justify-center size-7 rounded-full bg-primary text-primary-foreground text-xs font-bold shrink-0 mt-0.5">7</span>
-				<div class="flex-1">
-					<Button type="submit">Generate!</Button>
+
+			<li class="flex items-center gap-4">
+				<span class={ball}>5</span>
+				<div class="flex-1 flex flex-col gap-1">
+					<Input type="file" name="font" label="Font" accept=".woff,.woff2,.otf,.ttf" />
+					<p class="text-xs text-muted-foreground">.woff, .woff2, .otf, or .ttf</p>
 				</div>
 			</li>
+
+			<li class="flex items-center gap-4">
+				<span class={ball}>6</span>
+				<div class="flex-1 flex flex-col gap-1.5">
+					<label class="text-sm font-medium leading-none" for="color">Theme color</label>
+					<div class="flex items-center gap-2">
+						<input
+							type="color"
+							bind:value={color}
+							class="h-9 w-12 rounded-md border border-input bg-card cursor-pointer p-1 shrink-0"
+						/>
+						<input
+							id="color"
+							type="text"
+							name="color"
+							bind:value={color}
+							pattern="^#[0-9a-fA-F]{6}$"
+							class="h-9 w-32 rounded-md border border-input bg-card px-2.5 font-mono text-sm outline-none focus-visible:ring-3 focus-visible:ring-ring/50 focus-visible:border-ring transition-[color,box-shadow]"
+						/>
+					</div>
+					<p class="text-xs text-muted-foreground">From your institution's style guide</p>
+				</div>
+			</li>
+
+			<li class="flex items-center gap-4">
+				<Button type="submit">Generate template</Button>
+			</li>
+
 		</ol>
 	</form>
 </LegalText>
