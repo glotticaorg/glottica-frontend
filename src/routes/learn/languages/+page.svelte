@@ -115,7 +115,7 @@ const languages = [
 
 	<CardGrid>
 		{#each languages as lang}
-			<LinguisticCard name={lang.name} badge={lang.branch} sample={lang.sample} sampleTitle={lang.romanized} description={lang.description} />
+			<LinguisticCard name={lang.name} badge={lang.branch} sample={lang.sample} description={lang.description} />
 		{/each}
 	</CardGrid>
 </LegalText>

@@ -75,7 +75,7 @@ const scripts = [
 
 	<CardGrid>
 		{#each scripts as script}
-			<LinguisticCard name={script.name} badge={script.type} sample={script.sample} sampleTitle={script.language} description={script.description} />
+			<LinguisticCard name={script.name} badge={script.type} sample={script.sample} description={script.description} />
 		{/each}
 	</CardGrid>
 </LegalText>
