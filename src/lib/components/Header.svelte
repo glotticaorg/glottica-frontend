@@ -1,8 +1,8 @@
 <script lang="ts">
 import { Button } from '$lib/components/ui/button';
+import { House, UserRound } from '@lucide/svelte';
 import Logo from './Logo.svelte';
 import ThemeToggle from './ThemeToggle.svelte';
-import { House, UserRound } from '@lucide/svelte';
 </script>
 
 <header class="flex items-center h-16 px-4 shadow bg-card flex-none">
