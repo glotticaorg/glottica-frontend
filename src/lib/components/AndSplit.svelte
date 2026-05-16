@@ -1,36 +1,44 @@
 <script lang="ts">
-  type AndSplitListProps = { title: string, list: string[] }
-  let { left, right }: { left: AndSplitListProps, right: AndSplitListProps } = $props()
+type AndSplitListProps = { title: string; list: string[] };
+const { left, right }: { left: AndSplitListProps; right: AndSplitListProps } =
+	$props();
 </script>
 
-<div class="flex w-full flex-col lg:flex-row">
-	<div
-		class="card shadow bg-base-300 rounded-box grid min-h-32 flex-1 px-8 py-6"
-	>
-		<h3 class="text-xl mb-2">{left.title}</h3>
-		<ul class="steps steps-vertical">
-      {#each left.list as item}
-        <li class="step step-primary">{item}</li>
+<div class="flex w-full flex-col lg:flex-row items-stretch">
+  <div class="flex-1 px-8 py-6">
+    <h3 class="text-xl font-semibold mb-4">{left.title}</h3>
+    <ol class="flex flex-col gap-2">
+      {#each left.list as item, i}
+        <li class="flex items-center gap-3">
+          <span class="flex items-center justify-center size-6 rounded-full bg-primary text-primary-foreground text-xs font-bold shrink-0">{i + 1}</span>
+          <span class="text-sm">{item}</span>
+        </li>
       {/each}
-		</ul>
-	</div>
-	<div class="divider lg:divider-horizontal lg:m-8">AND</div>
-	<div
-		class="card shadow bg-base-300 rounded-box grid min-h-32 flex-1 grow px-8 py-6"
-	>
-		<h3 class="text-xl mb-2">{right.title}</h3>
-		<ul class="steps steps-vertical">
-      {#each right.list as item}
-        <li class="step step-primary">{item}</li>
-      {/each}
-		</ul>
-	</div>
-</div>
+    </ol>
+  </div>
 
-<style>
-	.step {
-		text-align: left;
-		justify-items: normal;
-		align-items: center;
-	}
-</style>
+  <!-- Mobile: horizontal rule with AND -->
+  <div class="flex lg:hidden items-center py-2">
+    <div class="flex-1 h-px bg-foreground/20"></div>
+    <span class="text-xs font-bold text-muted-foreground px-3">AND</span>
+    <div class="flex-1 h-px bg-foreground/20"></div>
+  </div>
+
+  <!-- Desktop: vertical rule with AND centred over it -->
+  <div class="hidden lg:flex flex-col items-center self-stretch relative px-6 shrink-0">
+    <div class="absolute inset-y-0 left-1/2 -translate-x-1/2 w-0.5 bg-foreground/20"></div>
+    <span class="relative z-10 my-auto bg-muted px-2 py-1 text-sm font-bold text-muted-foreground">AND</span>
+  </div>
+
+  <div class="flex-1 px-8 py-6">
+    <h3 class="text-xl font-semibold mb-4">{right.title}</h3>
+    <ol class="flex flex-col gap-2">
+      {#each right.list as item, i}
+        <li class="flex items-center gap-3">
+          <span class="flex items-center justify-center size-6 rounded-full bg-primary text-primary-foreground text-xs font-bold shrink-0">{i + 1}</span>
+          <span class="text-sm">{item}</span>
+        </li>
+      {/each}
+    </ol>
+  </div>
+</div>

@@ -1,7 +1,7 @@
 <script>
-  let { children } = $props()
+const { children } = $props();
 </script>
 
-<h2 class="card-title text-3xl">
+<h2 class="text-3xl font-bold leading-none tracking-tight">
   {@render children?.()}
 </h2>

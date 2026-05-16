@@ -1,25 +1,25 @@
 <script lang="ts">
-	import HomeIcon from './icons/HomeIcon.svelte';
-	import ProfileIcon from './icons/ProfileIcon.svelte';
-	import Logo from './Logo.svelte';
-	import ThemeToggle from './ThemeToggle.svelte';
+import { House, UserRound } from '@lucide/svelte';
+import { Button } from '$lib/components/ui/button';
+import Logo from './Logo.svelte';
+import ThemeToggle from './ThemeToggle.svelte';
 </script>
 
-<div class="navbar shadow bg-base-100 flex-none">
-	<div class="navbar-start">
-		<a class="btn btn-ghost btn-circle" aria-label="Home" href="/">
-			<HomeIcon />
-		</a>
-	</div>
-	<div class="navbar-center">
-		<a href="/" aria-label="Home logo">
-			<Logo />
-		</a>
-	</div>
-	<div class="navbar-end">
-		<ThemeToggle />
-		<a class="btn btn-ghost btn-circle" aria-label="Profile" href="/profile/">
-			<ProfileIcon />
-		</a>
-	</div>
-</div>
+<header class="flex items-center h-16 px-4 shadow bg-card flex-none">
+  <div class="flex-1">
+    <Button variant="ghost" size="icon" href="/" aria-label="Home">
+      <House class="size-6" />
+    </Button>
+  </div>
+  <div class="flex-none">
+    <a href="/" aria-label="Home logo">
+      <Logo />
+    </a>
+  </div>
+  <div class="flex-1 flex justify-end items-center gap-1">
+    <ThemeToggle />
+    <Button variant="ghost" size="icon" href="/profile/" aria-label="Profile">
+      <UserRound class="size-6" />
+    </Button>
+  </div>
+</header>
