@@ -14,7 +14,9 @@
 		"lint": "biome check .",
 		"lint:fix": "biome check --write .",
 		"test:unit": "vitest",
-		"test": "npm run test:unit -- --run"
+		"test": "npm run test:unit -- --run",
+		"compat": "es-check es2020 'build/client/**/*.js' --module",
+		"a11y": "lighthouse http://localhost:4173 --only-categories=accessibility --output=html --output-path=./a11y-report.html --chrome-flags='--headless'"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^1.9.0",
@@ -25,6 +27,9 @@
 		"@sveltejs/vite-plugin-svelte": "^7.0.0",
 		"@vitest/browser": "^4.1.2",
 		"bits-ui": "^2.18.1",
+		"browserslist": "^4.28.2",
+		"es-check": "^9.6.4",
+		"lighthouse": "^13.3.0",
 		"playwright": "^1.58.2",
 		"shadcn-svelte": "^1.2.7",
 		"svelte": "^5.55.0",
