@@ -13,7 +13,7 @@ let { data }: { data: PageData } = $props();
 
 <PageMeta title="Profile" description="Manage your Glottica account." />
 <DocumentHeader header="Your profile" description="Manage your account settings and preferences">
-	<UserRound class="size-64 text-muted-foreground/20" />
+	<UserRound class="size-64" />
 </DocumentHeader>
 
 <LegalText>
