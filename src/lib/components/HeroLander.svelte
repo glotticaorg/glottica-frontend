@@ -14,7 +14,15 @@ import PageHeader from './PageHeader.svelte';
   <div class="relative overflow-hidden w-full">
     <Languages class="size-80 top-70 lg:top-20 left-20 absolute opacity-60 rotate-30 overflow-hidden" />
     <div class="relative flex flex-col lg:flex-row items-center gap-12 px-8 py-16 max-w-4xl mx-auto">
-      <Card class="bg-card/90 shadow w-full max-w-sm shrink-0">
+      <div class="flex flex-col gap-4 text-center lg:text-left flex-1 lg:order-last">
+        <PageHeader>Login now!</PageHeader>
+        <p>
+          Or <Link href="/profile/register">create an account</Link> for
+          free to start learning
+        </p>
+      </div>
+
+      <Card class="bg-card/90 shadow w-full max-w-sm shrink-0 lg:order-first">
         <CardContent>
           <form method="POST" use:enhance>
             <fieldset class="flex flex-col gap-4">
@@ -49,14 +57,6 @@ import PageHeader from './PageHeader.svelte';
           </form>
         </CardContent>
       </Card>
-
-      <div class="flex flex-col gap-4 text-center lg:text-left flex-1">
-        <PageHeader>Login now!</PageHeader>
-        <p>
-          Or <Link href="/profile/register">create an account</Link> for
-          free to start learning
-        </p>
-      </div>
     </div>
   </div>
 </FlexHero>
