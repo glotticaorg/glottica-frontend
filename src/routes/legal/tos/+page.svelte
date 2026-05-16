@@ -4,7 +4,7 @@ import LegalText from '$lib/components/LegalText.svelte';
 import PageMeta from '$lib/components/PageMeta.svelte';
 import Paragraph from '$lib/components/Paragraph.svelte';
 import SectionHeader from '$lib/components/SectionHeader.svelte';
-import TosIcon from '$lib/components/icons/TosIcon.svelte';
+import { ScrollText } from '@lucide/svelte';
 </script>
 
 <PageMeta title="Terms of Service" description="Glottica's terms of service." />
@@ -12,7 +12,7 @@ import TosIcon from '$lib/components/icons/TosIcon.svelte';
 	header="Terms of service"
 	description="What we expect from you"
 >
-	<TosIcon />
+	<ScrollText class="size-64" />
 </DocumentHeader>
 
 <LegalText>

@@ -5,7 +5,7 @@ import Link from '$lib/components/Link.svelte';
 import PageMeta from '$lib/components/PageMeta.svelte';
 import Paragraph from '$lib/components/Paragraph.svelte';
 import SectionHeader from '$lib/components/SectionHeader.svelte';
-import PrivacyIcon from '$lib/components/icons/PrivacyIcon.svelte';
+import { Eye } from '@lucide/svelte';
 </script>
 
 <PageMeta title="Privacy Statement" description="How Glottica collects, uses, and protects your personal data in compliance with the GDPR." />
@@ -13,7 +13,7 @@ import PrivacyIcon from '$lib/components/icons/PrivacyIcon.svelte';
 	header="Privacy statement"
 	description="We are committed to protecting your privacy"
 >
-	<PrivacyIcon />
+	<Eye class="size-64" />
 </DocumentHeader>
 
 <LegalText>

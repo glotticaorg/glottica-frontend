@@ -6,7 +6,7 @@ import Link from '$lib/components/Link.svelte';
 import PageMeta from '$lib/components/PageMeta.svelte';
 import Paragraph from '$lib/components/Paragraph.svelte';
 import SectionHeader from '$lib/components/SectionHeader.svelte';
-import AccessibilityIcon from '$lib/components/icons/AccessibilityIcon.svelte';
+import { Accessibility } from '@lucide/svelte';
 </script>
 
 <PageMeta title="Accessibility" description="Glottica's accessibility aims and measures for an inclusive experience." />
@@ -14,7 +14,7 @@ import AccessibilityIcon from '$lib/components/icons/AccessibilityIcon.svelte';
 	header="Accessibility"
 	description="Our goals and measures"
 >
-	<AccessibilityIcon />
+	<Accessibility class="size-64" />
 </DocumentHeader>
 
 <LegalText>

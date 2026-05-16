@@ -4,7 +4,7 @@ import FlexHero from '$lib/components/FlexHero.svelte';
 import Input from '$lib/components/Input.svelte';
 import Link from '$lib/components/Link.svelte';
 import PageMeta from '$lib/components/PageMeta.svelte';
-import LanguageIcon from '$lib/components/icons/LanguageIcon.svelte';
+import { Languages } from '@lucide/svelte';
 import { Button } from '$lib/components/ui/button';
 import { Card, CardContent } from '$lib/components/ui/card';
 import type { ActionData } from './$types';
@@ -16,7 +16,7 @@ const { form }: { form: ActionData } = $props();
 
 <FlexHero>
   <div class="relative overflow-hidden w-full">
-    <LanguageIcon />
+    <Languages class="size-80 top-70 lg:top-20 left-20 absolute opacity-60 rotate-30 overflow-hidden" />
     <div class="relative flex flex-col lg:flex-row items-center gap-12 px-8 py-16 max-w-4xl mx-auto">
       <Card class="bg-card/90 shadow w-full max-w-sm shrink-0">
         <CardContent>

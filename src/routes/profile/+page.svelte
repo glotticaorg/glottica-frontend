@@ -5,8 +5,7 @@ import GridCard from '$lib/components/GridCard.svelte';
 import LegalText from '$lib/components/LegalText.svelte';
 import Link from '$lib/components/Link.svelte';
 import PageMeta from '$lib/components/PageMeta.svelte';
-import SecurityIcon from '$lib/components/icons/SecurityIcon.svelte';
-import { ShieldCheck } from '@lucide/svelte';
+import { ShieldCheck, UserRound } from '@lucide/svelte';
 import type { PageData } from './$types';
 
 let { data }: { data: PageData } = $props();
@@ -14,7 +13,7 @@ let { data }: { data: PageData } = $props();
 
 <PageMeta title="Profile" description="Manage your Glottica account." />
 <DocumentHeader header="Your profile" description="Manage your account settings and preferences">
-	<SecurityIcon />
+	<UserRound class="size-64 text-muted-foreground/20" />
 </DocumentHeader>
 
 <LegalText>

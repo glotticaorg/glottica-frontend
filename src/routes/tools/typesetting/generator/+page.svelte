@@ -1,6 +1,7 @@
 <script lang="ts">
 import Input from '$lib/components/Input.svelte';
 import LegalText from '$lib/components/LegalText.svelte';
+import NumberedStep from '$lib/components/NumberedStep.svelte';
 import PageMeta from '$lib/components/PageMeta.svelte';
 import PlainDocumentHeader from '$lib/components/PlainDocumentHeader.svelte';
 import SectionHeader from '$lib/components/SectionHeader.svelte';
@@ -9,9 +10,6 @@ import { Button } from '$lib/components/ui/button';
 
 const radioClass =
 	'block border border-border rounded-md px-3 py-1.5 text-sm bg-card peer-checked:bg-primary peer-checked:text-primary-foreground peer-checked:border-primary transition-colors cursor-pointer';
-
-const ball =
-	'flex items-center justify-center size-7 rounded-full bg-primary text-primary-foreground text-xs font-bold shrink-0';
 
 let color = $state('#3b82f6');
 </script>
@@ -26,9 +24,8 @@ let color = $state('#3b82f6');
 		</div>
 		<ol class="flex flex-col gap-8">
 
-			<li class="flex items-center gap-4">
-				<span class={ball}>1</span>
-				<fieldset class="flex-1 flex flex-col gap-2">
+			<NumberedStep number={1}>
+				<fieldset class="flex flex-col gap-2">
 					<legend class="text-sm font-medium">Content type</legend>
 					<div class="flex flex-wrap gap-1">
 						{#each [['paper', 'Paper'], ['syllabus', 'Syllabus'], ['slides', 'Slides']] as [value, label]}
@@ -39,11 +36,10 @@ let color = $state('#3b82f6');
 						{/each}
 					</div>
 				</fieldset>
-			</li>
+			</NumberedStep>
 
-			<li class="flex items-center gap-4">
-				<span class={ball}>2</span>
-				<fieldset class="flex-1 flex flex-col gap-2">
+			<NumberedStep number={2}>
+				<fieldset class="flex flex-col gap-2">
 					<legend class="text-sm font-medium">Application</legend>
 					<div class="flex flex-wrap gap-1">
 						{#each [['tex', 'TeX'], ['typst', 'Typst']] as [value, label]}
@@ -54,11 +50,10 @@ let color = $state('#3b82f6');
 						{/each}
 					</div>
 				</fieldset>
-			</li>
+			</NumberedStep>
 
-			<li class="flex items-center gap-4">
-				<span class={ball}>3</span>
-				<fieldset class="flex-1 flex flex-col gap-2">
+			<NumberedStep number={3}>
+				<fieldset class="flex flex-col gap-2">
 					<legend class="text-sm font-medium">Citation style</legend>
 					<div class="flex flex-wrap gap-1">
 						{#each [['unified', 'Unified'], ['apa', 'APA'], ['mla', 'MLA']] as [value, label]}
@@ -69,7 +64,7 @@ let color = $state('#3b82f6');
 						{/each}
 					</div>
 				</fieldset>
-			</li>
+			</NumberedStep>
 
 		</ol>
 
@@ -80,25 +75,22 @@ let color = $state('#3b82f6');
 
 		<ol class="flex flex-col gap-8" start={4}>
 
-			<li class="flex items-center gap-4">
-				<span class={ball}>4</span>
-				<div class="flex-1 flex flex-col gap-1">
+			<NumberedStep number={4}>
+				<div class="flex flex-col gap-1">
 					<Input type="file" name="logo" label="Affiliation logo" accept=".svg,.png" />
 					<p class="text-xs text-muted-foreground">.svg or .png, shown on the cover page</p>
 				</div>
-			</li>
+			</NumberedStep>
 
-			<li class="flex items-center gap-4">
-				<span class={ball}>5</span>
-				<div class="flex-1 flex flex-col gap-1">
+			<NumberedStep number={5}>
+				<div class="flex flex-col gap-1">
 					<Input type="file" name="font" label="Font" accept=".woff,.woff2,.otf,.ttf" />
 					<p class="text-xs text-muted-foreground">.woff, .woff2, .otf, or .ttf</p>
 				</div>
-			</li>
+			</NumberedStep>
 
-			<li class="flex items-center gap-4">
-				<span class={ball}>6</span>
-				<div class="flex-1 flex flex-col gap-1.5">
+			<NumberedStep number={6}>
+				<div class="flex flex-col gap-1.5">
 					<label class="text-sm font-medium leading-none" for="color">Theme color</label>
 					<div class="flex items-center gap-2">
 						<input
@@ -117,12 +109,12 @@ let color = $state('#3b82f6');
 					</div>
 					<p class="text-xs text-muted-foreground">From your institution's style guide</p>
 				</div>
-			</li>
-
-			<li class="flex items-center gap-4">
-				<Button type="submit">Generate template</Button>
-			</li>
+			</NumberedStep>
 
 		</ol>
+
+		<div class="mt-8">
+			<Button type="submit">Generate template</Button>
+		</div>
 	</form>
 </LegalText>

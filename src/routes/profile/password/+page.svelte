@@ -5,7 +5,7 @@ import InfoAlert from '$lib/components/InfoAlert.svelte';
 import Input from '$lib/components/Input.svelte';
 import Link from '$lib/components/Link.svelte';
 import PageMeta from '$lib/components/PageMeta.svelte';
-import SecurityIcon from '$lib/components/icons/SecurityIcon.svelte';
+import { ShieldCheck } from '@lucide/svelte';
 import { Button } from '$lib/components/ui/button';
 import { Card, CardContent } from '$lib/components/ui/card';
 import type { ActionData } from './$types';
@@ -18,7 +18,7 @@ const { form }: { form: ActionData } = $props();
 <FlexHero>
 	<div class="relative overflow-hidden w-full">
 		<div class="absolute top-16 lg:top-8 left-16 opacity-10 rotate-12 overflow-hidden pointer-events-none">
-			<SecurityIcon />
+			<ShieldCheck class="size-64" />
 		</div>
 		<div class="relative flex flex-col lg:flex-row items-center gap-12 px-8 py-16 max-w-4xl mx-auto">
 			<Card class="bg-card/90 shadow w-full max-w-sm shrink-0">
