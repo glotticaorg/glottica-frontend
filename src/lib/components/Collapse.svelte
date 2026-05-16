@@ -5,6 +5,7 @@ import {
 	AccordionItem,
 	AccordionTrigger
 } from '$lib/components/ui/accordion';
+import { untrack } from 'svelte';
 import type { Snippet } from 'svelte';
 
 const {
@@ -13,10 +14,9 @@ const {
 	open = false
 }: { children: Snippet; title: string; open?: boolean } = $props();
 
-let value = $state<string | undefined>(undefined);
-$effect.pre(() => {
-	value = open ? 'item' : undefined;
-});
+let value = $state<string | undefined>(
+	untrack(() => (open ? 'item' : undefined))
+);
 </script>
 
 <Accordion type="single" bind:value class="mt-4 bg-card shadow rounded-lg">

@@ -1,7 +1,7 @@
 <script>
 import CardGrid from '$lib/components/CardGrid.svelte';
-import LinguisticCard from '$lib/components/LinguisticCard.svelte';
 import LegalText from '$lib/components/LegalText.svelte';
+import LinguisticCard from '$lib/components/LinguisticCard.svelte';
 import PageMeta from '$lib/components/PageMeta.svelte';
 import PlainDocumentHeader from '$lib/components/PlainDocumentHeader.svelte';
 

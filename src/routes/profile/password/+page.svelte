@@ -5,9 +5,9 @@ import InfoAlert from '$lib/components/InfoAlert.svelte';
 import Input from '$lib/components/Input.svelte';
 import Link from '$lib/components/Link.svelte';
 import PageMeta from '$lib/components/PageMeta.svelte';
-import { ShieldCheck } from '@lucide/svelte';
 import { Button } from '$lib/components/ui/button';
 import { Card, CardContent } from '$lib/components/ui/card';
+import { ShieldCheck } from '@lucide/svelte';
 import type { ActionData } from './$types';
 
 const { form }: { form: ActionData } = $props();

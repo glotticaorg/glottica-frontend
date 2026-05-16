@@ -1,6 +1,6 @@
 <script>
-import Link from './Link.svelte';
 import { FileText } from '@lucide/svelte';
+import Link from './Link.svelte';
 
 const { children, href } = $props();
 </script>

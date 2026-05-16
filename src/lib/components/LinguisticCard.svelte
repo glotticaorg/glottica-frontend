@@ -1,6 +1,6 @@
 <script lang="ts">
-import GridCard from './GridCard.svelte';
 import { Badge } from '$lib/components/ui/badge';
+import GridCard from './GridCard.svelte';
 
 let {
 	name,
@@ -8,7 +8,13 @@ let {
 	sample,
 	sampleTitle,
 	description
-}: { name: string; badge: string; sample?: string; sampleTitle?: string; description: string } = $props();
+}: {
+	name: string;
+	badge: string;
+	sample?: string;
+	sampleTitle?: string;
+	description: string;
+} = $props();
 </script>
 
 <GridCard>
