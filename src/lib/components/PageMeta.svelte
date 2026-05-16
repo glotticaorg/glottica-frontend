@@ -3,7 +3,7 @@ const {
 	title = '',
 	description = ''
 }: { title?: string; description?: string } = $props();
-const fullTitle = $derived(title ? `Glottica — ${title}` : 'Glottica');
+const fullTitle = $derived(title ? `Glottica · ${title}` : 'Glottica');
 </script>
 
 <svelte:head>
