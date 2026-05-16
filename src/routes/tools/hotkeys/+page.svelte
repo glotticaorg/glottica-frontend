@@ -1,4 +1,5 @@
 <script lang="ts">
+import CalloutBox from '$lib/components/CalloutBox.svelte';
 import LegalText from '$lib/components/LegalText.svelte';
 import PageMeta from '$lib/components/PageMeta.svelte';
 import PlainDocumentHeader from '$lib/components/PlainDocumentHeader.svelte';
@@ -32,18 +33,17 @@ const languages = [
 		"modes" so you can switch between character sets without any hassle.
 	</p>
 
-	<div class="flex items-start gap-4 rounded-xl border border-border bg-card p-5 mb-8">
-		<Package class="size-5 text-muted-foreground shrink-0 mt-0.5" />
-		<div class="flex flex-col gap-1">
-			<div class="flex items-center gap-2">
-				<h3 class="text-base font-semibold">Full bundle</h3>
+	<div class="mb-8">
+		<CalloutBox title="Full bundle" description="Download a single bundle containing configurations for all supported languages and modes.">
+			{#snippet icon()}<Package class="size-5 text-muted-foreground shrink-0 mt-0.5" />{/snippet}
+			{#snippet headerAction()}
 				<button
 					onclick={() => expanded = !expanded}
 					class="text-xs font-medium px-2 py-0.5 rounded-full border border-border bg-secondary text-secondary-foreground hover:bg-muted transition-colors cursor-pointer"
 				>
 					All {languages.length} languages {expanded ? '▴' : '▾'}
 				</button>
-			</div>
+			{/snippet}
 			{#if expanded}
 				<div class="flex flex-wrap gap-1 mt-1">
 					{#each languages as lang}
@@ -51,16 +51,13 @@ const languages = [
 					{/each}
 				</div>
 			{/if}
-			<p class="text-sm text-muted-foreground">
-				Download a single bundle containing configurations for all supported languages and modes.
-			</p>
 			<div class="mt-3">
 				<Button href="/tools/hotkeys">
 					<Download class="size-4" />
 					Download full bundle
 				</Button>
 			</div>
-		</div>
+		</CalloutBox>
 	</div>
 
 	<p class="mb-4 text-sm text-muted-foreground">Alternatively, download a configuration for a single language:</p>

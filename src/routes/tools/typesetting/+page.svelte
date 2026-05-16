@@ -1,4 +1,5 @@
 <script lang="ts">
+import CalloutBox from '$lib/components/CalloutBox.svelte';
 import CardGrid from '$lib/components/CardGrid.svelte';
 import GridCard from '$lib/components/GridCard.svelte';
 import LegalText from '$lib/components/LegalText.svelte';
@@ -47,18 +48,14 @@ import { BookOpen, Code2, FileText, Palette } from '@lucide/svelte';
 		</GridCard>
 	</CardGrid>
 
-	<div class="mt-8 flex items-start gap-4 rounded-xl border border-border bg-card p-5">
-		<Palette class="size-5 text-muted-foreground shrink-0 mt-0.5" />
-		<div class="flex flex-col gap-1">
-			<div class="flex items-center gap-2">
-				<h3 class="text-base font-semibold">Branding</h3>
-				<Badge variant="secondary">Optional</Badge>
-			</div>
-			<p class="text-sm text-muted-foreground">
-				Upload your institution's logo and provide a brand colour to personalise cover pages and headings.
-				Supports <code class="font-mono">.svg</code> and <code class="font-mono">.png</code> logos.
-			</p>
-		</div>
+	<div class="mt-8">
+		<CalloutBox
+			title="Branding"
+			description="Upload your institution's logo and provide a brand colour to personalise cover pages and headings. Supports .svg and .png logos."
+		>
+			{#snippet icon()}<Palette class="size-5 text-muted-foreground shrink-0 mt-0.5" />{/snippet}
+			{#snippet headerAction()}<Badge variant="secondary">Optional</Badge>{/snippet}
+		</CalloutBox>
 	</div>
 
 	<div class="mt-8">

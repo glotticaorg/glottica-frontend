@@ -10,7 +10,7 @@ import HintButton from '$lib/components/HintButton.svelte';
 import PageMeta from '$lib/components/PageMeta.svelte';
 import ResponsiveJoin from '$lib/components/ResponsiveJoin.svelte';
 import WideJoin from '$lib/components/WideJoin.svelte';
-import SendIcon from '$lib/components/icons/SendIcon.svelte';
+import { Send } from '@lucide/svelte';
 </script>
 
 <PageMeta title="Flashcards" description="Practice Indo-European vocabulary with interactive flashcard exercises." />
@@ -28,7 +28,7 @@ import SendIcon from '$lib/components/icons/SendIcon.svelte';
 				<WideJoin>
 					<AccentJoinSearch placeholder="Answer" />
 					<AccentJoinButton ariaLabel="Send answer">
-						<SendIcon />
+						<Send class="size-6 opacity-50" />
 					</AccentJoinButton>
 				</WideJoin>
 			</CardActions>

@@ -1,11 +1,11 @@
 <script>
 import Link from './Link.svelte';
-import InlineDocumentIcon from './icons/InlineDocumentIcon.svelte';
+import { FileText } from '@lucide/svelte';
 
 const { children, href } = $props();
 </script>
 
 <Link href={href} newPage>
-  <InlineDocumentIcon />
+  <FileText class="size-4 inline mb-1" />
   {@render children?.()}
 </Link>

@@ -1,10 +1,9 @@
 <script>
 import CardGrid from '$lib/components/CardGrid.svelte';
-import GridCard from '$lib/components/GridCard.svelte';
+import LinguisticCard from '$lib/components/LinguisticCard.svelte';
 import LegalText from '$lib/components/LegalText.svelte';
 import PageMeta from '$lib/components/PageMeta.svelte';
 import PlainDocumentHeader from '$lib/components/PlainDocumentHeader.svelte';
-import { Badge } from '$lib/components/ui/badge';
 
 const scripts = [
 	{
@@ -75,19 +74,8 @@ const scripts = [
 	</p>
 
 	<CardGrid>
-	{#each scripts as script}
-		<GridCard>
-			<div class="flex items-start justify-between gap-2">
-				<div>
-					<h2 class="text-lg font-semibold">{script.name}</h2>
-					<Badge variant="outline" class="text-xs">{script.type}</Badge>
-				</div>
-				<span class="text-3xl font-serif leading-none text-primary opacity-80 select-none" title={script.language}>
-					{script.sample}
-				</span>
-			</div>
-			<p class="text-sm text-muted-foreground leading-relaxed">{script.description}</p>
-		</GridCard>
-	{/each}
+		{#each scripts as script}
+			<LinguisticCard name={script.name} badge={script.type} sample={script.sample} sampleTitle={script.language} description={script.description} />
+		{/each}
 	</CardGrid>
 </LegalText>

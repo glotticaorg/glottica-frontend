@@ -5,7 +5,7 @@ import Link from '$lib/components/Link.svelte';
 import PageMeta from '$lib/components/PageMeta.svelte';
 import Paragraph from '$lib/components/Paragraph.svelte';
 import SectionHeader from '$lib/components/SectionHeader.svelte';
-import SecurityIcon from '$lib/components/icons/SecurityIcon.svelte';
+import { ShieldCheck } from '@lucide/svelte';
 </script>
 
 <PageMeta title="Responsible Disclosure" description="Glottica's procedure for reporting cybersecurity concerns." />
@@ -13,7 +13,7 @@ import SecurityIcon from '$lib/components/icons/SecurityIcon.svelte';
 	header="Responsible disclosure"
 	description="Our procedure"
 >
-	<SecurityIcon />
+	<ShieldCheck class="size-64" />
 </DocumentHeader>
 
 <LegalText>

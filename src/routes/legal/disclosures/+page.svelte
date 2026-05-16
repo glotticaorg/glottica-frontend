@@ -7,7 +7,7 @@ import ListDocument from '$lib/components/ListDocument.svelte';
 import PageMeta from '$lib/components/PageMeta.svelte';
 import Paragraph from '$lib/components/Paragraph.svelte';
 import SectionHeader from '$lib/components/SectionHeader.svelte';
-import DisclosuresIcon from '$lib/components/icons/DisclosuresIcon.svelte';
+import { Archive } from '@lucide/svelte';
 </script>
 
 <PageMeta title="Disclosures" description="Financial and governance disclosure documents for Glottica Foundation." />
@@ -15,7 +15,7 @@ import DisclosuresIcon from '$lib/components/icons/DisclosuresIcon.svelte';
 	header="Disclosures"
 	description="As a non-profit foundation we must disclose certain documents on the financials and management of our organisation, these can all be found here."
 >
-	<DisclosuresIcon />
+	<Archive class="size-64" />
 </DocumentHeader>
 
 <LegalText>

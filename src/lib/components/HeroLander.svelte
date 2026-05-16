@@ -7,12 +7,12 @@ import { Label } from '$lib/components/ui/label';
 import FlexHero from './FlexHero.svelte';
 import Link from './Link.svelte';
 import PageHeader from './PageHeader.svelte';
-import LanguageIcon from './icons/LanguageIcon.svelte';
+import { Languages } from '@lucide/svelte';
 </script>
 
 <FlexHero>
   <div class="relative overflow-hidden w-full">
-    <LanguageIcon />
+    <Languages class="size-80 top-70 lg:top-20 left-20 absolute opacity-60 rotate-30 overflow-hidden" />
     <div class="relative flex flex-col lg:flex-row items-center gap-12 px-8 py-16 max-w-4xl mx-auto">
       <Card class="bg-card/90 shadow w-full max-w-sm shrink-0">
         <CardContent>
