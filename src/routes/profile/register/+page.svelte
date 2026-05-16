@@ -1,8 +1,8 @@
 <script lang="ts">
 import { enhance } from '$app/forms';
 import FlexHero from '$lib/components/FlexHero.svelte';
-import Link from '$lib/components/Link.svelte';
 import Input from '$lib/components/Input.svelte';
+import Link from '$lib/components/Link.svelte';
 import PageMeta from '$lib/components/PageMeta.svelte';
 import LanguageIcon from '$lib/components/icons/LanguageIcon.svelte';
 import { Button } from '$lib/components/ui/button';

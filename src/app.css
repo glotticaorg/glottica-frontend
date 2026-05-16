@@ -59,7 +59,6 @@
 	--border: oklch(90% 0.076 70.697);
 	--input: oklch(90% 0.076 70.697);
 	--ring: oklch(0% 0 0);
-
 }
 
 /* Dark theme — warm brown-grey surfaces, amber primary */
@@ -90,7 +89,6 @@
 	--border: oklch(30% 0.02 40);
 	--input: oklch(30% 0.02 40);
 	--ring: oklch(78% 0.17 65);
-
 }
 
 html {

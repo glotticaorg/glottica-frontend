@@ -1,6 +1,6 @@
 <script lang="ts">
-import { theme } from '$lib/stores/theme.svelte';
 import { Button } from '$lib/components/ui/button';
+import { theme } from '$lib/stores/theme.svelte';
 </script>
 
 <Button variant="ghost" size="icon" aria-label="Visual theme toggle" onclick={theme.toggle}>
