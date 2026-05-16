@@ -1,12 +1,12 @@
 <script lang="ts">
+import type { Snippet } from 'svelte';
+import { untrack } from 'svelte';
 import {
 	Accordion,
 	AccordionContent,
 	AccordionItem,
 	AccordionTrigger
 } from '$lib/components/ui/accordion';
-import { untrack } from 'svelte';
-import type { Snippet } from 'svelte';
 
 const {
 	children,

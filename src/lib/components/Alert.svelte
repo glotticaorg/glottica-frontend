@@ -1,7 +1,7 @@
 <script lang="ts">
-import { Alert, AlertDescription } from '$lib/components/ui/alert';
 import { TriangleAlert } from '@lucide/svelte';
 import type { Snippet } from 'svelte';
+import { Alert, AlertDescription } from '$lib/components/ui/alert';
 import Bold from './Bold.svelte';
 
 const { children, title }: { children: Snippet; title: string } = $props();

@@ -2,6 +2,7 @@
 import FooterTitle from './FooterTitle.svelte';
 import HoverLink from './HoverLink.svelte';
 import Logo from './Logo.svelte';
+
 const currentYear = new Date().getFullYear();
 </script>
 

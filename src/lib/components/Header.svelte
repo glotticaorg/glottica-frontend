@@ -1,6 +1,6 @@
 <script lang="ts">
-import { Button } from '$lib/components/ui/button';
 import { House, UserRound } from '@lucide/svelte';
+import { Button } from '$lib/components/ui/button';
 import Logo from './Logo.svelte';
 import ThemeToggle from './ThemeToggle.svelte';
 </script>

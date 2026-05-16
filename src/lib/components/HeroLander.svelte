@@ -1,10 +1,10 @@
 <script lang="ts">
+import { Languages } from '@lucide/svelte';
 import { enhance } from '$app/forms';
 import { Button } from '$lib/components/ui/button';
 import { Card, CardContent } from '$lib/components/ui/card';
 import { Input } from '$lib/components/ui/input';
 import { Label } from '$lib/components/ui/label';
-import { Languages } from '@lucide/svelte';
 import FlexHero from './FlexHero.svelte';
 import Link from './Link.svelte';
 import PageHeader from './PageHeader.svelte';

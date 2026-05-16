@@ -1,4 +1,5 @@
 <script lang="ts">
+import { ShieldCheck } from '@lucide/svelte';
 import { enhance } from '$app/forms';
 import FlexHero from '$lib/components/FlexHero.svelte';
 import InfoAlert from '$lib/components/InfoAlert.svelte';
@@ -7,7 +8,6 @@ import Link from '$lib/components/Link.svelte';
 import PageMeta from '$lib/components/PageMeta.svelte';
 import { Button } from '$lib/components/ui/button';
 import { Card, CardContent } from '$lib/components/ui/card';
-import { ShieldCheck } from '@lucide/svelte';
 import type { ActionData } from './$types';
 
 const { form }: { form: ActionData } = $props();

@@ -1,7 +1,7 @@
 <script lang="ts">
+import type { HTMLInputAttributes } from 'svelte/elements';
 import { Label } from '$lib/components/ui/label';
 import { cn } from '$lib/utils';
-import type { HTMLInputAttributes } from 'svelte/elements';
 
 const {
 	name,

@@ -1,9 +1,9 @@
 <script lang="ts">
+import { Bug } from '@lucide/svelte';
 import { page } from '$app/state';
 import PageHeader from '$lib/components/PageHeader.svelte';
 import ResponsiveAlignment from '$lib/components/ResponsiveAlignment.svelte';
 import ResponsiveFlexHero from '$lib/components/ResponsiveFlexHero.svelte';
-import { Bug } from '@lucide/svelte';
 </script>
 
 <ResponsiveFlexHero>

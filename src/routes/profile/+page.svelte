@@ -1,11 +1,11 @@
 <script lang="ts">
+import { ShieldCheck, UserRound } from '@lucide/svelte';
 import CardGrid from '$lib/components/CardGrid.svelte';
 import DocumentHeader from '$lib/components/DocumentHeader.svelte';
 import GridCard from '$lib/components/GridCard.svelte';
 import LegalText from '$lib/components/LegalText.svelte';
 import Link from '$lib/components/Link.svelte';
 import PageMeta from '$lib/components/PageMeta.svelte';
-import { ShieldCheck, UserRound } from '@lucide/svelte';
 import type { PageData } from './$types';
 
 let { data }: { data: PageData } = $props();

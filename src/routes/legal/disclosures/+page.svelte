@@ -1,4 +1,5 @@
 <script>
+import { Archive } from '@lucide/svelte';
 import CollapseList from '$lib/components/CollapseList.svelte';
 import DocumentHeader from '$lib/components/DocumentHeader.svelte';
 import LegalText from '$lib/components/LegalText.svelte';
@@ -7,7 +8,6 @@ import ListDocument from '$lib/components/ListDocument.svelte';
 import PageMeta from '$lib/components/PageMeta.svelte';
 import Paragraph from '$lib/components/Paragraph.svelte';
 import SectionHeader from '$lib/components/SectionHeader.svelte';
-import { Archive } from '@lucide/svelte';
 </script>
 
 <PageMeta title="Disclosures" description="Financial and governance disclosure documents for Glottica Foundation." />

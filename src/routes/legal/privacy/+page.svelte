@@ -1,11 +1,11 @@
 <script>
+import { Lock } from '@lucide/svelte';
 import DocumentHeader from '$lib/components/DocumentHeader.svelte';
 import LegalText from '$lib/components/LegalText.svelte';
 import Link from '$lib/components/Link.svelte';
 import PageMeta from '$lib/components/PageMeta.svelte';
 import Paragraph from '$lib/components/Paragraph.svelte';
 import SectionHeader from '$lib/components/SectionHeader.svelte';
-import { Lock } from '@lucide/svelte';
 </script>
 
 <PageMeta title="Privacy Statement" description="How Glottica collects, uses, and protects your personal data in compliance with the GDPR." />

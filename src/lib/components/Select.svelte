@@ -1,7 +1,7 @@
 <script lang="ts">
-import { Label } from '$lib/components/ui/label';
 import type { Snippet } from 'svelte';
 import type { HTMLSelectAttributes } from 'svelte/elements';
+import { Label } from '$lib/components/ui/label';
 
 let {
 	children,

@@ -1,4 +1,5 @@
 <script>
+import { Send } from '@lucide/svelte';
 import AccentJoinButton from '$lib/components/AccentJoinButton.svelte';
 import AccentJoinSearch from '$lib/components/AccentJoinSearch.svelte';
 import CardActions from '$lib/components/CardActions.svelte';
@@ -10,7 +11,6 @@ import HintButton from '$lib/components/HintButton.svelte';
 import PageMeta from '$lib/components/PageMeta.svelte';
 import ResponsiveJoin from '$lib/components/ResponsiveJoin.svelte';
 import WideJoin from '$lib/components/WideJoin.svelte';
-import { Send } from '@lucide/svelte';
 </script>
 
 <PageMeta title="Flashcards" description="Practice Indo-European vocabulary with interactive flashcard exercises." />

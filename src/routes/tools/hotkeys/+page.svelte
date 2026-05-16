@@ -1,11 +1,11 @@
 <script lang="ts">
+import { Download, Package } from '@lucide/svelte';
 import CalloutBox from '$lib/components/CalloutBox.svelte';
 import LegalText from '$lib/components/LegalText.svelte';
 import PageMeta from '$lib/components/PageMeta.svelte';
 import PlainDocumentHeader from '$lib/components/PlainDocumentHeader.svelte';
 import { Badge } from '$lib/components/ui/badge';
 import { Button } from '$lib/components/ui/button';
-import { Download, Package } from '@lucide/svelte';
 
 let expanded = $state(false);
 

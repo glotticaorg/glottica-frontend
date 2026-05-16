@@ -1,5 +1,6 @@
 <script>
 import { Card } from '$lib/components/ui/card';
+
 const { children } = $props();
 </script>
 
