@@ -19,14 +19,14 @@ const { left, right }: { left: AndSplitListProps; right: AndSplitListProps } =
 
   <!-- Mobile: horizontal rule with AND -->
   <div class="flex lg:hidden items-center py-2">
-    <div class="flex-1 h-px bg-border"></div>
+    <div class="flex-1 h-px bg-foreground/20"></div>
     <span class="text-xs font-bold text-muted-foreground px-3">AND</span>
-    <div class="flex-1 h-px bg-border"></div>
+    <div class="flex-1 h-px bg-foreground/20"></div>
   </div>
 
   <!-- Desktop: vertical rule with AND centred over it -->
   <div class="hidden lg:flex flex-col items-center self-stretch relative px-6 shrink-0">
-    <div class="absolute inset-y-0 left-1/2 -translate-x-1/2 w-0.5 bg-border"></div>
+    <div class="absolute inset-y-0 left-1/2 -translate-x-1/2 w-0.5 bg-foreground/20"></div>
     <span class="relative z-10 my-auto bg-muted px-2 py-1 text-sm font-bold text-muted-foreground">AND</span>
   </div>
 
