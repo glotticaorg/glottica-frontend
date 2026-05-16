@@ -6,13 +6,11 @@ let {
 	name,
 	badge,
 	sample,
-	sampleTitle,
 	description
 }: {
 	name: string;
 	badge: string;
 	sample?: string;
-	sampleTitle?: string;
 	description: string;
 } = $props();
 </script>
@@ -24,7 +22,7 @@ let {
 			<Badge variant="outline" class="text-xs mt-1">{badge}</Badge>
 		</div>
 		{#if sample}
-			<span class="text-3xl font-serif leading-none text-primary opacity-80 select-none" title={sampleTitle}>
+			<span class="text-3xl font-serif leading-none text-primary opacity-80 select-none">
 				{sample}
 			</span>
 		{/if}
