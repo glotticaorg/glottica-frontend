@@ -1,4 +1,6 @@
 <script lang="ts">
+import { Badge } from '$lib/components/ui/badge';
+import { Button } from '$lib/components/ui/button';
 import LegalText from '$lib/components/LegalText.svelte';
 import PageMeta from '$lib/components/PageMeta.svelte';
 import Paragraph from '$lib/components/Paragraph.svelte';
@@ -34,7 +36,7 @@ const languages = [
 	<SectionHeader>Supported languages</SectionHeader>
 	<div class="flex flex-wrap gap-2 mb-6">
 		{#each languages as lang}
-			<span class="badge badge-outline badge-lg">{lang}</span>
+			<Badge variant="outline" class="text-sm bg-card">{lang}</Badge>
 		{/each}
 	</div>
 
@@ -43,7 +45,7 @@ const languages = [
 		Download a configuration for a single language or the full bundle for all supported modes.
 	</Paragraph>
 	<div class="flex flex-col sm:flex-row gap-3 mt-2">
-		<a href="/tools/hotkeys" class="btn btn-outline">Download by language</a>
-		<a href="/tools/hotkeys" class="btn btn-primary">Download full bundle</a>
+		<Button variant="outline" href="/tools/hotkeys">Download by language</Button>
+		<Button href="/tools/hotkeys">Download full bundle</Button>
 	</div>
 </LegalText>

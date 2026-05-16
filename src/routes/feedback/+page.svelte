@@ -1,5 +1,6 @@
 <script lang="ts">
 import { enhance } from '$app/forms';
+import { Button } from '$lib/components/ui/button';
 import InfoAlert from '$lib/components/InfoAlert.svelte';
 import Input from '$lib/components/Input.svelte';
 import LegalText from '$lib/components/LegalText.svelte';
@@ -26,7 +27,7 @@ const { form }: { form: ActionData } = $props();
 	{:else}
 		<form method="POST" use:enhance class="flex flex-col gap-4">
 			{#if form?.error}
-				<p class="text-error text-sm">{form.error}</p>
+				<p class="text-destructive text-sm">{form.error}</p>
 			{/if}
 			<Select name="topic" label="Type" required>
 				<option value="accessibility">Accessibility</option>
@@ -38,7 +39,7 @@ const { form }: { form: ActionData } = $props();
 			</Select>
 			<Input name="email" type="email" label="Email" required />
 			<TextArea name="feedback" label="Feedback" required />
-			<button type="submit" class="btn btn-primary">Send feedback</button>
+			<Button type="submit">Send feedback</Button>
 		</form>
 	{/if}
 </LegalText>

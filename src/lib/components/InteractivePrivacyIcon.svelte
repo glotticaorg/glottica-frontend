@@ -1,14 +1,14 @@
 <script>
 import PrivacyIcon from './icons/PrivacyIcon.svelte';
 import PrivacyIconSlash from './icons/PrivacyIconSlash.svelte';
+
+let checked = $state(true);
 </script>
 
-<label class="swap swap-flip">
-  <input type="checkbox" name="Decorative element" checked />
-  <div class="swap-on">
+<button onclick={() => { checked = !checked; }} aria-label="Toggle privacy icon" class="cursor-pointer">
+  {#if checked}
     <PrivacyIcon />
-  </div>
-  <div class="swap-off">
+  {:else}
     <PrivacyIconSlash />
-  </div>
-</label>
+  {/if}
+</button>

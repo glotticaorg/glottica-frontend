@@ -9,6 +9,6 @@ const {
 const target = $derived(newPage ? '_blank' : undefined);
 </script>
 
-<a class="link" {href} {target}>
+<a class="underline underline-offset-4 text-primary" {href} {target}>
   {@render children?.()}
 </a>

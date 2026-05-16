@@ -19,7 +19,7 @@ import SectionHeader from '$lib/components/SectionHeader.svelte';
 	</Paragraph>
 	<SectionHeader>I want to help!</SectionHeader>
 	<Paragraph>
-		That's amazing! We're always looking for volunteers to join our effort. If you have relevant technical skills (e.g., web development or operations), please reach out to us here. If you are a designer and want to contribute to a sleeker look the website, please reach out to us here. If you would like to contribute to the learning materials that we host, please reach out to us here. If you have any ideas on how we could make our platform better, please let us know via the <a href="/feedback" class="link">feedback form</a>! If you instead want to contribute via a <a href="/donate" class="link">small donation</a> (despite our best efforts, servers aren't free!), that is also possible.
+		That's amazing! We're always looking for volunteers to join our effort. If you have relevant technical skills (e.g., web development or operations), please reach out to us here. If you are a designer and want to contribute to a sleeker look the website, please reach out to us here. If you would like to contribute to the learning materials that we host, please reach out to us here. If you have any ideas on how we could make our platform better, please let us know via the <a href="/feedback" class="underline underline-offset-4 text-primary">feedback form</a>! If you instead want to contribute via a <a href="/donate" class="underline underline-offset-4 text-primary">small donation</a> (despite our best efforts, servers aren't free!), that is also possible.
 	</Paragraph>
 	<SectionHeader>Technology</SectionHeader>
 	<Alert title="Disclaimer">

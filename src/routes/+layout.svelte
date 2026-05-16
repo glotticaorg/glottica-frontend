@@ -5,7 +5,7 @@ import '../app.css';
 const { children } = $props();
 </script>
 
-<div class="bg-base-200 min-h-lvh flex flex-col">
+<div class="bg-muted min-h-lvh flex flex-col text-foreground">
 	<Header />
 	<main class="flex-1 flex flex-col">
 		{@render children()}

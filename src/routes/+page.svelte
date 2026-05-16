@@ -14,7 +14,7 @@ import StatsList from '$lib/components/StatsList.svelte';
   <Stat title="Templates" description="Office, TeX, and Typst support">27</Stat>
   <Stat title="Keybinds" description="For both Windows and Mac">1000+</Stat>
 </StatsList>
-<div class="bg-base-200 py-8 px-10 lg:px-50">
+<div class="bg-muted py-8 px-10 lg:px-50">
 	<h2 class="text-2xl font-bold mb-6">
 		Discover the benefits for free &mdash; forever!
 	</h2>

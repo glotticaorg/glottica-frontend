@@ -4,6 +4,7 @@ import PageMeta from '$lib/components/PageMeta.svelte';
 import Paragraph from '$lib/components/Paragraph.svelte';
 import PlainDocumentHeader from '$lib/components/PlainDocumentHeader.svelte';
 import SectionHeader from '$lib/components/SectionHeader.svelte';
+import { Button } from '$lib/components/ui/button';
 </script>
 
 <PageMeta title="Typesetting Templates" description="Generate academic typesetting templates in TeX and Typst for linguistics." />
@@ -16,34 +17,28 @@ import SectionHeader from '$lib/components/SectionHeader.svelte';
 	</Paragraph>
 
 	<div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-6">
-		<div class="card bg-base-300 shadow">
-			<div class="card-body">
-				<h3 class="card-title text-lg">Document types</h3>
-				<ul class="list list-disc list-inside text-sm space-y-1">
-					<li>Papers</li>
-					<li>Syllabi</li>
-					<li>Slideshows</li>
-				</ul>
-			</div>
+		<div class="bg-card rounded-xl shadow p-5 border border-border">
+			<h3 class="text-lg font-semibold mb-2">Document types</h3>
+			<ul class="list-disc list-inside text-sm space-y-1">
+				<li>Papers</li>
+				<li>Syllabi</li>
+				<li>Slideshows</li>
+			</ul>
 		</div>
-		<div class="card bg-base-300 shadow">
-			<div class="card-body">
-				<h3 class="card-title text-lg">Applications</h3>
-				<ul class="list list-disc list-inside text-sm space-y-1">
-					<li>TeX</li>
-					<li>Typst</li>
-				</ul>
-			</div>
+		<div class="bg-card rounded-xl shadow p-5 border border-border">
+			<h3 class="text-lg font-semibold mb-2">Applications</h3>
+			<ul class="list-disc list-inside text-sm space-y-1">
+				<li>TeX</li>
+				<li>Typst</li>
+			</ul>
 		</div>
-		<div class="card bg-base-300 shadow">
-			<div class="card-body">
-				<h3 class="card-title text-lg">Citation styles</h3>
-				<ul class="list list-disc list-inside text-sm space-y-1">
-					<li>Unified Stylesheet</li>
-					<li>APA</li>
-					<li>MLA</li>
-				</ul>
-			</div>
+		<div class="bg-card rounded-xl shadow p-5 border border-border">
+			<h3 class="text-lg font-semibold mb-2">Citation styles</h3>
+			<ul class="list-disc list-inside text-sm space-y-1">
+				<li>Unified Stylesheet</li>
+				<li>APA</li>
+				<li>MLA</li>
+			</ul>
 		</div>
 	</div>
 
@@ -55,6 +50,6 @@ import SectionHeader from '$lib/components/SectionHeader.svelte';
 	</Paragraph>
 
 	<div class="mt-6">
-		<a href="/tools/typesetting/generator" class="btn btn-primary">Generate now</a>
+		<Button href="/tools/typesetting/generator">Generate now</Button>
 	</div>
 </LegalText>

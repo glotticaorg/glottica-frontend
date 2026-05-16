@@ -1,6 +1,6 @@
 <script>
 import DocumentHeader from '$lib/components/DocumentHeader.svelte';
-import InteractivePrivacyIcon from '$lib/components/InteractivePrivacyIcon.svelte';
+import PrivacyIcon from '$lib/components/icons/PrivacyIcon.svelte';
 import LegalText from '$lib/components/LegalText.svelte';
 import Link from '$lib/components/Link.svelte';
 import PageMeta from '$lib/components/PageMeta.svelte';
@@ -13,7 +13,7 @@ import SectionHeader from '$lib/components/SectionHeader.svelte';
 	header="Privacy statement"
 	description="We are committed to protecting your privacy"
 >
-	<InteractivePrivacyIcon />
+	<PrivacyIcon />
 </DocumentHeader>
 
 <LegalText>

@@ -2,6 +2,8 @@
 import LegalText from '$lib/components/LegalText.svelte';
 import PageMeta from '$lib/components/PageMeta.svelte';
 import PlainDocumentHeader from '$lib/components/PlainDocumentHeader.svelte';
+import { Input } from '$lib/components/ui/input';
+import { Button } from '$lib/components/ui/button';
 </script>
 
 <PageMeta title="Template Generator" description="Customise and generate your TeX or Typst template with your institution's branding." />
@@ -9,130 +11,76 @@ import PlainDocumentHeader from '$lib/components/PlainDocumentHeader.svelte';
 
 <LegalText>
 	<form method="POST" class="py-4">
-		<ul class="steps steps-vertical w-full">
-			<li class="step">
-				<div class="join join-vertical lg:join-horizontal block">
-					<legend class="fieldset-legend">Content type</legend>
-					<input
-						type="radio"
-						name="template"
-						class="btn join-item"
-						aria-label="Paper"
-						value="paper"
-					/>
-					<input
-						type="radio"
-						name="template"
-						class="btn join-item"
-						aria-label="Syllabus"
-						value="syllabus"
-					/>
-					<input
-						type="radio"
-						name="template"
-						class="btn join-item"
-						aria-label="Slides"
-						value="slides"
-					/>
+		<ol class="flex flex-col gap-8 w-full">
+			<li class="flex gap-4">
+				<span class="flex items-center justify-center size-7 rounded-full bg-primary text-primary-foreground text-xs font-bold shrink-0 mt-0.5">1</span>
+				<div class="flex-1">
+					<legend class="text-sm font-medium mb-2">Content type</legend>
+					<div class="flex flex-col lg:flex-row gap-1">
+						{#each [['paper', 'Paper'], ['syllabus', 'Syllabus'], ['slides', 'Slides']] as [value, label]}
+							<label class="cursor-pointer">
+								<input type="radio" name="template" {value} class="sr-only peer" />
+								<span class="block border border-border rounded-md px-3 py-1.5 text-sm bg-card peer-checked:bg-primary peer-checked:text-primary-foreground peer-checked:border-primary transition-colors">{label}</span>
+							</label>
+						{/each}
+					</div>
 				</div>
 			</li>
-			<li class="step">
-				<div class="join join-vertical lg:join-horizontal block">
-					<legend
-						class="fieldset-legend tooltip"
-						data-tip="Please specify what typesetting application you want to use."
-					>Application</legend>
-					<input
-						type="radio"
-						name="application"
-						class="btn join-item"
-						aria-label="TeX"
-						value="tex"
-					/>
-					<input
-						type="radio"
-						name="application"
-						class="btn join-item"
-						aria-label="Typst"
-						value="typst"
-					/>
+			<li class="flex gap-4">
+				<span class="flex items-center justify-center size-7 rounded-full bg-primary text-primary-foreground text-xs font-bold shrink-0 mt-0.5">2</span>
+				<div class="flex-1">
+					<legend class="text-sm font-medium mb-2" title="Please specify what typesetting application you want to use.">Application</legend>
+					<div class="flex flex-col lg:flex-row gap-1">
+						{#each [['tex', 'TeX'], ['typst', 'Typst']] as [value, label]}
+							<label class="cursor-pointer">
+								<input type="radio" name="application" {value} class="sr-only peer" />
+								<span class="block border border-border rounded-md px-3 py-1.5 text-sm bg-card peer-checked:bg-primary peer-checked:text-primary-foreground peer-checked:border-primary transition-colors">{label}</span>
+							</label>
+						{/each}
+					</div>
 				</div>
 			</li>
-			<li class="step">
-				<fieldset class="fieldset">
-					<legend
-						class="fieldset-legend tooltip"
-						data-tip="You can provide your institution's logo as a .svg or .png file to be displayed on the cover page."
-					>Affiliation logo</legend>
-					<input
-						type="file"
-						name="logo"
-						class="file-input file-input-primary"
-						aria-label="affiliation logo"
-						accept=".svg,.png"
-					/>
-				</fieldset>
-			</li>
-			<li class="step">
-				<fieldset class="fieldset">
-					<legend
-						class="fieldset-legend tooltip"
-						data-tip="Please provide a .woff, .woff2, .ttf, or .otf font file."
-					>Font</legend>
-					<input
-						type="file"
-						name="font"
-						class="file-input file-input-primary"
-						aria-label="font"
-						accept=".woff,.woff2,.otf,.ttf"
-					/>
-				</fieldset>
-			</li>
-			<li class="step">
-				<fieldset class="fieldset">
-					<legend
-						class="fieldset-legend tooltip"
-						data-tip="Please consult your institution's style guide for the exact value."
-					>Theme color</legend>
-					<input
-						type="text"
-						name="color"
-						class="input"
-						placeholder="#000000"
-						aria-label="theme color"
-						pattern="^#[0-9a-fA-F]{6}$"
-					/>
-				</fieldset>
-			</li>
-			<li class="step">
-				<div class="join join-vertical lg:join-horizontal block">
-					<legend class="fieldset-legend">Citation style</legend>
-					<input
-						type="radio"
-						name="citations"
-						class="btn join-item"
-						aria-label="Unified"
-						value="unified"
-					/>
-					<input
-						type="radio"
-						name="citations"
-						class="btn join-item"
-						aria-label="APA"
-						value="apa"
-					/>
-					<input
-						type="radio"
-						name="citations"
-						class="btn join-item"
-						aria-label="MLA"
-						value="mla"
-					/>
+			<li class="flex gap-4">
+				<span class="flex items-center justify-center size-7 rounded-full bg-primary text-primary-foreground text-xs font-bold shrink-0 mt-0.5">3</span>
+				<div class="flex-1">
+					<legend class="text-sm font-medium mb-2" title="You can provide your institution's logo as a .svg or .png file to be displayed on the cover page.">Affiliation logo</legend>
+					<Input type="file" name="logo" aria-label="affiliation logo" accept=".svg,.png" />
 				</div>
 			</li>
-			<li class="step">
-				<button type="submit" class="btn btn-primary">Generate!</button>
+			<li class="flex gap-4">
+				<span class="flex items-center justify-center size-7 rounded-full bg-primary text-primary-foreground text-xs font-bold shrink-0 mt-0.5">4</span>
+				<div class="flex-1">
+					<legend class="text-sm font-medium mb-2" title="Please provide a .woff, .woff2, .ttf, or .otf font file.">Font</legend>
+					<Input type="file" name="font" aria-label="font" accept=".woff,.woff2,.otf,.ttf" />
+				</div>
 			</li>
-		</ul>
+			<li class="flex gap-4">
+				<span class="flex items-center justify-center size-7 rounded-full bg-primary text-primary-foreground text-xs font-bold shrink-0 mt-0.5">5</span>
+				<div class="flex-1">
+					<legend class="text-sm font-medium mb-2" title="Please consult your institution's style guide for the exact value.">Theme color</legend>
+					<Input type="text" name="color" placeholder="#000000" aria-label="theme color" pattern="^#[0-9a-fA-F]{6}$" />
+				</div>
+			</li>
+			<li class="flex gap-4">
+				<span class="flex items-center justify-center size-7 rounded-full bg-primary text-primary-foreground text-xs font-bold shrink-0 mt-0.5">6</span>
+				<div class="flex-1">
+					<legend class="text-sm font-medium mb-2">Citation style</legend>
+					<div class="flex flex-col lg:flex-row gap-1">
+						{#each [['unified', 'Unified'], ['apa', 'APA'], ['mla', 'MLA']] as [value, label]}
+							<label class="cursor-pointer">
+								<input type="radio" name="citations" {value} class="sr-only peer" />
+								<span class="block border border-border rounded-md px-3 py-1.5 text-sm bg-card peer-checked:bg-primary peer-checked:text-primary-foreground peer-checked:border-primary transition-colors">{label}</span>
+							</label>
+						{/each}
+					</div>
+				</div>
+			</li>
+			<li class="flex gap-4">
+				<span class="flex items-center justify-center size-7 rounded-full bg-primary text-primary-foreground text-xs font-bold shrink-0 mt-0.5">7</span>
+				<div class="flex-1">
+					<Button type="submit">Generate!</Button>
+				</div>
+			</li>
+		</ol>
 	</form>
 </LegalText>
