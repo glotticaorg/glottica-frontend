@@ -42,7 +42,7 @@
 	--popover: oklch(97.5% 0.018 62);
 	--popover-foreground: oklch(22% 0.045 42);
 
-	--primary: oklch(50% 0.16 28);
+	--primary: oklch(43% 0.16 28);
 	--primary-foreground: oklch(97% 0.01 62);
 
 	--secondary: oklch(28% 0.06 40);
@@ -51,14 +51,14 @@
 	--muted: oklch(85% 0.04 58);
 	--muted-foreground: oklch(41% 0.05 42);
 
-	--accent: oklch(57% 0.13 32);
+	--accent: oklch(50% 0.13 32);
 	--accent-foreground: oklch(97% 0.01 62);
 
 	--destructive: oklch(50% 0.19 22);
 
 	--border: oklch(83% 0.04 58);
 	--input: oklch(83% 0.04 58);
-	--ring: oklch(50% 0.16 28);
+	--ring: oklch(43% 0.16 28);
 }
 
 /* Dark theme — warm brown-grey surfaces, amber primary */
