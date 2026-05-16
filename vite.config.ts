@@ -6,6 +6,6 @@ export default defineConfig({
 	plugins: [tailwindcss(), sveltekit()],
 	build: {
 		target: 'es2022',
-		cssMinify: true
+		cssMinify: 'lightningcss'
 	}
 });
