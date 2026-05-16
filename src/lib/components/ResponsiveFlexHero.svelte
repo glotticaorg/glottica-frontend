@@ -1,8 +1,8 @@
 <script>
-	import FlexHero from "./FlexHero.svelte";
-	import ResponsiveFlexHeroContent from "./ResponsiveFlexHeroContent.svelte";
+import FlexHero from './FlexHero.svelte';
+import ResponsiveFlexHeroContent from './ResponsiveFlexHeroContent.svelte';
 
-  let { children } = $props()
+const { children } = $props();
 </script>
 
 <FlexHero>

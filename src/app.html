@@ -3,11 +3,6 @@
 	<head>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100..900&display=optional"
-			rel="preload"
-			as="style"
-		/>
 		<meta charset="UTF-8" />
 		<link
 			rel="icon"
@@ -48,7 +43,7 @@
 		/>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100..900&display=optional"
+			href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;400;500;600;700&display=optional"
 			rel="stylesheet"
 		/>
 		<noscript>
@@ -59,10 +54,9 @@
 			</style>
 		</noscript>
 		<script>
-			if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-				document.documentElement.dataset.theme = 'dark';
-			} else {
-				document.documentElement.dataset.theme = 'light';
+			const saved = localStorage.getItem('glottica-theme');
+			if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+				document.documentElement.classList.add('dark');
 			}
 		</script>
 		%sveltekit.head%

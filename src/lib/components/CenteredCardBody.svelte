@@ -1,7 +1,7 @@
 <script>
-  let { children } = $props()
+const { children } = $props();
 </script>
 
-<div class="card-body items-center text-center">
+<div class="flex flex-col items-center text-center p-6 gap-4">
   {@render children?.()}
 </div>

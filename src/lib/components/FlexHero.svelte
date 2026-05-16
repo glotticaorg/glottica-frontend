@@ -1,7 +1,7 @@
 <script>
-  let { children } = $props()
+const { children } = $props();
 </script>
 
-<div class="hero flex-1">
+<div class="flex flex-1 items-center justify-center w-full">
   {@render children?.()}
 </div>

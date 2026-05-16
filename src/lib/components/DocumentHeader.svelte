@@ -1,11 +1,15 @@
 <script lang="ts">
-	import type { Snippet } from "svelte";
-	import ResponsiveFlexHero from "./ResponsiveFlexHero.svelte";
-	import PageDescription from "./PageDescription.svelte";
-	import PageHeader from "./PageHeader.svelte";
-	import ResponsiveAlignment from "./ResponsiveAlignment.svelte";
+import type { Snippet } from 'svelte';
+import PageDescription from './PageDescription.svelte';
+import PageHeader from './PageHeader.svelte';
+import ResponsiveAlignment from './ResponsiveAlignment.svelte';
+import ResponsiveFlexHero from './ResponsiveFlexHero.svelte';
 
-  let { children, description, header }: { children: Snippet, description: string, header: string } = $props()
+const {
+	children,
+	description,
+	header
+}: { children: Snippet; description: string; header: string } = $props();
 </script>
 
 <ResponsiveFlexHero>

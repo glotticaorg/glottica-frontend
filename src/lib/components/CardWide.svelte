@@ -1,7 +1,9 @@
 <script>
-  let { children } = $props()
+import { Card } from '$lib/components/ui/card';
+
+const { children } = $props();
 </script>
 
-<div class="card shadow bg-base-300 min-w-64 md:min-w-128">
+<Card class="shadow min-w-64 md:min-w-128 bg-muted">
   {@render children?.()}
-</div>
+</Card>

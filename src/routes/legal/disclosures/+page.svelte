@@ -1,19 +1,21 @@
 <script>
-	import DisclosuresIcon from '$lib/components/icons/DisclosuresIcon.svelte';
-	import LegalText from '$lib/components/LegalText.svelte';
-	import DocumentHeader from '$lib/components/DocumentHeader.svelte';
-	import CollapseList from '$lib/components/CollapseList.svelte';
-	import ListDocument from '$lib/components/ListDocument.svelte';
-	import Link from '$lib/components/Link.svelte';
-	import SectionHeader from '$lib/components/SectionHeader.svelte';
-	import Paragraph from '$lib/components/Paragraph.svelte';
+import { Archive } from '@lucide/svelte';
+import CollapseList from '$lib/components/CollapseList.svelte';
+import DocumentHeader from '$lib/components/DocumentHeader.svelte';
+import LegalText from '$lib/components/LegalText.svelte';
+import Link from '$lib/components/Link.svelte';
+import ListDocument from '$lib/components/ListDocument.svelte';
+import PageMeta from '$lib/components/PageMeta.svelte';
+import Paragraph from '$lib/components/Paragraph.svelte';
+import SectionHeader from '$lib/components/SectionHeader.svelte';
 </script>
 
+<PageMeta title="Disclosures" description="Financial and governance disclosure documents for Glottica Foundation." />
 <DocumentHeader
 	header="Disclosures"
 	description="As a non-profit foundation we must disclose certain documents on the financials and management of our organisation, these can all be found here."
 >
-	<DisclosuresIcon />
+	<Archive class="size-64" />
 </DocumentHeader>
 
 <LegalText>
@@ -26,7 +28,7 @@
 		If you notice any such disagreement between the Dutch and English documents or if you see
 		anything that is unclear, please <Link href="/about/contact">reach out to us</Link>.
 	</Paragraph>
-	<CollapseList title="2025 (NL)" open>
+	<CollapseList title="2025 (NL)">
 		<ListDocument href="#">Contactgegevens 2025</ListDocument>
 		<ListDocument href="#">Bestuurders en functies 2025</ListDocument>
 		<ListDocument href="#">Statuten 2025</ListDocument>

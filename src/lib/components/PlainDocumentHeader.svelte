@@ -1,9 +1,9 @@
 <script lang="ts">
-	import type { Snippet } from "svelte";
-	import PageHeader from "./PageHeader.svelte";
-	import CenterAlignment from "./CenterAlignment.svelte";
+import type { Snippet } from 'svelte';
+import CenterAlignment from './CenterAlignment.svelte';
+import PageHeader from './PageHeader.svelte';
 
-  let { children }: { children: Snippet } = $props()
+const { children }: { children: Snippet } = $props();
 </script>
 
 <CenterAlignment>

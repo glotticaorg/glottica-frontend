@@ -1,5 +1,5 @@
 <script>
-  let { children } = $props()
+const { children } = $props();
 </script>
 
 <section class="py-6 px-8 lg:px-0 lg:max-w-96">

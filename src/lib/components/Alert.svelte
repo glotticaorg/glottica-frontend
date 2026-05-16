@@ -1,14 +1,15 @@
 <script lang="ts">
-	import type { Snippet } from "svelte";
-	import WarningIcon from "./icons/WarningIcon.svelte";
-	import Bold from "./Bold.svelte";
+import { TriangleAlert } from '@lucide/svelte';
+import type { Snippet } from 'svelte';
+import { Alert, AlertDescription } from '$lib/components/ui/alert';
+import Bold from './Bold.svelte';
 
-  let { children, title }: { children: Snippet, title: string } = $props()
+const { children, title }: { children: Snippet; title: string } = $props();
 </script>
 
-<div role="alert" class="alert alert-warning mb-4 shadow">
-	<WarningIcon />
-  <span>
-		<Bold>{title}</Bold>: {@render children?.()}
-	</span>
-</div>
+<Alert variant="destructive" class="mb-4">
+  <TriangleAlert class="size-6" />
+  <AlertDescription>
+    <Bold>{title}</Bold>: {@render children?.()}
+  </AlertDescription>
+</Alert>
