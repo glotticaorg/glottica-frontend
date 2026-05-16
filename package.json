@@ -10,8 +10,8 @@
 		"prepare": "svelte-kit sync || echo ''",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-		"test:unit": "vitest",
-		"test": "npm run test:unit -- --run",
+		"test:unit": "vitest run",
+		"test": "npm run test:unit -- --coverage",
 		"compat": "es-check es2020 'build/client/**/*.js' --module",
 		"a11y": "lighthouse http://localhost:4173 --only-categories=accessibility --output=html --output-path=./a11y-report.html --chrome-flags='--headless'"
 	},
@@ -22,6 +22,7 @@
 		"@sveltejs/vite-plugin-svelte": "^7.0.0",
 		"@vitest/browser": "^4.1.6",
 		"@vitest/browser-playwright": "^4.1.6",
+		"@vitest/coverage-istanbul": "^4.1.6",
 		"browserslist": "^4.28.2",
 		"clsx": "^2.1.1",
 		"es-check": "^9.6.4",

@@ -4,6 +4,13 @@ import { defineConfig } from 'vitest/config';
 export default defineConfig({
 	test: {
 		expect: { requireAssertions: true },
+		coverage: {
+			provider: 'istanbul',
+			reporter: ['text', 'html'],
+			include: ['src/**/*.{ts,svelte}'],
+			exclude: ['src/lib/server/**', 'src/**/*.{test,spec}.*'],
+			reportsDirectory: './coverage',
+		},
 		projects: [
 			{
 				extends: './vite.config.ts',
