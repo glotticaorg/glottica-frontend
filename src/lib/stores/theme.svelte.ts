@@ -2,7 +2,7 @@ const THEME_KEY = 'glottica-theme';
 
 function getInitialTheme(): boolean {
 	if (typeof document === 'undefined') return false;
-	return document.documentElement.dataset.theme === 'dark';
+	return document.documentElement.classList.contains('dark');
 }
 
 let darkMode = $state(getInitialTheme());
@@ -13,8 +13,7 @@ export const theme = {
 	},
 	toggle() {
 		darkMode = !darkMode;
-		const value = darkMode ? 'dark' : 'light';
-		document.documentElement.dataset.theme = value;
-		localStorage.setItem(THEME_KEY, value);
+		document.documentElement.classList.toggle('dark', darkMode);
+		localStorage.setItem(THEME_KEY, darkMode ? 'dark' : 'light');
 	}
 };

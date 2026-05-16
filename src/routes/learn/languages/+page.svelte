@@ -1,7 +1,10 @@
 <script>
+import CardGrid from '$lib/components/CardGrid.svelte';
+import GridCard from '$lib/components/GridCard.svelte';
 import LegalText from '$lib/components/LegalText.svelte';
 import PageMeta from '$lib/components/PageMeta.svelte';
 import PlainDocumentHeader from '$lib/components/PlainDocumentHeader.svelte';
+import { Badge } from '$lib/components/ui/badge';
 
 const languages = [
 	{
@@ -107,26 +110,24 @@ const languages = [
 <PlainDocumentHeader>Languages</PlainDocumentHeader>
 
 <LegalText>
-	<p class="mb-6 text-base-content/70">
+	<p class="mb-6 text-muted-foreground">
 		Here you can find the languages for which we currently offer vocabulary decks and exercises.
 	</p>
 
-	<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+	<CardGrid>
 	{#each languages as lang}
-		<div class="card bg-base-200 shadow hover:shadow-md transition-shadow duration-200">
-			<div class="card-body gap-2">
-				<div class="flex items-start justify-between gap-2">
-					<div>
-						<h2 class="card-title text-lg">{lang.name}</h2>
-						<span class="badge badge-outline badge-sm">{lang.branch}</span>
-					</div>
-					<span class="text-3xl font-serif leading-none text-primary opacity-80 select-none" title={lang.romanized}>
-						{lang.sample}
-					</span>
+		<GridCard>
+			<div class="flex items-start justify-between gap-2">
+				<div>
+					<h2 class="text-lg font-semibold">{lang.name}</h2>
+					<Badge variant="outline" class="text-xs">{lang.branch}</Badge>
 				</div>
-				<p class="text-sm text-base-content/70 leading-relaxed">{lang.description}</p>
+				<span class="text-3xl font-serif leading-none text-primary opacity-80 select-none" title={lang.romanized}>
+					{lang.sample}
+				</span>
 			</div>
-		</div>
+			<p class="text-sm text-muted-foreground leading-relaxed">{lang.description}</p>
+		</GridCard>
 	{/each}
-	</div>
+	</CardGrid>
 </LegalText>

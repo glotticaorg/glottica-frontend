@@ -60,12 +60,8 @@
 		</noscript>
 		<script>
 			const saved = localStorage.getItem('glottica-theme');
-			if (saved) {
-				document.documentElement.dataset.theme = saved;
-			} else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-				document.documentElement.dataset.theme = 'dark';
-			} else {
-				document.documentElement.dataset.theme = 'light';
+			if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+				document.documentElement.classList.add('dark');
 			}
 		</script>
 		%sveltekit.head%

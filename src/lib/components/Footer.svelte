@@ -6,15 +6,15 @@ const currentYear = new Date().getFullYear();
 </script>
 
 <footer
-	class="footer shadow md:footer-horizontal bg-base-100 text-base-content p-10 flex-none"
+	class="flex flex-col md:flex-row gap-8 shadow bg-card text-card-foreground p-10 flex-none"
 >
-	<aside>
+	<aside class="flex flex-col gap-1 flex-1">
 		<a href="/" aria-label="Home">
 			<Logo />
 		</a>
 		<p>&copy; 2025&ndash;{currentYear}</p>
 	</aside>
-	<nav>
+	<nav class="flex flex-col gap-1 flex-1">
 		<FooterTitle>About us</FooterTitle>
 		<HoverLink href="/about/">About us</HoverLink>
 		<HoverLink href="/about/contact/">Contact</HoverLink>
@@ -22,7 +22,7 @@ const currentYear = new Date().getFullYear();
 		<HoverLink href="/feedback/">Feedback</HoverLink>
 		<HoverLink href="/about/partnerships/">Partnerships</HoverLink>
 	</nav>
-	<nav>
+	<nav class="flex flex-col gap-1 flex-1">
 		<FooterTitle>Resources</FooterTitle>
 		<HoverLink href="/learn/languages/">Languages</HoverLink>
 		<HoverLink href="/learn/scripts/">Scripts</HoverLink>
@@ -31,7 +31,7 @@ const currentYear = new Date().getFullYear();
 		<HoverLink href="/tools/typesetting/">Typesetting</HoverLink>
 		<HoverLink href="/calendar/">Calendar</HoverLink>
 	</nav>
-	<nav>
+	<nav class="flex flex-col gap-1 flex-1">
 		<FooterTitle>Legal</FooterTitle>
 		<HoverLink href="/legal/cookies/">Cookie policy</HoverLink>
 		<HoverLink href="/legal/disclosures/">Disclosures</HoverLink>

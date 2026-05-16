@@ -1,12 +1,13 @@
 <script lang="ts">
 import type { Snippet } from 'svelte';
+import { Button } from '$lib/components/ui/button';
 
 const {
-	children,
-	ariaLabel = undefined
+  children,
+  ariaLabel = undefined
 }: { children: Snippet; ariaLabel?: string } = $props();
 </script>
 
-<button class="btn btn-accent join-item" aria-label={ariaLabel}>
+<Button variant="secondary" aria-label={ariaLabel}>
   {@render children?.()}
-</button>
+</Button>

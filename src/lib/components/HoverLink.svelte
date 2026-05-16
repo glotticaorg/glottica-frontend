@@ -9,6 +9,6 @@ const {
 const target = $derived(newPage ? '_blank' : undefined);
 </script>
 
-<a class="link link-hover" {href} {target}>
+<a class="underline-offset-4 hover:underline text-foreground w-fit" {href} {target}>
   {@render children?.()}
 </a>

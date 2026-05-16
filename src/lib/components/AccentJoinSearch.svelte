@@ -1,5 +1,7 @@
 <script lang="ts">
+import { Input } from '$lib/components/ui/input';
+
 const { placeholder }: { placeholder: string } = $props();
 </script>
 
-<input type="search" class="input input-accent join-item w-full" placeholder={placeholder} />
+<Input type="search" class="w-full" {placeholder} />
