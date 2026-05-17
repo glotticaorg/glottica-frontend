@@ -2,7 +2,6 @@
 import { House, UserRound } from '@lucide/svelte';
 import { Button } from '$lib/components/ui/button';
 import Logo from './Logo.svelte';
-import ThemeToggle from './ThemeToggle.svelte';
 </script>
 
 <header class="flex items-center h-16 px-4 shadow bg-card flex-none">
@@ -17,7 +16,6 @@ import ThemeToggle from './ThemeToggle.svelte';
     </a>
   </div>
   <div class="flex-1 flex justify-end items-center gap-1">
-    <ThemeToggle />
     <Button variant="ghost" size="icon" href="/profile/" aria-label="Profile">
       <UserRound class="size-6" />
     </Button>

@@ -46,19 +46,6 @@
 			href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;400;500;600;700&display=optional"
 			rel="stylesheet"
 		/>
-		<noscript>
-			<style>
-				.theme-toggle {
-					display: none;
-				}
-			</style>
-		</noscript>
-		<script>
-			const saved = localStorage.getItem('glottica-theme');
-			if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-				document.documentElement.classList.add('dark');
-			}
-		</script>
 		%sveltekit.head%
 	</head>
 	<body data-sveltekit-preload-data="hover">
