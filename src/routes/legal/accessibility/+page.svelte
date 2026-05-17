@@ -1,23 +1,17 @@
-<script>
+<script lang="ts">
 import { PersonStanding } from '@lucide/svelte';
-import DocumentHeader from '$lib/components/DocumentHeader.svelte';
 import InfoAlert from '$lib/components/InfoAlert.svelte';
-import LegalText from '$lib/components/LegalText.svelte';
+import LegalDocumentPage from '$lib/components/LegalDocumentPage.svelte';
 import Link from '$lib/components/Link.svelte';
-import PageMeta from '$lib/components/PageMeta.svelte';
 import Paragraph from '$lib/components/Paragraph.svelte';
 import SectionHeader from '$lib/components/SectionHeader.svelte';
 </script>
 
-<PageMeta title="Accessibility" description="Glottica's accessibility aims and measures for an inclusive experience." />
-<DocumentHeader
-	header="Accessibility"
-	description="Our goals and measures"
+<LegalDocumentPage
+	title="Accessibility"
+	description="Glottica's accessibility aims and measures for an inclusive experience."
+	icon={PersonStanding}
 >
-	<PersonStanding class="size-64" />
-</DocumentHeader>
-
-<LegalText>
 	<InfoAlert title="Help us improve">
 		If you find any part of the site where you think accessibility could be improved, please let us know! You can reach out to us using the <Link href="/feedback">feedback form</Link>.
 	</InfoAlert>
@@ -32,4 +26,4 @@ import SectionHeader from '$lib/components/SectionHeader.svelte';
 		To ensure accessibility for visually impaired users we make sure that our color palette conforms to WCAG AAA normal text standards for contrastiveness.
 		Colorblindness was also taken into account during the design of our web experience. For this, people with colorblindness were consulted during the design.
 	</Paragraph>
-</LegalText>
+</LegalDocumentPage>

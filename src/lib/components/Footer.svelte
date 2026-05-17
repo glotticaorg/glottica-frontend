@@ -17,11 +17,11 @@ const currentYear = new Date().getFullYear();
 	</aside>
 	<nav class="flex flex-col gap-1 flex-1">
 		<FooterTitle>About us</FooterTitle>
-		<HoverLink href="/about/">About us</HoverLink>
-		<HoverLink href="/about/contact/">Contact</HoverLink>
+		<HoverLink href="/about-us/">About us</HoverLink>
+		<HoverLink href="/about-us/contact/">Contact</HoverLink>
 		<HoverLink href="/donate/">Donate</HoverLink>
 		<HoverLink href="/feedback/">Feedback</HoverLink>
-		<HoverLink href="/about/partnerships/">Partnerships</HoverLink>
+		<HoverLink href="/about-us/partnerships/">Partnerships</HoverLink>
 	</nav>
 	<nav class="flex flex-col gap-1 flex-1">
 		<FooterTitle>Resources</FooterTitle>

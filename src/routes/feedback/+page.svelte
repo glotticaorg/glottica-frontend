@@ -2,7 +2,7 @@
 import { enhance } from '$app/forms';
 import InfoAlert from '$lib/components/InfoAlert.svelte';
 import Input from '$lib/components/Input.svelte';
-import LegalText from '$lib/components/LegalText.svelte';
+import PageContent from '$lib/components/PageContent.svelte';
 import PageMeta from '$lib/components/PageMeta.svelte';
 import Paragraph from '$lib/components/Paragraph.svelte';
 import PlainDocumentHeader from '$lib/components/PlainDocumentHeader.svelte';
@@ -17,7 +17,7 @@ const { form }: { form: ActionData } = $props();
 <PageMeta title="Feedback" description="Share your feedback and ideas to help improve the Glottica platform." />
 <PlainDocumentHeader>Feedback</PlainDocumentHeader>
 
-<LegalText>
+<PageContent>
 	<Paragraph>
 		If you have any feedback or other ideas on how we can improve our platform, please let
 		us know through this form! We try to reply to requests within three weeks of receival.
@@ -42,4 +42,4 @@ const { form }: { form: ActionData } = $props();
 			<Button type="submit">Send feedback</Button>
 		</form>
 	{/if}
-</LegalText>
+</PageContent>

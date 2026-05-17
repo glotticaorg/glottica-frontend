@@ -1,22 +1,16 @@
-<script>
+<script lang="ts">
 import { ShieldCheck } from '@lucide/svelte';
-import DocumentHeader from '$lib/components/DocumentHeader.svelte';
-import LegalText from '$lib/components/LegalText.svelte';
+import LegalDocumentPage from '$lib/components/LegalDocumentPage.svelte';
 import Link from '$lib/components/Link.svelte';
-import PageMeta from '$lib/components/PageMeta.svelte';
 import Paragraph from '$lib/components/Paragraph.svelte';
 import SectionHeader from '$lib/components/SectionHeader.svelte';
 </script>
 
-<PageMeta title="Responsible Disclosure" description="Glottica's procedure for reporting cybersecurity concerns." />
-<DocumentHeader
-	header="Responsible disclosure"
-	description="Our procedure"
+<LegalDocumentPage
+	title="Responsible Disclosure"
+	description="Glottica's procedure for reporting cybersecurity concerns."
+	icon={ShieldCheck}
 >
-	<ShieldCheck class="size-64" />
-</DocumentHeader>
-
-<LegalText>
 	<SectionHeader>Reporting</SectionHeader>
 	<Paragraph>
 		You can report cybersecurity concerns to us using our <Link href="/feedback/">feedback form</Link>.
@@ -24,4 +18,4 @@ import SectionHeader from '$lib/components/SectionHeader.svelte';
 		We will assess reported concerns, be in contact with the reporter, and resolve them within
 		three weeks of receival if we believe they consitute a risk to the security of our platform.
 	</Paragraph>
-</LegalText>
+</LegalDocumentPage>

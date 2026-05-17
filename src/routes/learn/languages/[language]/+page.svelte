@@ -2,7 +2,7 @@
 import { BookMarked, BookOpen, CaseLower, Download, GraduationCap, Keyboard } from '@lucide/svelte';
 import CalloutBox from '$lib/components/CalloutBox.svelte';
 import GridCard from '$lib/components/GridCard.svelte';
-import LegalText from '$lib/components/LegalText.svelte';
+import PageContent from '$lib/components/PageContent.svelte';
 import LinguisticCard from '$lib/components/LinguisticCard.svelte';
 import PageMeta from '$lib/components/PageMeta.svelte';
 import PlainDocumentHeader from '$lib/components/PlainDocumentHeader.svelte';
@@ -25,7 +25,7 @@ const selectedScript = $derived(relatedScripts[selectedScriptIndex]);
 	<Badge variant="secondary" class="text-sm font-normal">{language.branch}</Badge>
 </div>
 
-<LegalText>
+<PageContent>
 	<p class="mb-10 text-muted-foreground">{language.description}</p>
 
 	<!-- Learning track -->
@@ -155,4 +155,4 @@ const selectedScript = $derived(relatedScripts[selectedScriptIndex]);
 			</p>
 		</GridCard>
 	</section>
-</LegalText>
+</PageContent>

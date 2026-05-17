@@ -1,7 +1,7 @@
 <script>
 import CardGrid from '$lib/components/CardGrid.svelte';
 import GridCard from '$lib/components/GridCard.svelte';
-import LegalText from '$lib/components/LegalText.svelte';
+import PageContent from '$lib/components/PageContent.svelte';
 import PageMeta from '$lib/components/PageMeta.svelte';
 import PlainDocumentHeader from '$lib/components/PlainDocumentHeader.svelte';
 import SectionHeader from '$lib/components/SectionHeader.svelte';
@@ -22,7 +22,7 @@ const publishers = [
 <PageMeta title="Partnerships" description="Glottica's university and publisher partners." />
 <PlainDocumentHeader>Partnerships</PlainDocumentHeader>
 
-<LegalText>
+<PageContent>
 	<p class="mb-10 text-muted-foreground">
 		Glottica collaborates with universities and academic publishers to bring high-quality
 		learning materials to students and researchers of historical languages worldwide.
@@ -65,4 +65,4 @@ const publishers = [
 			</GridCard>
 		{/each}
 	</CardGrid>
-</LegalText>
+</PageContent>

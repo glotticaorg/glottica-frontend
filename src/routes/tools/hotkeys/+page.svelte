@@ -1,7 +1,7 @@
 <script lang="ts">
 import { Download, Package } from '@lucide/svelte';
 import CalloutBox from '$lib/components/CalloutBox.svelte';
-import LegalText from '$lib/components/LegalText.svelte';
+import PageContent from '$lib/components/PageContent.svelte';
 import PageMeta from '$lib/components/PageMeta.svelte';
 import PlainDocumentHeader from '$lib/components/PlainDocumentHeader.svelte';
 import { Badge } from '$lib/components/ui/badge';
@@ -14,7 +14,7 @@ let expanded = $state(false);
 <PageMeta title="Hotkeys" description="Download keyboard hotkey configurations for Indo-European languages and scripts." />
 <PlainDocumentHeader>Hotkeys for Indo-Europeanists</PlainDocumentHeader>
 
-<LegalText>
+<PageContent>
 	<p class="mb-6 text-muted-foreground">
 		Keyboard configurations supporting Indo-European languages and orthographies, using language
 		"modes" so you can switch between character sets without any hassle.
@@ -63,4 +63,4 @@ let expanded = $state(false);
 			</div>
 		{/each}
 	</div>
-</LegalText>
+</PageContent>

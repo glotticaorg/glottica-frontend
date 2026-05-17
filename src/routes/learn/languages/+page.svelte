@@ -1,6 +1,6 @@
 <script>
 import CardGrid from '$lib/components/CardGrid.svelte';
-import LegalText from '$lib/components/LegalText.svelte';
+import PageContent from '$lib/components/PageContent.svelte';
 import LinguisticCard from '$lib/components/LinguisticCard.svelte';
 import PageMeta from '$lib/components/PageMeta.svelte';
 import PlainDocumentHeader from '$lib/components/PlainDocumentHeader.svelte';
@@ -10,7 +10,7 @@ import { languages } from '$lib/data/languages';
 <PageMeta title="Languages" description="Browse all languages available on Glottica for vocabulary and exercises." />
 <PlainDocumentHeader>Languages</PlainDocumentHeader>
 
-<LegalText>
+<PageContent>
 	<p class="mb-6 text-muted-foreground">
 		Here you can find the languages for which we currently offer vocabulary decks and exercises.
 	</p>
@@ -26,4 +26,4 @@ import { languages } from '$lib/data/languages';
 			/>
 		{/each}
 	</CardGrid>
-</LegalText>
+</PageContent>

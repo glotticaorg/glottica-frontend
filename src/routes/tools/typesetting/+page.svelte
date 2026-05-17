@@ -3,7 +3,7 @@ import { BookOpen, Code2, FileText, Palette } from '@lucide/svelte';
 import CalloutBox from '$lib/components/CalloutBox.svelte';
 import CardGrid from '$lib/components/CardGrid.svelte';
 import GridCard from '$lib/components/GridCard.svelte';
-import LegalText from '$lib/components/LegalText.svelte';
+import PageContent from '$lib/components/PageContent.svelte';
 import PageMeta from '$lib/components/PageMeta.svelte';
 import PlainDocumentHeader from '$lib/components/PlainDocumentHeader.svelte';
 import { Badge } from '$lib/components/ui/badge';
@@ -13,7 +13,7 @@ import { Button } from '$lib/components/ui/button';
 <PageMeta title="Typesetting Templates" description="Generate academic typesetting templates in TeX and Typst for linguistics." />
 <PlainDocumentHeader>Typesetting templates</PlainDocumentHeader>
 
-<LegalText>
+<PageContent>
 	<p class="mb-6 text-muted-foreground">
 		Generate document templates for your institution in seconds. Choose a content type,
 		typesetting application, and citation style — then optionally add your logo and brand colour.
@@ -61,4 +61,4 @@ import { Button } from '$lib/components/ui/button';
 	<div class="mt-8">
 		<Button href="/tools/typesetting/generator" size="lg">Generate your template</Button>
 	</div>
-</LegalText>
+</PageContent>

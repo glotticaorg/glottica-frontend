@@ -3,7 +3,7 @@ import { Archive, BookMarked, BookOpen, CalendarDays, CaseLower, Earth, Language
 import DetailItem from '$lib/components/DetailItem.svelte';
 import DetailsCard from '$lib/components/DetailsCard.svelte';
 import GridCard from '$lib/components/GridCard.svelte';
-import LegalText from '$lib/components/LegalText.svelte';
+import PageContent from '$lib/components/PageContent.svelte';
 import PageMeta from '$lib/components/PageMeta.svelte';
 import PlainDocumentHeader from '$lib/components/PlainDocumentHeader.svelte';
 import { Badge } from '$lib/components/ui/badge';
@@ -21,7 +21,7 @@ const { text, language, relatedScripts } = $derived(data);
 	<Badge variant="secondary" class="text-sm font-normal">{text.genre}</Badge>
 </div>
 
-<LegalText>
+<PageContent>
 	<!-- Details card -->
 	<section class="mb-10">
 		<DetailsCard>
@@ -67,4 +67,4 @@ const { text, language, relatedScripts } = $derived(data);
 			</p>
 		</GridCard>
 	</section>
-</LegalText>
+</PageContent>

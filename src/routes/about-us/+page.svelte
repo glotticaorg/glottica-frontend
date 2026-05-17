@@ -1,6 +1,6 @@
 <script>
 import Alert from '$lib/components/Alert.svelte';
-import LegalText from '$lib/components/LegalText.svelte';
+import PageContent from '$lib/components/PageContent.svelte';
 import Link from '$lib/components/Link.svelte';
 import PageMeta from '$lib/components/PageMeta.svelte';
 import Paragraph from '$lib/components/Paragraph.svelte';
@@ -11,7 +11,7 @@ import SectionHeader from '$lib/components/SectionHeader.svelte';
 <PageMeta title="About" description="Learn about Glottica, a non-profit foundation dedicated to Indo-European language learning." />
 <PlainDocumentHeader>About us</PlainDocumentHeader>
 
-<LegalText>
+<PageContent>
 	<SectionHeader>Our details</SectionHeader>
 	<Paragraph>
 		This website is maintained by Glottica.org, a non-profit foundation registered
@@ -31,4 +31,4 @@ import SectionHeader from '$lib/components/SectionHeader.svelte';
 	<Paragraph>
 		For our templates we rely on an open-source implementation of the Unified stylesheet for linguistics by XYZ and contributions from our institutional partners. The keybinds we distribute are bundles with <Link href="https://www.autohotkey.com/">AutoHotKey software</Link> for Windows and XYZ for Mac.
 	</Paragraph>
-</LegalText>
+</PageContent>

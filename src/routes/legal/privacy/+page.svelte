@@ -1,22 +1,16 @@
-<script>
+<script lang="ts">
 import { Lock } from '@lucide/svelte';
-import DocumentHeader from '$lib/components/DocumentHeader.svelte';
-import LegalText from '$lib/components/LegalText.svelte';
+import LegalDocumentPage from '$lib/components/LegalDocumentPage.svelte';
 import Link from '$lib/components/Link.svelte';
-import PageMeta from '$lib/components/PageMeta.svelte';
 import Paragraph from '$lib/components/Paragraph.svelte';
 import SectionHeader from '$lib/components/SectionHeader.svelte';
 </script>
 
-<PageMeta title="Privacy Statement" description="How Glottica collects, uses, and protects your personal data in compliance with the GDPR." />
-<DocumentHeader
-	header="Privacy statement"
-	description="We are committed to protecting your privacy"
+<LegalDocumentPage
+	title="Privacy Statement"
+	description="How Glottica collects, uses, and protects your personal data in compliance with the GDPR."
+	icon={Lock}
 >
-	<Lock class="size-64" />
-</DocumentHeader>
-
-<LegalText>
 	<SectionHeader>Our privacy statement</SectionHeader>
 	<Paragraph>
 		Our systems are in full compliance with the EU <Link href="https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng">GDPR</Link> and Dutch legislation.
@@ -28,4 +22,4 @@ import SectionHeader from '$lib/components/SectionHeader.svelte';
 		In the case of account deletion, all data pertaining to your activity and your account is hard deleted from our servers. This means that recovery of this data is impossible. Due to this, account deletion is irreversible.
 		Your credentials are hashed securely before being stored on our servers. When logging in to our platform, your hashed credentials do not leave our servers.
 	</Paragraph>
-</LegalText>
+</LegalDocumentPage>

@@ -3,7 +3,7 @@ import { ShieldCheck, UserRound } from '@lucide/svelte';
 import CardGrid from '$lib/components/CardGrid.svelte';
 import DocumentHeader from '$lib/components/DocumentHeader.svelte';
 import GridCard from '$lib/components/GridCard.svelte';
-import LegalText from '$lib/components/LegalText.svelte';
+import PageContent from '$lib/components/PageContent.svelte';
 import Link from '$lib/components/Link.svelte';
 import PageMeta from '$lib/components/PageMeta.svelte';
 import type { PageData } from './$types';
@@ -16,7 +16,7 @@ let { data }: { data: PageData } = $props();
 	<UserRound class="size-64" />
 </DocumentHeader>
 
-<LegalText>
+<PageContent>
 	<CardGrid>
 		<GridCard>
 			<div class="flex items-start gap-4">
@@ -43,4 +43,4 @@ let { data }: { data: PageData } = $props();
 			</dl>
 		</GridCard>
 	</CardGrid>
-</LegalText>
+</PageContent>

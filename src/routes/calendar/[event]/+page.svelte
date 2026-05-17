@@ -2,7 +2,7 @@
 import { CalendarDays, Clock, MapPin, Tag, Users } from '@lucide/svelte';
 import DetailItem from '$lib/components/DetailItem.svelte';
 import DetailsCard from '$lib/components/DetailsCard.svelte';
-import LegalText from '$lib/components/LegalText.svelte';
+import PageContent from '$lib/components/PageContent.svelte';
 import PageMeta from '$lib/components/PageMeta.svelte';
 import PlainDocumentHeader from '$lib/components/PlainDocumentHeader.svelte';
 import { Badge } from '$lib/components/ui/badge';
@@ -21,7 +21,7 @@ const { event } = $derived(data);
 	<Badge variant="secondary" class="text-sm font-normal">{event.format}</Badge>
 </div>
 
-<LegalText>
+<PageContent>
 	<!-- Details card -->
 	<section class="mb-10">
 		<DetailsCard>
@@ -58,4 +58,4 @@ const { event } = $derived(data);
 			{/each}
 		</div>
 	</section>
-</LegalText>
+</PageContent>

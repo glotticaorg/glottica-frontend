@@ -1,32 +1,24 @@
-<script>
+<script lang="ts">
 import { FolderBookmark } from '@lucide/svelte';
 import GroupedList from '$lib/components/GroupedList.svelte';
-import DocumentHeader from '$lib/components/DocumentHeader.svelte';
-import LegalText from '$lib/components/LegalText.svelte';
+import LegalDocumentPage from '$lib/components/LegalDocumentPage.svelte';
 import Link from '$lib/components/Link.svelte';
 import ListDocument from '$lib/components/ListDocument.svelte';
-import PageMeta from '$lib/components/PageMeta.svelte';
 import Paragraph from '$lib/components/Paragraph.svelte';
 import SectionHeader from '$lib/components/SectionHeader.svelte';
 </script>
 
-<PageMeta title="Disclosures" description="Financial and governance disclosure documents for Glottica Foundation." />
-<DocumentHeader
-	header="Disclosures"
-	description="As a non-profit foundation we must disclose certain documents on the financials and management of our organisation, these can all be found here."
+<LegalDocumentPage
+	title="Disclosures"
+	description="Financial and governance disclosure documents for Glottica Foundation."
+	icon={FolderBookmark}
 >
-	<FolderBookmark class="size-64" />
-</DocumentHeader>
-
-<LegalText>
-	<SectionHeader>
-		Our disclosure statements
-	</SectionHeader>
+	<SectionHeader>Our disclosure statements</SectionHeader>
 	<Paragraph>
 		We provide our statements both in Dutch and English to ensure full transparancy and clarity.
 		In the case of any disagreement, the Dutch document takes precedence over the English version.
 		If you notice any such disagreement between the Dutch and English documents or if you see
-		anything that is unclear, please <Link href="/about/contact">reach out to us</Link>.
+		anything that is unclear, please <Link href="/about-us/contact">reach out to us</Link>.
 	</Paragraph>
 	<GroupedList title="2025 (NL)">
 		<ListDocument href="#">Contactgegevens 2025</ListDocument>
@@ -47,4 +39,4 @@ import SectionHeader from '$lib/components/SectionHeader.svelte';
 		<ListDocument href="#">Activity report 2025</ListDocument>
 		<ListDocument href="#">Financial report 2025</ListDocument>
 	</GroupedList>
-</LegalText>
+</LegalDocumentPage>

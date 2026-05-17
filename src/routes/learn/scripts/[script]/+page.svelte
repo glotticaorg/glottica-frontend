@@ -2,7 +2,7 @@
 import { BookMarked, Download, GraduationCap, Keyboard, Languages } from '@lucide/svelte';
 import CalloutBox from '$lib/components/CalloutBox.svelte';
 import GridCard from '$lib/components/GridCard.svelte';
-import LegalText from '$lib/components/LegalText.svelte';
+import PageContent from '$lib/components/PageContent.svelte';
 import LinguisticCard from '$lib/components/LinguisticCard.svelte';
 import PageMeta from '$lib/components/PageMeta.svelte';
 import PlainDocumentHeader from '$lib/components/PlainDocumentHeader.svelte';
@@ -25,7 +25,7 @@ const selectedLanguage = $derived(relatedLanguages[selectedLanguageIndex]);
 	<Badge variant="secondary" class="text-sm font-normal">{script.type}</Badge>
 </div>
 
-<LegalText>
+<PageContent>
 	<p class="mb-10 text-muted-foreground">{script.description}</p>
 
 	<!-- Learning track -->
@@ -133,4 +133,4 @@ const selectedLanguage = $derived(relatedLanguages[selectedLanguageIndex]);
 			</p>
 		</GridCard>
 	</section>
-</LegalText>
+</PageContent>

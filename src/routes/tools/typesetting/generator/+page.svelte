@@ -1,6 +1,6 @@
 <script lang="ts">
 import Input from '$lib/components/Input.svelte';
-import LegalText from '$lib/components/LegalText.svelte';
+import PageContent from '$lib/components/PageContent.svelte';
 import NumberedStep from '$lib/components/NumberedStep.svelte';
 import PageMeta from '$lib/components/PageMeta.svelte';
 import PlainDocumentHeader from '$lib/components/PlainDocumentHeader.svelte';
@@ -17,7 +17,7 @@ let color = $state('#3b82f6');
 <PageMeta title="Template Generator" description="Customise and generate your TeX or Typst template with your institution's branding." />
 <PlainDocumentHeader>Template generator</PlainDocumentHeader>
 
-<LegalText>
+<PageContent>
 	<form method="POST" class="py-4">
 		<div class="mb-6">
 			<SectionHeader>Template settings</SectionHeader>
@@ -117,4 +117,4 @@ let color = $state('#3b82f6');
 			<Button type="submit">Generate template</Button>
 		</div>
 	</form>
-</LegalText>
+</PageContent>
