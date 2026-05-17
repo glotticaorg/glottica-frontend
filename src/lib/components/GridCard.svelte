@@ -6,7 +6,7 @@ let { children, class: className = '', href }: { children: Snippet; class?: stri
 </script>
 
 {#if href}
-<a {href} class="bg-card rounded-xl shadow-sm border border-border block transition-colors hover:bg-muted/50 {className}">
+<a {href} class="bg-card rounded-xl shadow-sm border border-border block transition-all hover:-translate-y-1 hover:shadow-lg {className}">
   <div class="p-5 flex flex-col gap-2">
     {@render children?.()}
   </div>

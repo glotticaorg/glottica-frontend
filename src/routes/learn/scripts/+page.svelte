@@ -17,7 +17,7 @@ import { scripts } from '$lib/data/scripts';
 
 	<CardGrid>
 		{#each scripts as script}
-			<LinguisticCard name={script.name} badge={script.type} sample={script.sample} description={script.description} />
+			<LinguisticCard name={script.name} badge={script.type} sample={script.sample} description={script.description} href="/learn/scripts/{script.slug}" />
 		{/each}
 	</CardGrid>
 </LegalText>
