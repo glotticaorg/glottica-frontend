@@ -1,6 +1,4 @@
 <script lang="ts">
-import CardGrid from '$lib/components/CardGrid.svelte';
-import GridCard from '$lib/components/GridCard.svelte';
 import LegalText from '$lib/components/LegalText.svelte';
 import PageMeta from '$lib/components/PageMeta.svelte';
 import PlainDocumentHeader from '$lib/components/PlainDocumentHeader.svelte';
@@ -23,7 +21,7 @@ const filtered = $derived(
 <PlainDocumentHeader>Texts</PlainDocumentHeader>
 
 <LegalText>
-	<div class="mb-6 max-w-xs">
+	<div class="mb-8 max-w-xs">
 		<Select name="language" label="Filter by language" bind:value={selectedLanguage}>
 			<option value="All">All languages</option>
 			{#each languages as language}
@@ -32,18 +30,34 @@ const filtered = $derived(
 		</Select>
 	</div>
 
-	<CardGrid>
+	<ol class="flex flex-col divide-y divide-border">
 		{#each filtered as text (text.slug)}
-			<GridCard href="/texts/{text.slug}">
-				<div class="flex items-start justify-between gap-2">
-					<div>
-						<h2 class="text-lg font-semibold">{text.title}</h2>
-						<Badge variant="outline" class="text-xs">{text.language}</Badge>
+			<li>
+				<a
+					href="/texts/{text.slug}"
+					class="flex flex-col sm:flex-row gap-2 sm:gap-8 py-5 hover:bg-muted/40 transition-colors rounded-lg px-3 -mx-3 group"
+				>
+					<span class="text-sm tabular-nums text-muted-foreground shrink-0 sm:w-36 pt-0.5">
+						{text.period}
+					</span>
+					<div class="flex flex-col gap-1.5 min-w-0 flex-1">
+						<div class="flex flex-wrap items-baseline gap-x-2 gap-y-1">
+							<span class="text-sm font-semibold group-hover:text-primary transition-colors leading-snug">
+								{text.title}
+							</span>
+							<Badge variant="outline" class="text-xs font-normal">{text.language}</Badge>
+						</div>
+						<p class="text-sm text-muted-foreground">
+							{text.author} &middot; {text.genre} &middot; {text.region}
+						</p>
+						<div class="flex flex-wrap gap-1">
+							{#each text.tags as tag}
+								<Badge variant="secondary" class="text-xs font-normal">{tag}</Badge>
+							{/each}
+						</div>
 					</div>
-					<span class="text-sm tabular-nums text-muted-foreground text-right shrink-0">{text.period}</span>
-				</div>
-				<p class="text-sm text-muted-foreground leading-relaxed">{text.author} &middot; {text.genre}</p>
-			</GridCard>
+				</a>
+			</li>
 		{/each}
-	</CardGrid>
+	</ol>
 </LegalText>

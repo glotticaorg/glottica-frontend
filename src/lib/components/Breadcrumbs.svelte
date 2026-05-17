@@ -37,6 +37,7 @@ function resolveLabel(segment: string, data: Record<string, unknown>, params: Re
 	if (segment === params.language) return (data.language as { name?: string })?.name ?? segment;
 	if (segment === params.script) return (data.script as { name?: string })?.name ?? segment;
 	if (segment === params.text) return (data.text as { title?: string })?.title ?? segment;
+	if (segment === params.event) return (data.event as { title?: string })?.title ?? segment;
 	return segment;
 }
 
@@ -71,7 +72,7 @@ const parent = $derived(
 	{:else}
 		<!-- Mobile: home icon (root) or ‹ Parent back-link -->
 		<div class="flex md:hidden items-center">
-			{#if parent}
+			{#if parent && parent.href !== '/'}
 				<Button variant="ghost" href={parent.href} aria-label="Back to {parent.label}" class="flex items-center gap-1 px-2">
 					<ChevronLeft class="size-4 shrink-0" />
 					<span class="text-sm truncate">{parent.label}</span>
