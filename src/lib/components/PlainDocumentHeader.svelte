@@ -7,7 +7,7 @@ const { children }: { children: Snippet } = $props();
 </script>
 
 <CenterAlignment>
-	<div class="pb-4 pt-8">
+	<div class="pb-4 pt-8 px-4">
 		<PageHeader>
 			{@render children?.()}
 		</PageHeader>

@@ -93,8 +93,8 @@ export const languages: Language[] = [
 		slug: 'old-persian',
 		name: 'Old Persian',
 		branch: 'Iranian',
-		sample: '𐎧𐏁𐎠𐎹𐎰𐎡𐎹',
-		romanized: 'xšāyaθiya',
+		sample: '𐎲𐎥',
+		romanized: 'baga',
 		description:
 			'The language of Darius and Xerxes, inscribed in cuneiform at Persepolis and Behistun.'
 	},

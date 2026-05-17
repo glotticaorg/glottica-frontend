@@ -26,7 +26,7 @@ let expanded = $state(false);
 			{#snippet headerAction()}
 				<button
 					onclick={() => expanded = !expanded}
-					class="text-xs font-medium px-2 py-0.5 rounded-full border border-border bg-secondary text-secondary-foreground hover:bg-muted transition-colors cursor-pointer"
+					class="text-xs font-medium px-2 py-0.5 rounded-full border border-border bg-secondary text-secondary-foreground hover:bg-muted hover:text-muted-foreground transition-colors cursor-pointer"
 				>
 					All {hotkeys.length} languages {expanded ? '▴' : '▾'}
 				</button>
