@@ -23,7 +23,9 @@ Thumbs.db
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 
+# DX
 .idea
+CLAUDE.md
 
 # Coverage
 /coverage

@@ -11,7 +11,7 @@ export const load = ({ params }: { params: { language: string } }) => {
 	return {
 		language: lang,
 		relatedTexts: texts.filter((t) => t.languageSlug === lang.slug),
-		relatedScripts: scripts.filter((s) => s.languageSlug === lang.slug),
+		relatedScripts: scripts.filter((s) => s.languageSlugs.includes(lang.slug)),
 		hotkey: hotkeys.find((h) => h.languageSlug === lang.slug) ?? null
 	};
 };

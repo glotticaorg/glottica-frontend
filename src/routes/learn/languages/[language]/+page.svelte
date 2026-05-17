@@ -11,6 +11,9 @@ import { Button } from '$lib/components/ui/button';
 
 let { data } = $props();
 const { language, relatedTexts, relatedScripts, hotkey } = $derived(data);
+
+let selectedScriptIndex = $state(0);
+const selectedScript = $derived(relatedScripts[selectedScriptIndex]);
 </script>
 
 <PageMeta
@@ -25,25 +28,67 @@ const { language, relatedTexts, relatedScripts, hotkey } = $derived(data);
 <LegalText>
 	<p class="mb-10 text-muted-foreground">{language.description}</p>
 
+	<!-- Learning track -->
+	<section class="mb-10">
+		<h2 class="mb-4 text-base font-semibold flex items-center gap-2 text-muted-foreground">
+			<GraduationCap class="size-4" />
+			Learning track
+			<Badge variant="secondary" class="text-xs font-normal">Coming soon</Badge>
+		</h2>
+		<GridCard>
+			<p class="text-sm text-muted-foreground">
+				Structured lessons for {language.name} are in development. Check back soon.
+			</p>
+		</GridCard>
+	</section>
+
 	<!-- Scripts + Hotkeys side by side -->
 	{#if relatedScripts.length > 0 || hotkey}
-		<div class="grid gap-6 mb-10" class:grid-cols-2={relatedScripts.length > 0 && hotkey}>
+		<div class="grid gap-6 mb-10" class:sm:grid-cols-2={relatedScripts.length > 0 && hotkey}>
 			{#if relatedScripts.length > 0}
 				<section class="flex flex-col">
 					<h2 class="mb-4 text-base font-semibold flex items-center gap-2">
 						<CaseLower class="size-4 text-muted-foreground" />
-						Script
+						Scripts
 					</h2>
-					{#each relatedScripts as script}
-						<LinguisticCard
-							class="flex-1"
-							name={script.name}
-							badge={script.type}
-							sample={script.sample}
-							description={script.description}
-							href="/learn/scripts"
-						/>
-					{/each}
+					{#if selectedScript}
+						{#if relatedScripts.length > 1}
+							<GridCard href="/learn/scripts/{selectedScript.slug}" class="flex-1">
+								<div class="flex items-start justify-between gap-2">
+									<div>
+										<h2 class="text-lg font-semibold">{selectedScript.name}</h2>
+										<Badge variant="outline" class="text-xs mt-1">{selectedScript.type}</Badge>
+									</div>
+									<span class="text-3xl font-serif leading-none text-primary opacity-80 select-none">
+										{selectedScript.sample}
+									</span>
+								</div>
+								<p class="text-sm text-muted-foreground leading-relaxed">{selectedScript.description}</p>
+								<div class="flex gap-1.5 flex-wrap mt-1">
+									{#each relatedScripts as script, i}
+										<button
+											onclick={(e) => { e.preventDefault(); e.stopPropagation(); selectedScriptIndex = i; }}
+											class="text-xs font-medium px-2.5 py-0.5 rounded-full border transition-colors cursor-pointer
+												{selectedScriptIndex === i
+													? 'bg-primary text-primary-foreground border-primary'
+													: 'border-border bg-secondary text-secondary-foreground hover:bg-muted hover:text-muted-foreground'}"
+										>
+											{script.name}
+										</button>
+									{/each}
+								</div>
+							</GridCard>
+						{:else}
+							<LinguisticCard
+								class="flex-1"
+								name={selectedScript.name}
+								badge={selectedScript.type}
+								sample={selectedScript.sample}
+								description={selectedScript.description}
+								href="/learn/scripts/{selectedScript.slug}"
+							/>
+						{/if}
+					{/if}
 				</section>
 			{/if}
 
@@ -88,9 +133,9 @@ const { language, relatedTexts, relatedScripts, hotkey } = $derived(data);
 						<span class="text-sm tabular-nums text-muted-foreground shrink-0">{text.period}</span>
 					</div>
 				{/each}
-			</div>
-			<div class="mt-3">
-				<Button variant="outline" href="/texts">Browse all texts</Button>
+				<a href="/texts" class="flex items-center justify-end gap-1 px-5 py-3 text-sm text-primary/80 hover:text-primary hover:bg-muted/50 transition-colors">
+					Browse all texts →
+				</a>
 			</div>
 		{:else}
 			<p class="text-sm text-muted-foreground">No texts available for this language yet.</p>
@@ -107,20 +152,6 @@ const { language, relatedTexts, relatedScripts, hotkey } = $derived(data);
 		<GridCard>
 			<p class="text-sm text-muted-foreground">
 				Curated reference books and grammars for {language.name} are coming soon.
-			</p>
-		</GridCard>
-	</section>
-
-	<!-- Lessons -->
-	<section class="mb-10">
-		<h2 class="mb-4 text-base font-semibold flex items-center gap-2 text-muted-foreground">
-			<GraduationCap class="size-4" />
-			Lessons
-			<Badge variant="secondary" class="text-xs font-normal">Coming soon</Badge>
-		</h2>
-		<GridCard>
-			<p class="text-sm text-muted-foreground">
-				Structured lessons for {language.name} are in development. Check back soon.
 			</p>
 		</GridCard>
 	</section>
