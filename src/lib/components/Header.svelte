@@ -1,16 +1,15 @@
 <script lang="ts">
-import { House, UserRound } from '@lucide/svelte';
+import { UserRound } from '@lucide/svelte';
 import { Button } from '$lib/components/ui/button';
 import Logo from './Logo.svelte';
+import Breadcrumbs from './Breadcrumbs.svelte';
 </script>
 
 <header class="flex items-center h-16 px-4 shadow bg-card flex-none">
-  <div class="flex-1">
-    <Button variant="ghost" size="icon" href="/" aria-label="Home">
-      <House class="size-6" />
-    </Button>
+  <div class="flex-1 overflow-hidden">
+    <Breadcrumbs />
   </div>
-  <div class="flex-none">
+  <div class="hidden md:flex flex-none">
     <a href="/" aria-label="Home logo">
       <Logo />
     </a>
