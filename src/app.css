@@ -1,7 +1,5 @@
 @import "tailwindcss";
 
-@custom-variant dark (&:where(.dark, .dark *));
-
 @theme inline {
 	--radius-sm: calc(var(--radius) - 4px);
 	--radius-md: calc(var(--radius) - 2px);
@@ -61,7 +59,8 @@
 }
 
 /* Dark theme — warm brown-grey surfaces, amber primary */
-.dark {
+@media (prefers-color-scheme: dark) {
+:root {
 	--background: oklch(13% 0.02 40);
 	--foreground: oklch(88% 0.03 75);
 
@@ -88,6 +87,7 @@
 	--border: oklch(30% 0.02 40);
 	--input: oklch(30% 0.02 40);
 	--ring: oklch(78% 0.17 65);
+}
 }
 
 html {
