@@ -8,7 +8,7 @@ const {
 }: { children: Snippet; title: string } = $props();
 </script>
 
-<div class="mt-4 bg-card rounded-xl shadow-xs ring-1 ring-foreground/10 px-6 py-4">
+<div class="mt-4 bg-card rounded-xl shadow-sm border border-border px-6 py-4">
   <p class="font-semibold text-sm mb-3">{title}</p>
   <List noMargin>
     {@render children?.()}

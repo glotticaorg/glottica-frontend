@@ -1,6 +1,6 @@
 <script>
 import { Archive } from '@lucide/svelte';
-import CollapseList from '$lib/components/CollapseList.svelte';
+import GroupedList from '$lib/components/GroupedList.svelte';
 import DocumentHeader from '$lib/components/DocumentHeader.svelte';
 import LegalText from '$lib/components/LegalText.svelte';
 import Link from '$lib/components/Link.svelte';
@@ -28,7 +28,7 @@ import SectionHeader from '$lib/components/SectionHeader.svelte';
 		If you notice any such disagreement between the Dutch and English documents or if you see
 		anything that is unclear, please <Link href="/about/contact">reach out to us</Link>.
 	</Paragraph>
-	<CollapseList title="2025 (NL)">
+	<GroupedList title="2025 (NL)">
 		<ListDocument href="#">Contactgegevens 2025</ListDocument>
 		<ListDocument href="#">Bestuurders en functies 2025</ListDocument>
 		<ListDocument href="#">Statuten 2025</ListDocument>
@@ -37,8 +37,8 @@ import SectionHeader from '$lib/components/SectionHeader.svelte';
 		<ListDocument href="#">Activiteitenverslag 2025</ListDocument>
 		<ListDocument href="#">Financiële verantwoording 2025</ListDocument>
 		<ListDocument href="#">Standaardformulier 2025</ListDocument>
-	</CollapseList>
-	<CollapseList title="2025 (EN)">
+	</GroupedList>
+	<GroupedList title="2025 (EN)">
 		<ListDocument href="#">Contact details 2025</ListDocument>
 		<ListDocument href="#">Composition board 2025</ListDocument>
 		<ListDocument href="#">Bylaws 2025</ListDocument>
@@ -46,5 +46,5 @@ import SectionHeader from '$lib/components/SectionHeader.svelte';
 		<ListDocument href="#">Rewards and remuneration 2025</ListDocument>
 		<ListDocument href="#">Activity report 2025</ListDocument>
 		<ListDocument href="#">Financial report 2025</ListDocument>
-	</CollapseList>
+	</GroupedList>
 </LegalText>
