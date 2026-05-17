@@ -1,4 +1,6 @@
 <script lang="ts">
+import NumberedStep from './NumberedStep.svelte';
+
 type AndSplitListProps = { title: string; list: string[] };
 const { left, right }: { left: AndSplitListProps; right: AndSplitListProps } =
 	$props();
@@ -9,10 +11,9 @@ const { left, right }: { left: AndSplitListProps; right: AndSplitListProps } =
     <h3 class="text-xl font-semibold mb-4">{left.title}</h3>
     <ol class="flex flex-col gap-2">
       {#each left.list as item, i}
-        <li class="flex items-center gap-3">
-          <span class="flex items-center justify-center size-6 rounded-full bg-primary text-primary-foreground text-xs font-bold shrink-0">{i + 1}</span>
+        <NumberedStep number={i + 1}>
           <span class="text-sm">{item}</span>
-        </li>
+        </NumberedStep>
       {/each}
     </ol>
   </div>
@@ -34,10 +35,9 @@ const { left, right }: { left: AndSplitListProps; right: AndSplitListProps } =
     <h3 class="text-xl font-semibold mb-4">{right.title}</h3>
     <ol class="flex flex-col gap-2">
       {#each right.list as item, i}
-        <li class="flex items-center gap-3">
-          <span class="flex items-center justify-center size-6 rounded-full bg-primary text-primary-foreground text-xs font-bold shrink-0">{i + 1}</span>
+        <NumberedStep number={i + 1}>
           <span class="text-sm">{item}</span>
-        </li>
+        </NumberedStep>
       {/each}
     </ol>
   </div>

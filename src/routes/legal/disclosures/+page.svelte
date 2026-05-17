@@ -1,5 +1,5 @@
 <script>
-import { Archive } from '@lucide/svelte';
+import { FolderBookmark } from '@lucide/svelte';
 import GroupedList from '$lib/components/GroupedList.svelte';
 import DocumentHeader from '$lib/components/DocumentHeader.svelte';
 import LegalText from '$lib/components/LegalText.svelte';
@@ -15,7 +15,7 @@ import SectionHeader from '$lib/components/SectionHeader.svelte';
 	header="Disclosures"
 	description="As a non-profit foundation we must disclose certain documents on the financials and management of our organisation, these can all be found here."
 >
-	<Archive class="size-64" />
+	<FolderBookmark class="size-64" />
 </DocumentHeader>
 
 <LegalText>

@@ -125,13 +125,13 @@ const selectedScript = $derived(relatedScripts[selectedScriptIndex]);
 		{#if relatedTexts.length > 0}
 			<div class="flex flex-col divide-y divide-border rounded-xl border border-border bg-card shadow-sm overflow-hidden">
 				{#each relatedTexts as text}
-					<div class="flex items-center justify-between gap-4 px-5 py-3">
+					<a href="/texts/{text.slug}" class="flex items-center justify-between gap-4 px-5 py-3 hover:bg-muted/50 transition-colors">
 						<div>
 							<span class="font-medium">{text.title}</span>
 							<span class="ml-2 text-sm text-muted-foreground">{text.author} &middot; {text.genre}</span>
 						</div>
 						<span class="text-sm tabular-nums text-muted-foreground shrink-0">{text.period}</span>
-					</div>
+					</a>
 				{/each}
 				<a href="/texts" class="flex items-center justify-end gap-1 px-5 py-3 text-sm text-primary/80 hover:text-primary hover:bg-muted/50 transition-colors">
 					Browse all texts →

@@ -33,8 +33,8 @@ const filtered = $derived(
 	</div>
 
 	<CardGrid>
-		{#each filtered as text (text.title)}
-			<GridCard>
+		{#each filtered as text (text.slug)}
+			<GridCard href="/texts/{text.slug}">
 				<div class="flex items-start justify-between gap-2">
 					<div>
 						<h2 class="text-lg font-semibold">{text.title}</h2>

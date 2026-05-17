@@ -70,5 +70,14 @@ export const scripts: Script[] = [
 		languageSlugs: ['gothic'],
 		description:
 			'Created by Bishop Wulfila in the 4th century to translate the Bible into the Gothic language.'
+	},
+	{
+		slug: 'latin',
+		name: 'Latin',
+		type: 'Alphabet',
+		sample: 'Roma',
+		languageSlugs: ['latin', 'old-english', 'old-norse'],
+		description:
+			'The alphabet of ancient Rome, descended from Etruscan and Greek scripts. Ancestor of virtually all modern European writing systems and the most widely used script in the world today.'
 	}
 ];
