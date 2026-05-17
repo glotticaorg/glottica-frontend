@@ -1,6 +1,7 @@
 <script lang="ts">
 import { CalendarDays, Clock, MapPin, Tag, Users } from '@lucide/svelte';
-import GridCard from '$lib/components/GridCard.svelte';
+import DetailItem from '$lib/components/DetailItem.svelte';
+import DetailsCard from '$lib/components/DetailsCard.svelte';
 import LegalText from '$lib/components/LegalText.svelte';
 import PageMeta from '$lib/components/PageMeta.svelte';
 import PlainDocumentHeader from '$lib/components/PlainDocumentHeader.svelte';
@@ -23,47 +24,20 @@ const { event } = $derived(data);
 <LegalText>
 	<!-- Details card -->
 	<section class="mb-10">
-		<GridCard>
-			<div class="flex flex-col sm:flex-row gap-6">
-				<dl class="flex flex-col gap-3 flex-1">
-					<div class="flex flex-col gap-0.5">
-						<dt class="flex items-center gap-1.5 text-xs font-medium text-muted-foreground uppercase tracking-wide">
-							<CalendarDays class="size-3" />
-							Date
-						</dt>
-						<dd class="text-sm font-medium">
-							<time datetime={event.date}>{formatEventDate(event.date)}</time>
-						</dd>
-					</div>
-					<div class="flex flex-col gap-0.5">
-						<dt class="flex items-center gap-1.5 text-xs font-medium text-muted-foreground uppercase tracking-wide">
-							<Clock class="size-3" />
-							Time
-						</dt>
-						<dd class="text-sm font-medium">{event.time}</dd>
-					</div>
-				</dl>
-				<div class="hidden sm:block w-px bg-border shrink-0"></div>
-				<dl class="flex flex-col gap-3 flex-1">
-					<div class="flex flex-col gap-0.5">
-						<dt class="flex items-center gap-1.5 text-xs font-medium text-muted-foreground uppercase tracking-wide">
-							<MapPin class="size-3" />
-							Location
-						</dt>
-						<dd class="text-sm font-medium">{event.location}</dd>
-					</div>
-					{#if event.organizer}
-						<div class="flex flex-col gap-0.5">
-							<dt class="flex items-center gap-1.5 text-xs font-medium text-muted-foreground uppercase tracking-wide">
-								<Users class="size-3" />
-								Organiser
-							</dt>
-							<dd class="text-sm font-medium">{event.organizer}</dd>
-						</div>
-					{/if}
-				</dl>
-			</div>
-		</GridCard>
+		<DetailsCard>
+			{#snippet left()}
+				<DetailItem icon={CalendarDays} label="Date">
+					<time datetime={event.date}>{formatEventDate(event.date)}</time>
+				</DetailItem>
+				<DetailItem icon={Clock} label="Time">{event.time}</DetailItem>
+			{/snippet}
+			{#snippet right()}
+				<DetailItem icon={MapPin} label="Location">{event.location}</DetailItem>
+				{#if event.organizer}
+					<DetailItem icon={Users} label="Organiser">{event.organizer}</DetailItem>
+				{/if}
+			{/snippet}
+		</DetailsCard>
 	</section>
 
 	<!-- Abstract -->

@@ -1,5 +1,7 @@
 <script lang="ts">
 import { Archive, BookMarked, BookOpen, CalendarDays, CaseLower, Earth, Languages, PenLine, UserRound } from '@lucide/svelte';
+import DetailItem from '$lib/components/DetailItem.svelte';
+import DetailsCard from '$lib/components/DetailsCard.svelte';
 import GridCard from '$lib/components/GridCard.svelte';
 import LegalText from '$lib/components/LegalText.svelte';
 import PageMeta from '$lib/components/PageMeta.svelte';
@@ -22,83 +24,34 @@ const { text, language, relatedScripts } = $derived(data);
 <LegalText>
 	<!-- Details card -->
 	<section class="mb-10">
-		<GridCard>
-			<div class="flex flex-col sm:flex-row gap-6">
-				<dl class="flex flex-col gap-3 flex-1">
-					<div class="flex flex-col gap-0.5">
-						<dt class="flex items-center gap-1.5 text-xs font-medium text-muted-foreground uppercase tracking-wide">
-							<UserRound class="size-3" />
-							Author
-						</dt>
-						<dd class="text-sm font-medium">{text.author}</dd>
-					</div>
-					<div class="flex flex-col gap-0.5">
-						<dt class="flex items-center gap-1.5 text-xs font-medium text-muted-foreground uppercase tracking-wide">
-							<CalendarDays class="size-3" />
-							Period
-						</dt>
-						<dd class="text-sm font-medium">{text.period}</dd>
-					</div>
-					<div class="flex flex-col gap-0.5">
-						<dt class="flex items-center gap-1.5 text-xs font-medium text-muted-foreground uppercase tracking-wide">
-							<BookOpen class="size-3" />
-							Genre
-						</dt>
-						<dd class="text-sm font-medium">{text.genre}</dd>
-					</div>
-					<div class="flex flex-col gap-0.5">
-						<dt class="flex items-center gap-1.5 text-xs font-medium text-muted-foreground uppercase tracking-wide">
-							<Archive class="size-3" />
-							Preservation
-						</dt>
-						<dd class="text-sm font-medium">{text.preservation}</dd>
-					</div>
-				</dl>
-				<div class="hidden sm:block w-px bg-border shrink-0"></div>
-				<dl class="flex flex-col gap-3 flex-1">
-					{#if language}
-						<div class="flex flex-col gap-0.5">
-							<dt class="flex items-center gap-1.5 text-xs font-medium text-muted-foreground uppercase tracking-wide">
-								<Languages class="size-3" />
-								Language
-							</dt>
-							<dd class="text-sm font-medium">
-								<a href="/learn/languages/{language.slug}" class="hover:text-primary transition-colors">{language.name}</a>
-							</dd>
-						</div>
-					{/if}
-					{#if relatedScripts.length > 0}
-						<div class="flex flex-col gap-0.5">
-							<dt class="flex items-center gap-1.5 text-xs font-medium text-muted-foreground uppercase tracking-wide">
-								<CaseLower class="size-3" />
-								{relatedScripts.length === 1 ? 'Script' : 'Scripts'}
-							</dt>
-							<dd class="flex flex-col gap-0.5">
-								{#each relatedScripts as script}
-									<a href="/learn/scripts/{script.slug}" class="text-sm font-medium hover:text-primary transition-colors">{script.name}</a>
-								{/each}
-							</dd>
-						</div>
-					{/if}
-					<div class="flex flex-col gap-0.5">
-						<dt class="flex items-center gap-1.5 text-xs font-medium text-muted-foreground uppercase tracking-wide">
-							<Earth class="size-3" />
-							Region
-						</dt>
-						<dd class="text-sm font-medium">{text.region}</dd>
-					</div>
-					{#if text.annotator}
-						<div class="flex flex-col gap-0.5">
-							<dt class="flex items-center gap-1.5 text-xs font-medium text-muted-foreground uppercase tracking-wide">
-								<PenLine class="size-3" />
-								Annotated by
-							</dt>
-							<dd class="text-sm font-medium">{text.annotator}</dd>
-						</div>
-					{/if}
-				</dl>
-			</div>
-		</GridCard>
+		<DetailsCard>
+			{#snippet left()}
+				<DetailItem icon={UserRound} label="Author">{text.author}</DetailItem>
+				<DetailItem icon={CalendarDays} label="Period">{text.period}</DetailItem>
+				<DetailItem icon={BookOpen} label="Genre">{text.genre}</DetailItem>
+				<DetailItem icon={Archive} label="Preservation">{text.preservation}</DetailItem>
+			{/snippet}
+			{#snippet right()}
+				{#if language}
+					<DetailItem icon={Languages} label="Language">
+						<a href="/learn/languages/{language.slug}" class="hover:text-primary transition-colors">{language.name}</a>
+					</DetailItem>
+				{/if}
+				{#if relatedScripts.length > 0}
+					<DetailItem icon={CaseLower} label={relatedScripts.length === 1 ? 'Script' : 'Scripts'}>
+						<span class="flex flex-col gap-0.5">
+							{#each relatedScripts as script}
+								<a href="/learn/scripts/{script.slug}" class="hover:text-primary transition-colors">{script.name}</a>
+							{/each}
+						</span>
+					</DetailItem>
+				{/if}
+				<DetailItem icon={Earth} label="Region">{text.region}</DetailItem>
+				{#if text.annotator}
+					<DetailItem icon={PenLine} label="Annotated by">{text.annotator}</DetailItem>
+				{/if}
+			{/snippet}
+		</DetailsCard>
 	</section>
 
 	<!-- Reading -->
