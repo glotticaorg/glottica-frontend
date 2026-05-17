@@ -6,16 +6,20 @@ let {
 	name,
 	badge,
 	sample,
-	description
+	description,
+	href,
+	class: className = ''
 }: {
 	name: string;
 	badge: string;
 	sample?: string;
 	description: string;
+	href?: string;
+	class?: string;
 } = $props();
 </script>
 
-<GridCard>
+<GridCard {href} class={className}>
 	<div class="flex items-start justify-between gap-2">
 		<div>
 			<h2 class="text-lg font-semibold">{name}</h2>

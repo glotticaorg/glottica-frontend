@@ -6,22 +6,9 @@ import PageMeta from '$lib/components/PageMeta.svelte';
 import PlainDocumentHeader from '$lib/components/PlainDocumentHeader.svelte';
 import { Badge } from '$lib/components/ui/badge';
 import { Button } from '$lib/components/ui/button';
+import { hotkeys } from '$lib/data/hotkeys';
 
 let expanded = $state(false);
-
-const languages = [
-	{ name: 'Lithuanian', branch: 'Baltic' },
-	{ name: 'Proto-Indo-European', branch: 'Reconstructed' },
-	{ name: 'Old Church Slavic', branch: 'Slavic' },
-	{ name: 'Polish', branch: 'Slavic' },
-	{ name: 'Serbo-Croatian', branch: 'Slavic' },
-	{ name: 'Avestan', branch: 'Iranian' },
-	{ name: 'Sanskrit', branch: 'Indo-Aryan' },
-	{ name: 'Greek', branch: 'Hellenic' },
-	{ name: 'Gothic', branch: 'Germanic' },
-	{ name: 'Hittite', branch: 'Anatolian' },
-	{ name: 'Latin', branch: 'Italic' }
-];
 </script>
 
 <PageMeta title="Hotkeys" description="Download keyboard hotkey configurations for Indo-European languages and scripts." />
@@ -41,12 +28,12 @@ const languages = [
 					onclick={() => expanded = !expanded}
 					class="text-xs font-medium px-2 py-0.5 rounded-full border border-border bg-secondary text-secondary-foreground hover:bg-muted transition-colors cursor-pointer"
 				>
-					All {languages.length} languages {expanded ? '▴' : '▾'}
+					All {hotkeys.length} languages {expanded ? '▴' : '▾'}
 				</button>
 			{/snippet}
 			{#if expanded}
 				<div class="flex flex-wrap gap-1 mt-1">
-					{#each languages as lang}
+					{#each hotkeys as lang}
 						<Badge variant="outline" class="text-xs">{lang.name}</Badge>
 					{/each}
 				</div>
@@ -62,8 +49,8 @@ const languages = [
 
 	<p class="mb-4 text-sm text-muted-foreground">Alternatively, download a configuration for a single language:</p>
 
-	<div class="flex flex-col divide-y divide-border rounded-xl border border-border bg-card overflow-hidden">
-		{#each languages as lang}
+	<div class="flex flex-col divide-y divide-border rounded-xl border border-border bg-card shadow-sm overflow-hidden">
+		{#each hotkeys as lang}
 			<div class="flex items-center justify-between gap-4 px-5 py-3">
 				<div class="flex items-center gap-3">
 					<span class="font-medium">{lang.name}</span>
