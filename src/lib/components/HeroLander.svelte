@@ -24,7 +24,7 @@ import PageHeader from './PageHeader.svelte';
 
       <Card class="bg-card/90 shadow w-full max-w-sm shrink-0 lg:order-first">
         <CardContent>
-          <form method="POST" use:enhance>
+          <form method="POST" action="/profile/login" use:enhance>
             <fieldset class="flex flex-col gap-4">
               <div class="flex flex-col gap-1.5">
                 <Label for="email">Email</Label>
