@@ -17,10 +17,10 @@ const { language, relatedTexts, relatedScripts, hotkey } = $derived(data);
 	title={language.name}
 	description="Resources for {language.name}: scripts, hotkeys, texts, and lessons."
 />
-<PlainDocumentHeader>
-	{language.name}
-	<Badge variant="secondary" class="ml-3 align-middle text-sm font-normal">{language.branch}</Badge>
-</PlainDocumentHeader>
+<PlainDocumentHeader>{language.name}</PlainDocumentHeader>
+<div class="text-center px-4 pb-4">
+	<Badge variant="secondary" class="text-sm font-normal">{language.branch}</Badge>
+</div>
 
 <LegalText>
 	<p class="mb-10 text-muted-foreground">{language.description}</p>
